@@ -1,32 +1,25 @@
 .menu-btn {
   position: relative;
-  top: 0;
-  right: 2px;
-  width: 34px;
-  height: 30px;
+  top: -3px;
+  right: 5px;
+  width: 30px;
+  height: 20px;
   cursor: pointer;
-  padding: 14px 2px;
   z-index: 5;
-
-  @media (max-width: 325px) {
-    width: 30px;
-    right: 6px;
-  }
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    width: 34px;
-    height: 2.6px;
+    width: 30px;
+    height: 2px;
     transition: all .3s ease;
     background-color: currentColor;
-    transform-origin: 50% 50%;
     top: calc(50% - 1px);
   }
 
   &::before {
-    transform: translateY(-9px);
+    transform: translateY(-7px);
   }
 
   &::after {
@@ -36,8 +29,8 @@
   span {
     display: block;
     transition: all .3s ease;
-    height: 2.6px;
-    width: 34px;
+    height: 2px;
+    width: 30px;
     background-color: currentColor;
   }
 

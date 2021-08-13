@@ -51,7 +51,8 @@
             <div class="header__wrapper">
               <div class="header__info">
                 <a class="logo" href="<?= esc_url( home_url( '/' ) ); ?>">
-
+                  <div class="logo__main">Dina Deykun</div>
+                  <div class="logo__seconadary">photography</div>
                 </a>
               </div>
 
@@ -88,6 +89,8 @@
               </div>
 
             </div>
+
+            <button class="header__btn"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-btn-icon.svg" alt=""> <span>check your date</span></button>
           </div>
         </div>
 			</header>
