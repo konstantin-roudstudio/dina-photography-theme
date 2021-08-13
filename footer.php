@@ -12,21 +12,39 @@
 ?>
 
 <footer class="footer">
-  <div class="footer__center center">
-    <div class="footer__nav">
-      <div class="footer__inner">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, sint maiores quidem repellat omnis. Eligendi ea in debitis magnam earum, esse distinctio officia. Est aperiam, repellat veniam asperiores ut quisquam dicta necessitatibus, maiores temporibus mollitia iste, praesentium similique omnis aspernatur perspiciatis doloremque, quidem amet magnam reiciendis blanditiis voluptate quae. Ut, cum est natus? Veritatis, at deserunt itaque commodi minus repellendus optio nobis, reprehenderit iusto quam cumque quidem fugit quibusdam sed fuga dolore eos voluptates. Nostrum, explicabo, eaque? At, provident cumque totam quis tempora asperiores aperiam consequatur nobis dolor corporis unde eum iure nulla obcaecati facilis velit quaerat quos excepturi ipsam.</div>
-      <?php
+  <div class="footer__bg">
+    <img src="<?php echo get_template_directory_uri(); ?> /images/footer-bg-mob.jpg" alt="">
+  </div>
+	
+  <div class="footer__center center">	     
+    <div class="footer__inner">
+			<h2 class="footer__title">I’m an artist who creates beautiful and romantic portraiture, and I’m committed to my art and every client’s individuality.</h2>
+
+			<div class="footer__nav">
+				<?php
       wp_nav_menu(
           array(
               'theme_location' => 'footer-menu',
               'fallback_cb'    => '',
               'container'      => false
           )
-      );
+        );
       ?>
-    </div>
+			</div>
 
-  </div>
+      <div class="footer__socials">
+        <a href="#"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-icon-01.svg" alt=""></a>
+        <a href="#"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-icon-02.svg" alt=""></a>
+      </div>
+
+			<div class="footer__bottom">
+				<button class="footer__btn btn"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-btn-icon.svg" alt=""> check your date</button>
+				<div class="footer__rights">&copy; 2021. Dina Deykun. All rights reserved. Privacy Policy.</div>
+			</div>
+
+		</div>
+
+	</div>
 </footer>
 <?php /* get_template_part('template-parts/cookies-bar') */ ?>
 
