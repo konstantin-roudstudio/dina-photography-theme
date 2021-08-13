@@ -1,0 +1,11 @@
+{
+    "name": "untitled/dina-photography",
+    "autoload": {
+        "classmap": [
+            "inc"
+        ],
+        "psr-4": {
+            "PanPsychologist\\": "inc/"
+        }
+    }
+}

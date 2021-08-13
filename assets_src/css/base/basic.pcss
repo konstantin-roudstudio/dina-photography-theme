@@ -1,0 +1,75 @@
+html {
+  touch-action: manipulation;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  background: #Fff;
+  color: #000;
+  font: 600 14px / 1.5 'RF Dewi Extended', sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button {
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+h1,
+h2,
+h3,
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  transition: .2s color ease-in-out;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::selection {
+  background: rgba(0, 0, 0, .2);
+}
+
+section {
+  position: relative;
+}
+
+.wrapper {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (--mobile) {
+  html[lang] {
+    margin-top: 0 !important;
+
+    #wpadminbar {
+      display: none !important;
+    }
+  }
+}

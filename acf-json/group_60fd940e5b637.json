@@ -1,0 +1,198 @@
+{
+    "key": "group_60fd940e5b637",
+    "title": "Flexible content",
+    "fields": [
+        {
+            "key": "field_60fd9424d0240",
+            "label": "Page Builder",
+            "name": "page_builder",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_60fd94370f279": {
+                    "key": "layout_60fd94370f279",
+                    "name": "hero_section",
+                    "label": "Hero section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fd9466d0241",
+                            "label": "Hero section",
+                            "name": "hero_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60fd8f2734624"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60fd953ed0243": {
+                    "key": "layout_60fd953ed0243",
+                    "name": "about_section",
+                    "label": "About section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fd9549d0244",
+                            "label": "About section",
+                            "name": "about_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60fd92177e00e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60fe7586fa321": {
+                    "key": "layout_60fe7586fa321",
+                    "name": "facts_section",
+                    "label": "Facts section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fe7591fa322",
+                            "label": "Facts section",
+                            "name": "facts_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60fe71f52769e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60fe924049ef0": {
+                    "key": "layout_60fe924049ef0",
+                    "name": "services_section",
+                    "label": "Services section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fe924849ef1",
+                            "label": "Services section",
+                            "name": "services_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60fe88ae0a199"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_60fe927049ef2": {
+                    "key": "layout_60fe927049ef2",
+                    "name": "testimonials_section",
+                    "label": "Testimonials section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fe928a49ef3",
+                            "label": "Testimonials section",
+                            "name": "testimonials_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_60fe913f9f67c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "flexible.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1628507274
+}

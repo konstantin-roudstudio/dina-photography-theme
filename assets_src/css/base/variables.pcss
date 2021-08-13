@@ -1,0 +1,24 @@
+:root {
+  --max-mobile-width: 767px;
+  --min-tablet-width: 768px;
+  --max-tablet-width: 998px;
+  --min-laptop-width: 999px;
+  --max-laptop-width: 1199px;
+  --min-desktop-width: 1200px;
+  --max-desktop-width: 1599px;
+  --min-hd-width: 1600px;
+
+  --sal-duration: 0.5s;
+}
+
+@custom-media --mobile (max-width: 767px);
+@custom-media --tablet-down (max-width: 998px);
+@custom-media --tablet (min-width: 768px) and (max-width: 998px);
+@custom-media --tablet-up (min-width: 768px);
+@custom-media --laptop-down (max-width: 1199px);
+@custom-media --laptop (min-width: 999px) and (max-width: 1199px);
+@custom-media --laptop-up (min-width: 999px);
+@custom-media --desktop-down (max-width: 1599px);
+@custom-media --desktop (min-width: 1200px) and (max-width: 1599px);
+@custom-media --desktop-up (min-width: 1200px);
+@custom-media --hd (min-width: 1600px);

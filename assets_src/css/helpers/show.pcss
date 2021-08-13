@@ -1,0 +1,29 @@
+.show-mobile {
+  @media (--tablet-up) {
+    display: none !important;
+  }
+}
+
+.show-tablet {
+  @media (--mobile), (--laptop-up) {
+    display: none !important;
+  }
+}
+
+.show-laptop {
+  @media (--tablet-down), (--desktop-up) {
+    display: none !important;
+  }
+}
+
+.show-desktop {
+  @media (--laptop-down), (--hd) {
+    display: none !important;
+  }
+}
+
+.show-hd {
+  @media (--desktop-down) {
+    display: none !important;
+  }
+}

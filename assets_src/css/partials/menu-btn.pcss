@@ -1,0 +1,61 @@
+.menu-btn {
+  position: relative;
+  top: 0;
+  right: 2px;
+  width: 34px;
+  height: 30px;
+  cursor: pointer;
+  padding: 14px 2px;
+  z-index: 5;
+
+  @media (max-width: 325px) {
+    width: 30px;
+    right: 6px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 2.6px;
+    transition: all .3s ease;
+    background-color: currentColor;
+    transform-origin: 50% 50%;
+    top: calc(50% - 1px);
+  }
+
+  &::before {
+    transform: translateY(-9px);
+  }
+
+  &::after {
+    transform: translateY(9px);
+  }
+
+  span {
+    display: block;
+    transition: all .3s ease;
+    height: 2.6px;
+    width: 34px;
+    background-color: currentColor;
+  }
+
+  @media (--desktop-up) {
+    display: none;
+  }
+
+  &.active {
+    span {
+      opacity: 0;
+    }
+
+    &::before {
+      transform: rotate(45deg) translateY(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translateY(0);
+    }
+  }
+}
