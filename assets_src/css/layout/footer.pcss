@@ -1,104 +1,186 @@
 .footer {
   position: relative;
+  min-height: 946px;
   padding: 22px 0 120px;
 
   &__bg {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    object-fit: cover;
+    background: url('./images/footer-bg-mob.jpg') no-repeat center / cover;
     z-index: -1;
+
+    @media (--laptop-up) {
+      background: url('./images/footer-bg-desktop.jpg') no-repeat center / cover;
+    }
   }
 
   &__center {
     position: relative;
   }
 
-  .footer__nav {}
+  &__nav {
+    margin-bottom: 33px;
+  }
 
-  .menu {}
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
 
   .menu-item {
+    &:first-child {
+      order: 2;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 2.61;
+      display: inline-flex;
+      margin-bottom: 14px;
+    }
+  }
+
+  .sub-menu {
+    .menu-item {
+      a {
+        text-transform: none;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 2.46;
+        letter-spacing: 0.026em;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    background-color: #fff;
+    padding: 27px 21px 24px;
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-family: 'Antiqua', serif;
+    font-size: 22px;
+    line-height: 1.46;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+  }
+
+  &__socials {
+    padding-top: 18px;
+    display: flex;
+    margin: 0 -6px;
+
+    a {
+      width: 37px;
+      height: 37px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      /*  background-color: #000; */
+
+      img {
+        display: block;
+        transition: transform .3s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    max-width: 275px;
+    margin: 33px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__btn {
+    min-width: 210px;
+    margin: 0 auto 33px;
+    padding: 14px 20px 13px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 21px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.026em;
+    text-transform: uppercase;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &__rights {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.84;
+    text-align: center;
+    letter-spacing: 0.026em;
+    color: #8D8C84;
+  }
+
+  &__contact {
+    width: 50%;
+  }
+
+  &__contact-title {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
     line-height: 2.61;
-    margin-bottom: 13px;
+    display: inline-flex;
+    margin-bottom: 14px;
   }
 
-.sub-menu {
-  .menu-item {
-    text-transform: none;
+  &__contact-link {
+    display: block;
+    width: fit-content;
     font-weight: 600;
     font-size: 13px;
     line-height: 2.46;
     letter-spacing: 0.026em;
+    ;
   }
-}
 
-&__inner {
-  background-color: #fff;
-  padding: 27px 21px 24px;
-}
+  &__partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 310px;
+    margin: auto;
 
-&__title {
-  font-family: 'Antiqua', serif;
-  font-size: 22px;
-  line-height: 1.45;
-  text-transform: uppercase;
-  margin-bottom: 21px;
-}
+    a {
+      display: block;
+      margin-right: 34px;
 
-&__socials {
-  padding-top: 18px;
-  display: flex;
-  margin: 0 -6px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
-  a {
-    margin: 0 6px;
-    width: 38px;
-    height: 38px;
+    img {
+      display: block;
+    }
   }
-}
-
-&__bottom {
-  max-width: 275px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-&__btn {
-  min-width: 210px;
-  margin: 0 auto 33px;
-  padding: 14px 20px 13px;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 21px;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.026em;
-  text-transform: uppercase;
-
-  img {
-    display: block;
-    margin-right: 8px;
-  }
-}
-
-&__rights {
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 1.84;
-  text-align: center;
-  letter-spacing: 0.026em;
-  color: #8D8C84;
-}
 }
