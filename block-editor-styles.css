@@ -168,7 +168,7 @@ html .edit-post-visual-editor .text-right {
 html .edit-post-visual-editor .center {
     flex-grow: 1;
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1355px;
     padding: 0 20px;
     position: relative;
 }
@@ -181,12 +181,15 @@ html .edit-post-visual-editor .logo {
     flex-direction: column;
     align-items: center;
     padding-left: 2px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
 }
 
 @media (min-width: 1200px) {
     html .edit-post-visual-editor .logo {
         flex-direction: row;
-        padding: 11px 0 15px;
+        padding: 14px 0 12px;
     }
 }
 
@@ -201,6 +204,12 @@ html .edit-post-visual-editor .logo__main {
     html .edit-post-visual-editor .logo__main {
         margin-right: 7px;
         font-size: 22px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .logo__seconadary {
+        font-size: 12px;
     }
 }
 

@@ -19,8 +19,9 @@
       align-items: center;
       padding: 23px 0;
     }
+
     @media (--desktop-up) {
-    	width: 80%;
+      width: 81%;
     }
 
   }
@@ -33,30 +34,24 @@
     }
   }
 
-  &__nav {}
-
   &__btn {
-  	display: none;
-  	align-items: center;
-  	justify-content: center;
-    min-width: 210px;
+    display: none;
     padding: 14px 20px 13px;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 21px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.026em;
-    text-transform: uppercase;
 
-    img {
-      display: inline-block;
-      margin-right: 7px;
-    }
     @media (--desktop-up) {
-    	display: inline-flex;
+      display: inline-flex;
+    }
+  }
+
+  &--light {
+    color: #fff;
+
+    .header__info {
+      border: none;
+    }
+
+    .btn {
+      color: #fff;
     }
   }
 }
