@@ -215,9 +215,11 @@
 
       &:hover {
         .sub-menu {
-          opacity: 1;
+          @media (--desktop-up) {
+            opacity: 1;
           visibility: visible;
           //////////////////////////////////////////////////////////////////////////need to done
+          }     
         }
       }
     }
