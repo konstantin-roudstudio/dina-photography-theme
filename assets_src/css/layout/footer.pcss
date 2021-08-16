@@ -3,6 +3,10 @@
   min-height: 946px;
   padding: 22px 0 120px;
 
+  @media (--tablet-up) {
+    padding: 125px 0 42px;
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -19,6 +23,7 @@
 
   &__center {
     position: relative;
+    max-width: 1352px;
   }
 
   &__nav {
@@ -31,6 +36,10 @@
   }
 
   .menu-item {
+    @media (--tablet-up) {
+      border-right: 1px solid #F2F0EC;
+    }
+
     &:first-child {
       order: 2;
     }
@@ -63,6 +72,15 @@
     background-color: #fff;
     padding: 27px 21px 24px;
     margin-bottom: 45px;
+
+    @media (--tablet-up) {
+      padding: 49px 20px 25px 52px;
+    }
+
+    @media (--desktop-up) {
+      padding: 98px 40px 47px 84px;
+      margin-bottom: 49px;
+    }
   }
 
   &__title {
@@ -72,6 +90,13 @@
     line-height: 1.46;
     text-transform: uppercase;
     margin-bottom: 21px;
+
+    @media (--tablet-up) {
+      border-right: 1px solid #F2F0EC;
+      font-size: 32px;
+      line-height: 1.375;
+      width: 46%;
+    }
   }
 
   &__socials {
@@ -105,16 +130,25 @@
   }
 
   &__bottom {
-    max-width: 275px;
-    margin: 33px auto 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    @media (--mobile) {
+      margin: 33px auto 0;
+      max-width: 275px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (--tablet-up) {
+      padding-right: 44px;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &__btn {
     min-width: 210px;
-    margin: 0 auto 33px;
     padding: 14px 20px 13px;
     color: #000;
     background-color: #fff;
@@ -125,6 +159,10 @@
     line-height: 1.16;
     letter-spacing: 0.026em;
     text-transform: uppercase;
+
+    @media (--mobile) {
+      margin: 0 auto 33px;
+    }
 
     svg {
       margin-right: 8px;
@@ -138,6 +176,10 @@
     text-align: center;
     letter-spacing: 0.026em;
     color: #8D8C84;
+
+    @media (--tablet-up) {
+      margin-top: 10px;
+    }
   }
 
   &__contact {
@@ -177,10 +219,18 @@
       &:last-child {
         margin-right: 0;
       }
+
+      @media (--tablet-up) {
+        margin-right: 50px;
+      }
     }
 
     img {
       display: block;
+    }
+
+    @media (--tablet-up) {
+      max-width: 382px;
     }
   }
 }
