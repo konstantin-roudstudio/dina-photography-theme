@@ -215,13 +215,18 @@ html .edit-post-visual-editor .logo__main {
 }
 
 html .edit-post-visual-editor .logo-small {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     margin-right: 38px;
     font-family: 'Antiqua';
     font-size: 22px;
     letter-spacing: 0.026em;
     line-height: 1.1;
     font-weight: 400;
+    transform: translateX(-2em);
+    transition: transform .3s .3s, opacity .5s;
+    position: absolute;
+    left: 0;
 }
 
 html .edit-post-visual-editor .title {
