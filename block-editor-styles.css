@@ -11,7 +11,7 @@
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
