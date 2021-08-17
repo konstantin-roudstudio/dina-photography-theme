@@ -53,23 +53,27 @@
                 <a class="logo" href="<?= esc_url( home_url( '/' ) ); ?>">
                   <div class="logo__main">Dina Deykun</div>
                   <div class="logo__seconadary">photography</div>
-                </a>
+                </a>                
               </div>
 
               <div class="header__nav">
                 <nav class="main-nav">
                   <div class="main-nav__inner">
-                    <?php
-                    wp_nav_menu(
+                    <div class="header__block">
+                      <a class="logo-small" href="<?= esc_url( home_url( '/' ) ); ?>">
+                        <div>D/D</div>
+                      </a>
+                      <?php
+                      wp_nav_menu(
                         array(
                             'theme_location' => 'header-main-menu',
                             'fallback_cb'    => '',
                             'container'      => false,
                             'menu_class'     => 'main-nav__main'
                         )
-                    );
-                    ?>
-
+                      );
+                      ?>
+                    </div>
                     <?php
                     wp_nav_menu(
                         array(

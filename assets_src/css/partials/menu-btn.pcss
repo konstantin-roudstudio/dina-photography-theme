@@ -1,9 +1,10 @@
 .menu-btn {
+  display: block;
   position: relative;
-  top: -3px;
+  /*top: 0;*/
   right: 5px;
   width: 30px;
-  height: 20px;
+  height: 30px;
   cursor: pointer;
   z-index: 5;
 
@@ -15,15 +16,16 @@
     height: 2px;
     transition: all .3s ease;
     background-color: currentColor;
-    top: calc(50% - 1px);
   }
 
   &::before {
     transform: translateY(-7px);
+    top: calc(50% - 3px);
   }
 
   &::after {
     transform: translateY(9px);
+    top: calc(50% - 1px);
   }
 
   span {
@@ -32,6 +34,8 @@
     height: 2px;
     width: 30px;
     background-color: currentColor;
+    position: relative;
+    top: calc(50% - 1px);
   }
 
   @media (--desktop-up) {
@@ -45,10 +49,12 @@
 
     &::before {
       transform: rotate(45deg) translateY(0);
+      top: calc(50% - 6px);
     }
 
     &::after {
       transform: rotate(-45deg) translateY(0);
+      top: calc(50% - 6px);
     }
   }
 }

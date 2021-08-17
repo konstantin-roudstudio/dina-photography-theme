@@ -11,7 +11,7 @@
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
@@ -197,7 +197,7 @@ html .edit-post-visual-editor .logo__main {
     text-transform: uppercase;
     font-size: 26px;
     letter-spacing: 0.026em;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 }
 
 @media (min-width: 1200px) {
@@ -210,7 +210,18 @@ html .edit-post-visual-editor .logo__main {
 @media (min-width: 1200px) {
     html .edit-post-visual-editor .logo__seconadary {
         font-size: 12px;
+        padding-top: 5px;
     }
+}
+
+html .edit-post-visual-editor .logo-small {
+    display: none;
+    margin-right: 38px;
+    font-family: 'Antiqua';
+    font-size: 22px;
+    letter-spacing: 0.026em;
+    line-height: 1.1;
+    font-weight: 400;
 }
 
 html .edit-post-visual-editor .title {
