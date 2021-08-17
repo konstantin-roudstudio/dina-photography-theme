@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-    <main id="main" class="site-main">
+    <main id="main" class="main">
         <?php
         if (have_rows('page_builder')):
             while (have_rows('page_builder')): the_row();

@@ -83,6 +83,7 @@
                     <div class="main-nav__btn-wrapper">
                       <button class="main-nav__btn btn"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-btn-icon.svg" alt=""> <span>check your date</span></button>
                     </div>
+
                     <div class="main-nav__socials-wrapper">
                       <a href="#" class="main-nav__socials">
                         <img src="<?php echo get_template_directory_uri(); ?> /images/facebook.svg" alt="">
