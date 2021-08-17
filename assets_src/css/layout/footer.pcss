@@ -29,7 +29,7 @@
     margin-bottom: 33px;
   }
 
-  .menu {
+  &__nav-menu {
     display: flex;
     flex-direction: column;
   }
@@ -79,6 +79,14 @@
     @media (--desktop-up) {
       padding: 96px 40px 47px 84px;
       margin-bottom: 49px;
+    }
+  }
+
+  &__main {
+    display: flex;
+
+    @media (--laptop-down) {
+      flex-wrap: wrap;
     }
   }
 
@@ -164,7 +172,7 @@
 
   &__contact {}
 
-  &__contact-title {
+  &__subtitle {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
