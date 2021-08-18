@@ -1,4 +1,5 @@
 .footer {
+  background: #d8d8d8;
   position: relative;
   padding: 22px 0 45px;
 
@@ -12,11 +13,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('./images/footer-bg-mob.jpg') no-repeat center / cover;
-    z-index: -1;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
 
     @media (--laptop-up) {
-      background: url('./images/footer-bg-desktop.jpg') no-repeat center / cover;
+      &--mobile {
+        display: none;
+      }
+    }
+
+    @media (--tablet-down) {
+      &--desktop {
+        display: none;
+      }
     }
   }
 
