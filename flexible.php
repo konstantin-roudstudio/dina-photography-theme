@@ -12,6 +12,7 @@ get_header();
 
 //        TEMP!
         get_template_part('template-parts/rows/hero-info-section');
+        get_template_part('template-parts/rows/hero-slider-section');
 
         if (have_rows('page_builder')):
             while (have_rows('page_builder')): the_row();
