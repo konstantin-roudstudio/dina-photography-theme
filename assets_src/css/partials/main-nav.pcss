@@ -204,8 +204,9 @@
 
       &__container {
         @media (--laptop-down) {
+          width: 0;
           max-height: 0;
-          transition: max-height .3s ease;
+          transition: max-height .3s ease, width .2s;
         }
 
         @media (--desktop-up) {
@@ -225,6 +226,7 @@
 
     .visible {
       @media (--laptop-down) {
+        width: 100%;
         opacity: 1;
         visibility: visible;
         max-height: 500px;
@@ -241,14 +243,16 @@
     .rotate {
       @media (--laptop-down) {
         &.menu-item-has-children {
-          &:after {
-            transform: rotateX(180deg);
+          a {
+            &:after {
+              transform: rotateX(180deg);
+            }
           }
         }
       }
     }
 
-    .menu-item-has-children > a {
+    .menu-item-has-children>a {
       display: block;
       position: relative;
 
