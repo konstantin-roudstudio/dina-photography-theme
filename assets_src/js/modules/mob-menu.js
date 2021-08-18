@@ -19,7 +19,7 @@ export default function mobMenu() {
 
   for (let i = 0; i < hasChildren.length; i++) {
     hasChildren[i].addEventListener('click', function() {
-      subMenu[i].classList.toggle('visible');
+      subMenu[i].closest('.sub-menu__container').classList.toggle('visible');
       hasChildren[i].classList.toggle('rotate');
     })
   }
