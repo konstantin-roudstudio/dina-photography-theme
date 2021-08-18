@@ -11,6 +11,7 @@ get_header();
         <?php
 
 //        TEMP!
+        get_template_part('template-parts/rows/hero-about-section');
         get_template_part('template-parts/rows/hero-info-section');
 
         if (have_rows('page_builder')):
