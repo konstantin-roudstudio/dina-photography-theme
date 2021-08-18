@@ -53,7 +53,7 @@
                 <a class="logo" href="<?= esc_url( home_url( '/' ) ); ?>">
                   <div class="logo__main">Dina Deykun</div>
                   <div class="logo__seconadary">photography</div>
-                </a>                
+                </a>
               </div>
 
               <div class="header__nav">
@@ -80,7 +80,8 @@
                             'theme_location' => 'header-secondary-menu',
                             'fallback_cb'    => '',
                             'container'      => false,
-                            'menu_class'     => 'main-nav__secondary'
+                            'menu_class'     => 'main-nav__secondary',
+                            'walker' => new Header_Menu_Walker()
                         )
                     );
                     ?>
