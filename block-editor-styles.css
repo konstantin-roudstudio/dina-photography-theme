@@ -230,12 +230,18 @@ html .edit-post-visual-editor .logo-small {
 }
 
 html .edit-post-visual-editor .title {
-    font: 500 48px/1.2 'Antiqua', serif;
+    font: 500 38px/1.2 'Antiqua', serif;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .title {
+        font-size: 42px;
+    }
 }
 
 @media (min-width: 1200px) {
     html .edit-post-visual-editor .title {
-        font-size: 58px;
+        font-size: 52px;
     }
 }
 
@@ -292,6 +298,120 @@ html .edit-post-visual-editor .wysiwyg-content ol li:last-child {
 
 html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
+}
+
+html .edit-post-visual-editor .hero-info {
+    position: relative;
+}
+
+html .edit-post-visual-editor .hero-info__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d8d8d8;
+}
+
+@media (max-width: 767px) {
+    html .edit-post-visual-editor .hero-info__bg--desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .hero-info__bg--mobile {
+        display: none;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews {
+    position: relative;
+    margin-top: -90px;
+    color: #fff;
+    min-height: 734px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-reviews {
+        margin-top: -92px;
+        min-height: 898px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d8d8d8;
+}
+
+@media (max-width: 767px) {
+    html .edit-post-visual-editor .hero-reviews__bg--desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .hero-reviews__bg--mobile {
+        display: none;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 387px 20px 110px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-reviews__center {
+        padding: 505px 30px 187px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__title {
+    position: relative;
+    max-width: 810px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 29px;
+}
+
+html .edit-post-visual-editor .hero-reviews__title::before {
+    content: '';
+    position: absolute;
+    top: -48px;
+    left: 0;
+    display: block;
+    width: 34px;
+    height: 20px;
+    background-color: red;
+    /* background: url('../../../images/quote-01.png') no-repeat center / contain; */
+}
+
+html .edit-post-visual-editor .hero-reviews__text {
+    position: relative;
+    max-width: 642px;
+}
+
+html .edit-post-visual-editor .hero-reviews__arrow {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    width: 7px;
+    height: 49px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-reviews__arrow {
+        bottom: -100px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__arrow-path {
+    fill: #fff;
 }
 
 /*# sourceMappingURL=block-editor-styles.css.map */
