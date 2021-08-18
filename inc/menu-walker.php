@@ -44,10 +44,14 @@ class Header_Menu_Walker extends Walker_Nav_Menu
     $item_output .= '</span>';
 
     if ($show_image) {
+      $item_output .= '<div class="menu-item__img">';
+
       if ($image) {
         $thumb = $image['sizes']['large'];
-        $item_output .= '<div class="menu-item__img"><img src="' . esc_url($thumb) . '" alt="' . esc_attr($image['alt']) . '" /></div>';
+        $item_output .= '<img src="' . esc_url($thumb) . '" alt="' . esc_attr($image['alt']) . '" />';
       }
+
+      $item_output .= '</div>';
     }
 
     $item_output .= '</a>';
