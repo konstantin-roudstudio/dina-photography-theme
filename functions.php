@@ -131,6 +131,8 @@ function dina_photography_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'dina_photography_scripts', 999 );
 
+require_once __DIR__ . '/inc/menu-walker.php';
+
 /**
  * Remove Content edit box from Flexible page
  */

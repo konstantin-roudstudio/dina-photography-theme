@@ -1,11 +1,13 @@
 .header {
-
   &__inner {
     /*min-height: 89px;*/
     transition: transform .3s;
+    position: relative;
   }
 
   &__center {
+    position: static;
+
     @media (--desktop-up) {
       display: flex;
       align-items: center;

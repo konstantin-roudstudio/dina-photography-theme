@@ -72,7 +72,7 @@
       a {
         position: relative;
 
-        &::after {
+        &::before {
           background: currentColor;
           content: '';
           position: absolute;
@@ -86,7 +86,7 @@
           transition: all .2s ease;
         }
 
-        &:hover::after {
+        &:hover::before {
           opacity: 1;
           transform: scaleX(1);
         }
@@ -157,8 +157,6 @@
 
     .sub-menu {
       opacity: 0;
-      visibility: hidden;
-      max-height: 0;
       transition: all .3s;
 
       @media (--laptop-down) {
@@ -166,7 +164,53 @@
       }
 
       @media (--desktop-up) {
-        max-width: 0; //////////////////////////////////////////////////////// need to change
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .menu-item {
+          width: 20%;
+          margin: 0 0 30px;
+          padding: 0 14px;
+
+          &__label {
+            display: block;
+            margin-bottom: 15px;
+          }
+
+          &__img {
+            background: #d8d8d8;
+            position: relative;
+
+            &::after {
+              content: '';
+              display: block;
+              padding-bottom: 50%;
+            }
+
+            img {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      &__container {
+        @media (--desktop-up) {
+          padding: 40px 0 50px;
+          background: #fff;
+          transform: scaleY(0.5);
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          transform-origin: 50% 0;
+          transition: all .3s .2s ease, visibility 0s .5s;
+        }
       }
     }
 
@@ -190,7 +234,8 @@
       }
     }
 
-    .menu-item-has-children {
+    .menu-item-has-children > a {
+      display: block;
       position: relative;
 
       &:after {
@@ -215,19 +260,26 @@
 
       @media (--laptop-down) {
         border-bottom: 1px solid rgba(0, 0, 0, .3);
+
         .menu-item {
           &:last-child {
             padding-bottom: 20px;
           }
         }
       }
+    }
 
-      &:hover {
-        .sub-menu {
-          @media (--desktop-up) {
+    .menu-item-has-children:hover {
+      .sub-menu {
+        @media (--desktop-up) {
+          opacity: 1;
+          transition: all .3s .2s ease;
+
+          &__container {
             opacity: 1;
             visibility: visible;
-            //////////////////////////////////////////////////////////////////////////need to done
+            transform: scaleY(1);
+            transition: all .3s ease, visibility 0s 0s;
           }
         }
       }
