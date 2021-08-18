@@ -52,7 +52,8 @@ if ( ! function_exists( 'dina-photography_setup' ) ) :
         array(
             'header-main-menu' => esc_html__( 'Header Main', 'dina-photography' ),
             'header-secondary-menu' => esc_html__( 'Header Secondary', 'dina-photography' ),
-            'footer-menu' => esc_html__( 'Footer', 'dina-photography' )
+            'footer-photography' => esc_html__( 'Footer Photo', 'dina-photography' ),
+            'footer-about' => esc_html__( 'Footer About', 'dina-photography' )
         )
     );
 
