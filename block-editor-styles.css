@@ -230,12 +230,19 @@ html .edit-post-visual-editor .logo-small {
 }
 
 html .edit-post-visual-editor .title {
-    font: 500 48px/1.2 'Antiqua', serif;
+    font: 500 38px/1.2 'Antiqua', serif;
+    text-transform: uppercase;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .title {
+        font-size: 42px;
+    }
 }
 
 @media (min-width: 1200px) {
     html .edit-post-visual-editor .title {
-        font-size: 58px;
+        font-size: 52px;
     }
 }
 
@@ -292,6 +299,79 @@ html .edit-post-visual-editor .wysiwyg-content ol li:last-child {
 
 html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
+}
+
+html .edit-post-visual-editor .hero-info {
+    position: relative;
+    margin-top: -90px;
+    color: #fff;
+    min-height: 736px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-info {
+        min-height: 1070px;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d8d8d8;
+}
+
+@media (max-width: 767px) {
+    html .edit-post-visual-editor .hero-info__bg--desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .hero-info__bg--mobile {
+        display: none;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 387px 20px 50px;
+    max-width: 720px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-info__center {
+        max-width: 850px;
+        padding-top: 317px;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 35px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-info__title {
+        font-size: 52px;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__btn {
+    min-width: 232px;
+    min-height: 43px;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: 0.026em;
 }
 
 /*# sourceMappingURL=block-editor-styles.css.map */
