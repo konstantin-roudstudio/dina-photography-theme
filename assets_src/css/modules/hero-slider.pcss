@@ -1,8 +1,11 @@
 .hero-slider {
+  position: relative;
   min-height: 100vh;
+  margin-top: -90px;
 
   &__content {
-    color: #ffffff;
+    color: #fff;
+    position: relative;
     z-index: 1;
   }
 
@@ -10,5 +13,146 @@
     position: absolute;
     height: 100%;
     width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      opacity: 0.5;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    &::before {
+      height: 17vh;
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+    }
+
+    &::after {
+      display: none;
+      height: 63vh;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
+
+      @media (--laptop-up) {
+        display: block;
+      }
+    }
   }
+
+  .swiper-wrapper {}
+
+  .swiper-slide {}
+
+  &__nav {}
+
+  .swiper-button-prev {}
+
+  .swiper-button-next {}
+
+  &__numbers {}
+
+  &__number {}
+
+  &__slash {}
+
+  &__number {}
+
+  &__content {
+    position: relative;
+    pointer-events: none;
+    padding: 52vh 16px 70px;
+
+    @media (--laptop-up) {
+      padding: 70vh 20px 62px;
+    }
+
+    .hero-slider__text {
+      display: none;
+      max-width: 656px;
+      margin: 0 -13px;
+
+      @media (--laptop-up) {
+        display: flex;
+        margin: 0 1px 52px auto;
+
+        p {
+          max-width: 308px;
+          margin: 0 13px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.019em;
+    max-width: 810px;
+    margin-bottom: 42px;
+    line-height: 1.26;
+
+    @media (--mobile) {
+      text-align: center;
+    }
+
+    @media (--laptop-up) {
+      line-height: 1.11;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    @media (--desktop-up) {
+      font-size: 52px;
+    }
+  }
+
+  &__destinations {
+    display: none;
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: 0.026em;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 7px;
+
+    @media (--laptop-up) {
+      display: flex;
+    }
+  }
+
+  &__destination {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-left: 64px;
+    }
+  }
+
+  &__content-mobile {
+    position: relative;
+    bottom: -2px;
+    z-index: 1;
+    padding: 40px 16px;
+    background-color: #fff;
+    color: #000;
+
+    p {
+      margin-bottom: 21px;
+    }
+
+    @media (--laptop-up) {
+      display: none;
+    }
+  }
+
 }
