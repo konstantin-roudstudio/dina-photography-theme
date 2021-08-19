@@ -380,6 +380,14 @@ html .edit-post-visual-editor .promo {
     position: relative;
     background: #d8d8d8;
     min-height: 884px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo {
+        flex-direction: row;
+    }
 }
 
 html .edit-post-visual-editor .promo__bg {
@@ -406,6 +414,18 @@ html .edit-post-visual-editor .promo__overlay {
         width: 60%;
         background: linear-gradient(to right, #000, transparent);
     }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .promo__overlay {
+        width: 54%;
+    }
+}
+
+html .edit-post-visual-editor .promo__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 html .edit-post-visual-editor .promo__content {
@@ -438,6 +458,27 @@ html .edit-post-visual-editor .promo__title {
 @media (min-width: 999px) {
     html .edit-post-visual-editor .promo__text {
         max-width: 363px;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo--text-right .promo__center {
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo--text-right .promo__overlay {
+        right: 0;
+        left: auto;
+        width: 67%;
+        background: linear-gradient(to left, #000, transparent);
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .promo--text-right .promo__overlay {
+        width: 60%;
     }
 }
 
