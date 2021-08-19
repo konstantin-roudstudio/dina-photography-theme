@@ -403,6 +403,11 @@ html .edit-post-visual-editor .feedback blockquote p:last-child {
     }
 }
 
+html .edit-post-visual-editor .feedback__author {
+    font-weight: 600;
+    font-style: italic;
+}
+
 html .edit-post-visual-editor .hero-info {
     position: relative;
     margin-top: -90px;
