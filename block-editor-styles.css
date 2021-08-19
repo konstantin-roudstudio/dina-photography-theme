@@ -305,13 +305,7 @@ html .edit-post-visual-editor .hero-info {
     position: relative;
     margin-top: -90px;
     color: #fff;
-    min-height: 736px;
-}
-
-@media (min-width: 1200px) {
-    html .edit-post-visual-editor .hero-info {
-        min-height: 1070px;
-    }
+    min-height: 100vh;
 }
 
 html .edit-post-visual-editor .hero-info__bg {
@@ -319,6 +313,17 @@ html .edit-post-visual-editor .hero-info__bg {
     height: 100%;
     width: 100%;
     background: #d8d8d8;
+    z-index: -1;
+}
+
+html .edit-post-visual-editor .hero-info__bg::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+    opacity: 0.7;
+    z-index: 1;
+    height: 50vh;
 }
 
 @media (max-width: 767px) {
@@ -333,20 +338,28 @@ html .edit-post-visual-editor .hero-info__bg {
     }
 }
 
+html .edit-post-visual-editor .hero-info__bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
 html .edit-post-visual-editor .hero-info__center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 387px 20px 50px;
+    padding: 36vh 20px 50px;
     max-width: 720px;
 }
 
 @media (min-width: 999px) {
     html .edit-post-visual-editor .hero-info__center {
         max-width: 850px;
-        padding-top: 317px;
+        padding-top: 29.5vh;
     }
 }
 
