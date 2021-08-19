@@ -1,4 +1,66 @@
 .promo {
+  position: relative;
   background: #d8d8d8;
-  min-height: 400px;
+  min-height: 884px;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background: url(./images/.jpg) no-repeat center/cover;*/
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #000, transparent);
+
+    @media (--laptop-up) {
+      height: 100%;
+      width: 60%;
+      background: linear-gradient(to right, #000, transparent);
+    }
+
+    @media (--desktop-up) {
+
+    }
+  }
+
+  &__center {
+
+  }
+
+  &__content {
+    position: relative;
+    margin: 0 8px;
+    padding-bottom: 150px;
+    color: #fff;
+
+    @media (--laptop-up) {
+      max-width: 643px;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.37;
+    letter-spacing: 0.026em;
+    margin-bottom: 14px;
+
+    @media (--laptop-up) {
+      font-size: 38px;
+    }
+  }
+
+  &__text {
+    @media (--laptop-up) {
+      max-width: 363px;
+    }
+  }
 }
