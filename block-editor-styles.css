@@ -11,7 +11,7 @@
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
@@ -301,17 +301,16 @@ html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
 }
 
+html .edit-post-visual-editor .feedback {
+    background: #a00000;
+    min-height: 50px;
+}
+
 html .edit-post-visual-editor .hero-info {
     position: relative;
     margin-top: -90px;
     color: #fff;
-    min-height: 736px;
-}
-
-@media (min-width: 1200px) {
-    html .edit-post-visual-editor .hero-info {
-        min-height: 1070px;
-    }
+    min-height: 100vh;
 }
 
 html .edit-post-visual-editor .hero-info__bg {
@@ -333,20 +332,28 @@ html .edit-post-visual-editor .hero-info__bg {
     }
 }
 
+html .edit-post-visual-editor .hero-info__bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
 html .edit-post-visual-editor .hero-info__center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 387px 20px 50px;
+    padding: 36vh 20px 50px;
     max-width: 720px;
 }
 
 @media (min-width: 999px) {
     html .edit-post-visual-editor .hero-info__center {
         max-width: 850px;
-        padding-top: 317px;
+        padding-top: 29vh;
     }
 }
 
