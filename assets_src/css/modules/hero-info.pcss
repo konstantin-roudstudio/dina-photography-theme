@@ -1,12 +1,12 @@
 .hero-info {
   position: relative;
-  margin-top: -90px;  
+  margin-top: -90px;
   color: #fff;
-  min-height: 736px;
+  min-height: 100vh;
 
-  @media (--desktop-up) {
-    min-height: 1070px;
-  }
+  //@media (--desktop-up) {
+  //  min-height: 1070px;
+  //}
 
   &__bg {
     position: absolute;
@@ -26,7 +26,12 @@
       }
     }
 
-    img {}
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__center {
@@ -35,12 +40,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 387px 20px 50px;
+    padding: 36vh 20px 50px;
     max-width: 720px;
 
     @media (--laptop-up) {
       max-width: 850px;
-      padding-top: 317px;
+      padding-top: 29vh;
     }
   }
 
