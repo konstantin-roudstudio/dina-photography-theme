@@ -46,6 +46,68 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_611e03a6796fa": {
+                    "key": "layout_611e03a6796fa",
+                    "name": "hero_reviews_section",
+                    "label": "Hero Reviews Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_611e03b6796fb",
+                            "label": "Hero Reviews Section",
+                            "name": "hero_reviews_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_611e026b827ed"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_611e1fb137bc1": {
+                    "key": "layout_611e1fb137bc1",
+                    "name": "hero_about_section",
+                    "label": "Hero About Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_611e1fbf37bc2",
+                            "label": "Hero About Section",
+                            "name": "hero_about_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_611e182b7f4c5"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -70,5 +132,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629349446
+    "modified": 1629364192
 }

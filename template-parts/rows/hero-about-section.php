@@ -1,61 +1,80 @@
 <?php
-$title = get_sub_field('about_title');
-$image = get_sub_field('about_image');
+$title = get_sub_field('title');
+$bg_id = get_sub_field('image');
+$bg_mob_id = get_sub_field('image_mobile');
+$text_items = get_sub_field('text_items');
+$facts = get_sub_field('facts');
+$logos = get_sub_field('logos');
+
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
 
 ?>
 
 <section class="hero-about center">
-  <div class="hero-about__bg hero-about__bg--desktop"></div>
+  <?php if ($bg_img): ?>
+    <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--desktop'; ?>">
+      <?= $bg_img ?>
+    </div>
+  <?php endif; ?>
 
-  <div class="hero-about__bg hero-about__bg--mobile"></div>
+  <?php if ($bg_mob_img): ?>
+    <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--mobile'; ?>">
+      <?= $bg_mob_img ?>
+    </div>
+  <?php endif; ?>
 
   <div class="hero-about__content">
-    <h1 class="hero-about__title title">
-      I’m Dina, Europe based photographer, experienced traveler and wine enthusiast.
-    </h1>
-    <div class="hero-about__top-text">
-      <p class="hero-about__text">I’m an artist who creates beautiful and romantic portraiture, and I’m committed to my art and every client’s individuality. I believe your photographs are your legacy, and that each person I photograph has something to leave behind.</p>
-      <p class="hero-about__text">I’m a frequent exhibition goer and study my craft relentlessly. I enjoy watching artistic films that allow me to research different photographer’s perspectives and enjoy following many famous fashion photographers.</p>
-    </div>
-    <div class="hero-about__bottom-text">
-      <p class="hero-about__text">As a wedding photographer, I think I have an obligation to myself and my craft to learn and track other professional’s styles. For me, I find a deep inspiration from advertisement and fashion photography, as well as famous artists who take great care with documenting light in their work, like Rembrandt.</p>
-    </div>
-    <div class="hero-about__items">
-      <div class="hero-about__items-left">
-        <div class="hero-about__item">
-          <div class="hero-about__item-title">FAVORITE COUNTRY</div>
-          <div class="hero-about__item-text">France and Italy (can’t choose)</div>
+    <?php if ($title) : ?>
+      <h1 class="hero-about__title title"><?= $title ?></h1>
+    <?php endif; ?>
+
+    <?php if (!empty($text_items)) : ?>
+      <?php foreach ($text_items as $item) : ?>
+        <?php if ($item['columns'] == true) : ?>
+          <div class="hero-about__block-text hero-about__block-text--columns">
+            <p class="hero-about__text"><?= $item['text_left'] ?></p>
+            <p class="hero-about__text"><?= $item['text_right'] ?></p>
+          </div>
+        <?php else: ?>
+          <div class="hero-about__block-text">
+            <p class="hero-about__text"><?= $item['text'] ?></p>
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
+
+    <?php if (!empty($facts)) : ?>
+      <div class="hero-about__items">
+        <div class="hero-about__items-left">
+          <?php foreach ($facts
+
+          as $index => $item) : ?>
+          <?php if ($index >= count($facts) / 2 && $index < (count($facts) / 2) + 1) : ?>
         </div>
-        <div class="hero-about__item">
-          <div class="hero-about__item-title">SECRET TALENT</div>
-          <div class="hero-about__item-text">Snowboarding & Chick with secrets</div>
-        </div>
-      </div>
-      <div class="hero-about__items-right">
-        <div class="hero-about__item">
-          <div class="hero-about__item-title">FAVORITE DRINK</div>
-          <div class="hero-about__item-text">Red Wine with soft taste of Fruits</div>
-        </div>
-        <div class="hero-about__item">
-          <div class="hero-about__item-title">Current Location</div>
-          <div class="hero-about__item-text">Warsaw</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-about__bottom">
-      <div class="hero-about__item-title">Some of my works published at: </div>
-      <div class="hero-about__bottom-items">
-        <div class="hero-about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/hero-about__pic-01.png" alt="">
-        </div>
-        <div class="hero-about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/hero-about__pic-02.png" alt="">
-        </div>
-        <div class="hero-about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/hero-about__pic-03.png" alt="">
+        <div class="hero-about__items-right">
+          <?php endif; ?>
+          <div class="hero-about__item">
+            <div class="hero-about__item-title"><?= $item['title'] ?></div>
+            <div class="hero-about__item-text"><?= $item['text'] ?></div>
+          </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </div>
+    <?php endif; ?>
+
+    <?php if (!empty($logos)) : ?>
+      <div class="hero-about__bottom">
+        <div class="hero-about__item-title">Some of my works published at:</div>
+        <div class="hero-about__bottom-items">
+          <?php foreach ($logos as $logo) : ?>
+            <div class="hero-about__bottom-item">
+              <?= wp_get_attachment_image($logo['image'], 'large'); ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
   </div>
 </section>
 
