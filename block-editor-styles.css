@@ -231,6 +231,7 @@ html .edit-post-visual-editor .logo-small {
 
 html .edit-post-visual-editor .title {
     font: 500 38px/1.2 'Antiqua', serif;
+    text-transform: uppercase;
 }
 
 @media (min-width: 999px) {
@@ -300,283 +301,17 @@ html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
 }
 
-html .edit-post-visual-editor .hero-about {
+html .edit-post-visual-editor .hero-info {
     position: relative;
-    top: -90px;
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about {
-        height: 1375px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__bg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background: #d8d8d8;
-    height: 736px;
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__bg {
-        height: 1375px;
-    }
-}
-
-@media (max-width: 767px) {
-    html .edit-post-visual-editor .hero-about__bg--desktop {
-        display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__bg--mobile {
-        display: none;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__content {
-    position: relative;
-}
-
-@media (max-width: 998px) {
-    html .edit-post-visual-editor .hero-about__content {
-        padding-top: 736px;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__content {
-        max-width: 770px;
-        width: 60%;
-        background-color: #fff;
-        top: 117px;
-        margin-left: auto;
-        padding: 54px 27px 40px 31px;
-    }
+    margin-top: -90px;
+    color: #fff;
+    min-height: 736px;
 }
 
 @media (min-width: 1200px) {
-    html .edit-post-visual-editor .hero-about__content {
-        padding: 108px 54px 41px 63px;
+    html .edit-post-visual-editor .hero-info {
+        min-height: 1070px;
     }
-}
-
-html .edit-post-visual-editor .hero-about__title {
-    text-transform: uppercase;
-    line-height: 1.12;
-    top: 420px;
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__title {
-        top: 512px;
-    }
-}
-
-@media (max-width: 998px) {
-    html .edit-post-visual-editor .hero-about__title {
-        position: absolute;
-        left: -9px;
-        text-align: center;
-        color: #fff;
-        letter-spacing: 0.012em;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__title {
-        margin-bottom: 46px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__top-text {
-    border-bottom: 1px solid #F2F0EC;
-}
-
-@media (max-width: 998px) {
-    html .edit-post-visual-editor .hero-about__top-text {
-        margin: 23px 0 31px;
-        padding-right: 5px;
-    }
-    html .edit-post-visual-editor .hero-about__top-text .hero-about__text:last-child {
-        margin-bottom: 31px;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__top-text {
-        display: flex;
-        padding-bottom: 40px;
-    }
-    html .edit-post-visual-editor .hero-about__top-text .hero-about__text {
-        width: 50%;
-        padding-right: 11px;
-        margin-right: 17px;
-    }
-    html .edit-post-visual-editor .hero-about__top-text .hero-about__text:last-child {
-        padding-right: 0;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 998px) {
-    html .edit-post-visual-editor .hero-about__text {
-        margin-bottom: 21px;
-    }
-}
-
-@media (max-width: 998px) {
-    html .edit-post-visual-editor .hero-about__bottom-text {
-        margin-right: -5px;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__bottom-text {
-        margin-top: 39px;
-    }
-    html .edit-post-visual-editor .hero-about__bottom-text .hero-about__text {
-        margin-bottom: 28px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__items {
-    padding-left: 1px;
-    margin-bottom: 45px;
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__items {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media (max-width: 767px) {
-    html .edit-post-visual-editor .hero-about__items-left {
-        padding-top: 2px;
-    }
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__items-left {
-        width: 48%;
-        border-right: 1px solid #F2F0EC;
-    }
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__items-right {
-        width: 50%;
-        padding-left: 9px;
-    }
-}
-
-@media (max-width: 767px) {
-    html .edit-post-visual-editor .hero-about__items-right .hero-about__item:first-child {
-        margin-bottom: 23px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__item {
-    padding-right: 20px;
-}
-
-@media (max-width: 767px) {
-    html .edit-post-visual-editor .hero-about__item {
-        margin-bottom: 23px;
-    }
-    html .edit-post-visual-editor .hero-about__item:first-child {
-        margin-bottom: 15px;
-    }
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .hero-about__item {
-        margin-bottom: 45px;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__item {
-        margin-bottom: 31px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__item-title {
-    color: #A4A3A3;
-    text-transform: uppercase;
-    font-size: 13px;
-    line-height: 2.51;
-}
-
-html .edit-post-visual-editor .hero-about__item-text {
-    line-height: 2.18;
-    letter-spacing: 0.026em;
-}
-
-html .edit-post-visual-editor .hero-about__bottom {
-    text-align: center;
-}
-
-html .edit-post-visual-editor .hero-about__bottom-items {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 400px;
-}
-
-@media (max-width: 370px) {
-    html .edit-post-visual-editor .hero-about__bottom-items {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 450px) {
-    html .edit-post-visual-editor .hero-about__bottom-items {
-        margin: 43px 19px 70px 0;
-    }
-}
-
-@media (min-width: 451px) {
-    html .edit-post-visual-editor .hero-about__bottom-items {
-        margin: 43px auto 70px;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .hero-about__bottom-items {
-        margin: 43px auto 41px;
-    }
-}
-
-@media (max-width: 370px) {
-    html .edit-post-visual-editor .hero-about__bottom-item {
-        margin-bottom: 20px;
-    }
-}
-
-html .edit-post-visual-editor .hero-about__bottom-item:first-child {
-    width: 71px;
-    height: 33px;
-}
-
-html .edit-post-visual-editor .hero-about__bottom-item:nth-child(2) {
-    width: 133px;
-    height: 21px;
-}
-
-html .edit-post-visual-editor .hero-about__bottom-item:last-child {
-    width: 82px;
-    height: 29px;
-}
-
-html .edit-post-visual-editor .hero-info {
-    position: relative;
 }
 
 html .edit-post-visual-editor .hero-info__bg {
@@ -596,6 +331,47 @@ html .edit-post-visual-editor .hero-info__bg {
     html .edit-post-visual-editor .hero-info__bg--mobile {
         display: none;
     }
+}
+
+html .edit-post-visual-editor .hero-info__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 387px 20px 50px;
+    max-width: 720px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-info__center {
+        max-width: 850px;
+        padding-top: 317px;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 35px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-info__title {
+        font-size: 52px;
+    }
+}
+
+html .edit-post-visual-editor .hero-info__btn {
+    min-width: 232px;
+    min-height: 43px;
+    border: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: 0.026em;
 }
 
 /*# sourceMappingURL=block-editor-styles.css.map */

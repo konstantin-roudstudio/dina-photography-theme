@@ -1,17 +1,41 @@
 <?php
-$title = get_sub_field('about_title');
-$image = get_sub_field('about_image');
+$title = get_sub_field('title');
+$bg_id = get_sub_field('image');
+$bg_mob_id = get_sub_field('image_mobile');
+$button = get_sub_field('button');
+
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
+
+if ($button) {
+  $button_url = $button['url'];
+  $button_title = $button['title'];
+  $button_target = $button['target'] ? $button['target'] : '_self';
+}
 
 ?>
 
 <section class="hero-info">
-  <div class="hero-info__bg hero-info__bg--desktop"></div>
+  <?php if ($bg_img): ?>
+    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--desktop'; ?>">
+      <?= $bg_img ?>
+    </div>
+  <?php endif; ?>
 
-  <div class="hero-info__bg hero-info__bg--mobile"></div>
+  <?php if ($bg_mob_img): ?>
+    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--mobile'; ?>">
+      <?= $bg_mob_img ?>
+    </div>
+  <?php endif; ?>
 
   <div class="center hero-info__center">
-    <h1 class="hero-info__title title">wedding photographer in south of france</h1>
-    <a href="#" class="btn btn--solid">Explore Portfolio</a>
+    <?php if ($title) : ?>
+      <h1 class="hero-info__title title"><?= $title ?></h1>
+    <?php endif; ?>
+
+    <?php if ($button): ?>
+      <a href="<?php echo esc_url($button_url); ?>" target="<?php echo esc_attr($button_target); ?>"
+         class="hero-info__btn btn btn--solid"><?php echo esc_html($button_title); ?></a>
+    <?php endif; ?>
   </div>
 </section>
-
