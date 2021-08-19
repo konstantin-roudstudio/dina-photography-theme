@@ -1,5 +1,13 @@
 .hero-reviews {
   position: relative;
+  margin-top: -90px;
+  color: #fff;
+  min-height: 734px;
+
+  @media (--desktop-up) {
+    margin-top: -92px;
+    min-height: 898px;
+  }
 
   &__bg {
     position: absolute;
@@ -18,5 +26,53 @@
         display: none;
       }
     }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 338px 20px 110px;
+
+    @media (--desktop-up) {
+      padding: 459px 30px 187px;
+    }
+  }
+
+  &__quote {
+    width: 25px;
+    height: 17px;
+    fill: #fff;
+    margin-bottom: 29px;
+  }
+
+  &__title {
+    max-width: 810px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 29px;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 642px;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    width: 7px;
+    height: 49px;
+
+    @media (--desktop-up) {
+      bottom: -108px;
+    }
+  }
+
+  &__arrow-path {
+    fill: #fff;
   }
 }
