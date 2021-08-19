@@ -26,7 +26,7 @@ $bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
 
   <div class="hero-about__content">
     <?php if ($title) : ?>
-      <h1 class="hero-about__title title"><?= $title ?></h1>
+      <h1 class="hero-about__title title"><?= nl2br($title) ?></h1>
     <?php endif; ?>
 
     <?php if (!empty($text_items)) : ?>
