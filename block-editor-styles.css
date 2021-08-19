@@ -11,7 +11,7 @@
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
@@ -302,8 +302,105 @@ html .edit-post-visual-editor .wysiwyg-content img {
 }
 
 html .edit-post-visual-editor .feedback {
-    background: #a00000;
-    min-height: 50px;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback {
+        min-height: 800px;
+        flex-direction: row;
+    }
+}
+
+html .edit-post-visual-editor .feedback__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(./images/feedback-bg.jpg) no-repeat center/cover;
+}
+
+html .edit-post-visual-editor .feedback__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback__center {
+        /*   margin: 0;
+      max-width: 1440px;*/
+    }
+}
+
+html .edit-post-visual-editor .feedback__content {
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback__content {
+        max-width: 645px;
+        padding-bottom: 70px;
+    }
+}
+
+html .edit-post-visual-editor .feedback__content-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.8) 80%);
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .feedback__content-bg {
+        height: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .feedback__content-bg {
+        height: 50%;
+        background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.5) 80%);
+    }
+}
+
+html .edit-post-visual-editor .feedback__img {
+    width: 25px;
+    height: 17px;
+    margin-bottom: 25px;
+}
+
+html .edit-post-visual-editor .feedback blockquote {
+    margin: 0 0 30px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback blockquote {
+        display: flex;
+    }
+}
+
+html .edit-post-visual-editor .feedback blockquote p {
+    margin-bottom: 20px;
+}
+
+html .edit-post-visual-editor .feedback blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback blockquote p {
+        width: 50%;
+        margin-bottom: 0;
+        padding-right: 20px;
+    }
 }
 
 html .edit-post-visual-editor .hero-info {
