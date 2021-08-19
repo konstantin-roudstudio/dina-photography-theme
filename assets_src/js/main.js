@@ -1,10 +1,10 @@
 import 'regenerator-runtime/runtime.js';
-import animations from './utils/animations';
+// import animations from './utils/animations';
 import fixVhOnResize from './utils/fixVhOnResize';
-import testimonials from './modules/testimonials'
 import mobMenu from './modules/mob-menu';
 import windowWidthResize from './utils/windowWidthResize';
 import stickyHeader from './modules/header';
+import heroSlider from './modules/hero-slider'
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -12,11 +12,11 @@ import stickyHeader from './modules/header';
   const initMethods = [
     fixVhOnResize,
     windowWidthResize,
-    testimonials,
-    animations,
+    // animations,
     /*disablePageScroll,*/
     mobMenu,
-    stickyHeader
+    stickyHeader,
+    heroSlider
   ];
 
   $(() => {
