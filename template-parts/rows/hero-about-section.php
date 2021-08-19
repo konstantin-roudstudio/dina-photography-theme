@@ -15,12 +15,18 @@ $bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
   <?php if ($bg_img): ?>
     <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--desktop'; ?>">
       <?= $bg_img ?>
+      <?php if ($title) : ?>
+        <h1 class="hero-about__title title"><?= nl2br($title) ?></h1>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($bg_mob_img): ?>
     <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--mobile'; ?>">
       <?= $bg_mob_img ?>
+      <?php if ($title) : ?>
+        <h1 class="hero-about__title title"><?= nl2br($title) ?></h1>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
 
