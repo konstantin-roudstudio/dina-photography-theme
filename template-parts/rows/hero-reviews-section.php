@@ -39,8 +39,8 @@ $bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
 
     <?php if ($link): ?>
       <a href="<?= esc_url($link); ?>" class="hero-reviews__arrow">
-        <svg>
-          <path class="hero-reviews__arrow-path" d="M4 0.5V0H3V0.5H4ZM3.5 48.5L6.38675 43.5H0.613249L3.5 48.5ZM3 0.5V44H4V0.5H3Z" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 49" class="hero-reviews__arrow-svg">
+          <polygon points="4 43.5 4 0.5 4 0 3 0 3 0.5 3 43.5 0.61 43.5 3.5 48.5 6.39 43.5 4 43.5"/>
         </svg>
       </a>
     <?php endif; ?>
