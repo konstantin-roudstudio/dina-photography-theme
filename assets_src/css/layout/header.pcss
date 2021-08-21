@@ -2,8 +2,10 @@
   min-height: 60px;
 
   &__inner {
-    transition: transform .3s;
-    position: relative;
+    transition: transform .3s ease;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
 
   &__center {
@@ -29,9 +31,15 @@
     }
   }
 
+  &__block {
+    transition: all .3s ease;
+    display: flex;
+    //position: relative;
+  }
+
   &__info {
     z-index: 5;
-    transition: opacity .3s;
+    transition: all .3s ease;
 
     @media (--desktop-up) {
       border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -41,10 +49,11 @@
   &__btn {
     display: none;
     padding: 14px 20px 13px;
+    transition: all .3s ease;
 
     @media (--desktop-up) {
       display: inline-flex;
-      margin-top: 4px;
+      margin: 4px 2px 0 0;
     }
   }
 
@@ -62,51 +71,50 @@
 }
 
 .header-fixed {
-  .header {
-    background-color: #fff;
-  }
+  @media (--desktop-up) {
+    .header {
+      background-color: #fff;
+    }
 
-  .header__inner {
-    position: fixed;
-    left: 0;
-    right: 0;
-    padding-bottom: 11px;
-    margin-bottom: 11px;
-    transform: translateY(11px);
-  }
+    .header__wrapper {
+      //transform: translateY(-30px);
+    }
 
-  .main-nav__inner {
-    padding: 0;
-  }
+    .header__inner {
+      transform: translateY(-42px);
+    }
 
-  .main-nav__main {
-    align-items: center;
-  }
+    .main-nav__inner {
+      //padding: 0;
+      //transform: translateY(5px)
+    }
 
-  .main-nav__secondary {
-    align-items: center;
-  }
+    .main-nav__main {
+      transform: translateX(90px);
+    }
 
-  .header__info {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-  }
+    .main-nav__secondary {
+      align-items: center;
+    }
 
-  .header__btn {
-    margin-top: 0;
-    padding: 11px 0;
-  }
+    .header__info {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
 
-  .header__block {
-    display: flex;
-    /*align-items: center;*/
-  }
+    .header__btn {
+      padding: 11px 0;
+      transform: translateY(24px);
+    }
 
-  .logo-small {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-    position: relative;
+    .header__block {
+      /*align-items: center;*/
+    }
+
+    .logo-small {
+      opacity: 1;
+      visibility: visible;
+      transition: all .3s ease, visibility 0s 0s;
+    }
   }
 }
