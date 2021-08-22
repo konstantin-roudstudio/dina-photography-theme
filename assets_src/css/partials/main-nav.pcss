@@ -11,7 +11,6 @@
     transform: scaleY(0);
     transform-origin: 50% 0;
     opacity: 0;
-    overflow: auto;
     visibility: hidden;
     padding-top: 90px;
     transition: all .3s .2s ease, visibility 0s .5s;
@@ -19,9 +18,7 @@
 
   &__inner {
     @media (--laptop-down) {
-      //display: flex;
-      //flex-direction: column;
-      //justify-content: center;
+      overflow: auto;
       opacity: 0;
       transform: translateY(-20px);
       transition: all .2s ease;
@@ -32,7 +29,6 @@
     @media (--desktop-up) {
       display: flex;
       justify-content: space-between;
-      /*align-items: center;*/
       padding: 13px 0;
     }
   }
@@ -51,22 +47,13 @@
     padding: 14px 20px 13px;
   }
 
-  &__socials-wrapper {
+  &__socials {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 
     @media (--desktop-up) {
       display: none;
-    }
-  }
-
-  &__socials {
-    width: 37px;
-    height: 37px;
-    margin-right: 12px;
-
-    &:last-child {
-      margin-right: 0;
     }
   }
 
@@ -131,8 +118,13 @@
 
   &__secondary {
     @media (--laptop-down) {
-      border-bottom: 1px solid rgba(0, 0, 0, .3);
-      border-top: 1px solid rgba(0, 0, 0, .3);
+      > .menu-item {
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+        &:first-child {
+          border-top: 1px solid rgba(0, 0, 0, .3);
+        }
+      }
     }
 
     @media (--desktop-up) {
@@ -325,8 +317,6 @@
       }
 
       @media (--laptop-down) {
-        border-bottom: 1px solid rgba(0, 0, 0, .3);
-
         .menu-item {
           &:last-child {
             padding-bottom: 20px;

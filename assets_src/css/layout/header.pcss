@@ -34,7 +34,6 @@
   &__block {
     transition: all .3s ease;
     display: flex;
-    //position: relative;
   }
 
   &__info {
@@ -47,12 +46,15 @@
   }
 
   &__btn {
-    display: none;
     padding: 14px 20px 13px;
     transition: all .3s ease;
 
+    @media (--laptop-down) {
+      display: none;
+    }
+
     @media (--desktop-up) {
-      display: inline-flex;
+      //display: inline-flex;
       margin: 4px 2px 0 0;
     }
   }
@@ -76,17 +78,8 @@
       background-color: #fff;
     }
 
-    .header__wrapper {
-      //transform: translateY(-30px);
-    }
-
     .header__inner {
       transform: translateY(-42px);
-    }
-
-    .main-nav__inner {
-      //padding: 0;
-      //transform: translateY(5px)
     }
 
     .main-nav__main {
@@ -105,10 +98,6 @@
     .header__btn {
       padding: 11px 0;
       transform: translateY(24px);
-    }
-
-    .header__block {
-      /*align-items: center;*/
     }
 
     .logo-small {
