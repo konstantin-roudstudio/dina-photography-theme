@@ -9,15 +9,30 @@
  * @package DinaPhotography
  */
 
+$text = get_field('footer_title', 'option');
+$copyright = get_field('footer_copyright', 'option');
+$logos = get_field('footer_partners', 'option');
+$bg_id = get_field('footer_background', 'option');
+$bg_mob_id = get_field('footer_mobile_background', 'option');
+
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
+
 ?>
 
 <footer class="footer">
-  <div class="footer__bg"></div>
+  <?php if ($bg_img) : ?>
+    <div class="footer__bg<?php if ($bg_img && $bg_mob_img) echo ' footer__bg--desktop'; ?>"><?= $bg_img ?></div>
+  <?php endif; ?>
+
+  <?php if ($bg_mob_img) : ?>
+    <div class="footer__bg<?php if ($bg_img && $bg_mob_img) echo ' footer__bg--mobile'; ?>"><?= $bg_mob_img ?></div>
+  <?php endif; ?>
+
   <div class="footer__center center">
     <div class="footer__inner">
       <div class="footer__main">
-        <h2 class="footer__title">I’m an artist who creates beautiful and romantic portraiture, and I’m committed to my
-          art and every client’s<br> individuality.</h2>
+        <h2 class="footer__title"><?= nl2br($text) ?></h2>
         <div class="footer__nav footer__nav--wide">
           <h3 class="footer__subtitle">Photography</h3>
           <?php
@@ -79,19 +94,21 @@
           </svg>
           check your date
         </button>
-        <a href="#" class="footer__rights">&copy; 2021. Dina Deykun. All rights reserved. Privacy Policy.</a>
+        <div class="footer__rights"><span><?= $copyright ?></span> <a href="#">Privacy Policy.</a></div>
       </div>
+    </div>
 
-    </div>
+    <?php if($logos) : ?>
     <div class="footer__partners">
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-partners-01.png" alt=""></a>
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-partners-02.png" alt=""></a>
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?> /images/footer-partners-03.png" alt=""></a>
+      <?php foreach ($logos as $item) :
+        $img = wp_get_attachment_image($item['logo'], 'large');
+      ?>
+        <a href="#"><?= $img ?></a>
+      <?php endforeach; ?>
     </div>
+    <?php endif; ?>
   </div>
 </footer>
-<?php /* get_template_part('template-parts/cookies-bar') */ ?>
-
 </div>
 </div>
 
