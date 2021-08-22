@@ -12,6 +12,8 @@
 $fb_link = get_field('fb_link', 'option');
 $insta_link = get_field('insta_link', 'option');
 
+$light_header = get_field('light_header');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -48,7 +50,7 @@ $insta_link = get_field('insta_link', 'option');
 		<div class="wrapper">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dina_photography' ); ?></a>
 
-			<header class="header" id="header">
+			<header class="header<?php if($light_header) echo ' header--light'; ?>" id="header">
         <div class="header__inner">
           <div class="header__center center">
             <div class="header__wrapper">
