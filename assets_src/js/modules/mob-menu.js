@@ -14,6 +14,11 @@ export default function mobMenu($) {
       disablePageScroll(true);
     } else {
       enableScroll();
+
+      setTimeout(function () {
+        $('.sub-menu__container').hide();
+        $hasChildren.removeClass('visible');
+      }, 500)
     }
   });
 
