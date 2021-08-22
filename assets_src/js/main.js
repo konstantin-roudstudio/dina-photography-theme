@@ -10,7 +10,7 @@ import stickyHeader from './modules/header';
 
 (function ($) {
   const initMethods = [
-    fixVhOnResize,
+    // fixVhOnResize,
     windowWidthResize,
     testimonials,
     animations,

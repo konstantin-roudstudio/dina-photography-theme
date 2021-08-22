@@ -36,15 +36,18 @@
 
 .logo-small {
   opacity: 0;
-  visibility: hidden;
   margin-right: 38px;
-  font-family: 'Antiqua';
+  font-family: 'Antiqua', serif;
   font-size: 22px;
   letter-spacing: 0.026em;
   line-height: 1.1;
   font-weight: 400;
-  transform: translateX(-2em);
-  transition: transform .3s .3s, opacity .5s;
+  transition: opacity .3s, visibility 0s .3s;
   position: absolute;
-  left: 0;
+  visibility: hidden;
+  top: 60px;
+
+  @media (--laptop-down) {
+    display: none;
+  }
 }
