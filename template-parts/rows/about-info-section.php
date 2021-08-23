@@ -2,6 +2,8 @@
 ?>
 
 <section class="about">
-  ABOUT SECTION
+  <div class="about__inner">
+    ABOUT SECTION
+  </div>  
 </section>
 
