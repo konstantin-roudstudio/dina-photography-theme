@@ -96,13 +96,8 @@
   }
 
   &--slider {
-    .feedback__item {
-      margin-right: 30px;
-    }
-
-    .feedback__slider-bottom {
-      display: flex;
-      margin-bottom: 40px;
+    .swiper-wrapper {
+      margin-bottom: 20px;
     }
 
     .swiper-button-prev,
@@ -112,13 +107,19 @@
       opacity: 1;
       color: transparent;
       position: relative;
+
       &::after {
-      display: none;
-    }
+        display: none;
+      }
 
       svg {
         background: red;
       }
+    }
+
+    .feedback__slider-nav {
+      display: flex;
+      margin-bottom: 40px;
     }
 
     .feedback__numbers {

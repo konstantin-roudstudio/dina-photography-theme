@@ -416,13 +416,8 @@ html .edit-post-visual-editor .feedback__author {
     font-style: italic;
 }
 
-html .edit-post-visual-editor .feedback--slider .feedback__item {
-    margin-right: 30px;
-}
-
-html .edit-post-visual-editor .feedback--slider .feedback__slider-bottom {
-    display: flex;
-    margin-bottom: 40px;
+html .edit-post-visual-editor .feedback--slider .swiper-wrapper {
+    margin-bottom: 20px;
 }
 
 html .edit-post-visual-editor .feedback--slider .swiper-button-prev,
@@ -442,6 +437,11 @@ html .edit-post-visual-editor .feedback--slider .swiper-button-next::after {
 html .edit-post-visual-editor .feedback--slider .swiper-button-prev svg,
 html .edit-post-visual-editor .feedback--slider .swiper-button-next svg {
     background: red;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__slider-nav {
+    display: flex;
+    margin-bottom: 40px;
 }
 
 html .edit-post-visual-editor .feedback--slider .feedback__numbers {

@@ -40,10 +40,11 @@
             </div>
             <div class="feedback__author">- Frej & Chinami</div>
           </div>
+
+
         </div>
 
-
-        <div class="feedback__slider-bottom">
+        <div class="feedback__slider-nav">
           <div class="swiper-button-prev">
             <svg width="56" height="7" viewBox="0 0 56 7" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M55.5 4H56V3H55.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM55.5 3H5V4H55.5V3Z" fill="white"/>
