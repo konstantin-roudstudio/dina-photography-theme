@@ -313,6 +313,13 @@ html .edit-post-visual-editor .about {
 
 html .edit-post-visual-editor .about__inner {
     padding: 70px 0 61px;
+    position: relative;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .about__inner {
+        padding: 175px 0 63px;
+    }
 }
 
 html .edit-post-visual-editor .about__title {
@@ -325,15 +332,110 @@ html .edit-post-visual-editor .about__title {
 @media (min-width: 999px) {
     html .edit-post-visual-editor .about__title {
         font-size: 38px;
+        max-width: 52%;
+        margin-left: auto;
+        margin-bottom: 78px;
+        line-height: 1.2;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__title {
+        max-width: 643px;
+    }
+}
+
+html .edit-post-visual-editor .about__img-desktop {
+    display: none;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .about__img-desktop {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 143px;
+        width: 420px;
+    }
+    html .edit-post-visual-editor .about__img-desktop::after {
+        content: '';
+        display: block;
+        padding-bottom: 143%;
+    }
+    html .edit-post-visual-editor .about__img-desktop img {
+        background: rgba(0, 0, 0, 0.3);
+        display: block;
+        -o-object-fit: cover;
+           object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__img-desktop {
+        left: 6.5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 68px;
     }
 }
 
 html .edit-post-visual-editor .about__img {
     margin-bottom: 41px;
+    position: relative;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .about__img {
+        max-width: 600px;
+        left: 10%;
+        margin-bottom: 68px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__img {
+        margin-bottom: 0;
+        width: 600px;
+        left: 16%;
+    }
+}
+
+html .edit-post-visual-editor .about__img::after {
+    content: '';
+    display: block;
+    padding-bottom: 70%;
 }
 
 html .edit-post-visual-editor .about__img img {
+    background: rgba(0, 0, 0, 0.3);
     display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__content {
+        max-width: 308px;
+        margin: 0 2px 25px 0;
+    }
 }
 
 html .edit-post-visual-editor .about__text {
@@ -341,11 +443,59 @@ html .edit-post-visual-editor .about__text {
     margin-bottom: 26px;
 }
 
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .about__text {
+        max-width: 100%;
+    }
+}
+
 html .edit-post-visual-editor .about__btn {
     min-width: 150px;
     padding: 13px 35px;
     font-size: 13px;
     letter-spacing: 0.026em;
+    margin-bottom: 69px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .about__btn {
+        margin-bottom: 0;
+    }
+}
+
+html .edit-post-visual-editor .about__bottom-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 386px;
+    margin: auto;
+}
+
+@media (max-width: 370px) {
+    html .edit-post-visual-editor .about__bottom-items {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 370px) {
+    html .edit-post-visual-editor .about__bottom-item {
+        margin-bottom: 20px;
+    }
+}
+
+html .edit-post-visual-editor .about__bottom-item:first-child {
+    width: 71px;
+    height: 33px;
+}
+
+html .edit-post-visual-editor .about__bottom-item:nth-child(2) {
+    width: 133px;
+    height: 21px;
+}
+
+html .edit-post-visual-editor .about__bottom-item:last-child {
+    width: 82px;
+    height: 29px;
 }
 
 html .edit-post-visual-editor .hero-info {

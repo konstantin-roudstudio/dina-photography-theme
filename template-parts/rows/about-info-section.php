@@ -5,6 +5,9 @@
   <div class="about__center center">
     <div class="about__inner">
       <div class="about__title title">I work to capture the beauty, emotion and magic of the most important day of your life. </div>
+      <div class="about__img-desktop">
+        <img src="<?php echo get_template_directory_uri(); ?>">
+      </div>
       <div class="about__content-wrapper">
         <div class="about__img">
           <img src="<?php echo get_template_directory_uri(); ?> /images/about__img.jpg" alt="">
@@ -14,7 +17,17 @@
           <a href="#" class="about__btn btn">My Story</a>
         </div>
       </div>
-      <div class="about__partners"></div>
+      <div class="about__bottom-items">
+        <div class="about__bottom-item">
+          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-01.png" alt="">
+        </div>
+        <div class="about__bottom-item">
+          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-02.png" alt="">
+        </div>
+        <div class="about__bottom-item">
+          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-03.png" alt="">
+        </div>
+      </div>
     </div>
   </div> 
 </section>
