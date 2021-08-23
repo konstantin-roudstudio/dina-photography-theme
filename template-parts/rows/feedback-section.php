@@ -4,7 +4,7 @@
 
 <section class="feedback">
   <div class="feedback__bg"></div>
-<!--  <div class="feedback__content-bg"></div>-->
+  <div class="feedback__content-bg"></div>
   <div class="feedback__center center">
     <div class="feedback__content">
 
