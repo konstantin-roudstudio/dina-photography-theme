@@ -416,6 +416,64 @@ html .edit-post-visual-editor .feedback__author {
     font-style: italic;
 }
 
+html .edit-post-visual-editor .feedback--slider .feedback__item {
+    margin-right: 30px;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__slider-bottom {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+html .edit-post-visual-editor .feedback--slider .swiper-button-prev,
+html .edit-post-visual-editor .feedback--slider .swiper-button-next {
+    width: 56px;
+    /*top: 90%;*/
+    opacity: 1;
+    color: transparent;
+    position: relative;
+}
+
+html .edit-post-visual-editor .feedback--slider .swiper-button-prev::after,
+html .edit-post-visual-editor .feedback--slider .swiper-button-next::after {
+    display: none;
+}
+
+html .edit-post-visual-editor .feedback--slider .swiper-button-prev svg,
+html .edit-post-visual-editor .feedback--slider .swiper-button-next svg {
+    background: red;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__numbers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__number {
+    line-height: 1.21;
+    min-width: 20px;
+    padding: 0 5px;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__slash {
+    position: relative;
+    width: 16px;
+    height: 30px;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__slash::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    transform: rotate(30deg);
+    background-color: #fff;
+}
+
 html .edit-post-visual-editor .hero-info {
     position: relative;
     margin-top: -90px;
