@@ -63,13 +63,22 @@
 
     @media (--laptop-up) {
       font-size: 38px;
+      line-height: 1.2;
     }
   }
 
   &__text {
+    &:nth-last-child(n+2) {
+      margin-bottom: 20px;
+    }
+
     @media (--laptop-up) {
       max-width: 363px;
     }
+  }
+
+  &__btn {
+    color: inherit;
   }
 
   &--text-right {
