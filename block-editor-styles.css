@@ -174,7 +174,7 @@ html .edit-post-visual-editor .center {
 }
 
 html .edit-post-visual-editor .logo {
-    font-family: 'Antiqua';
+    font-family: 'Antiqua', serif;
     font-weight: 400;
     line-height: 1.1;
     display: flex;
@@ -184,6 +184,7 @@ html .edit-post-visual-editor .logo {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    color: inherit;
 }
 
 @media (min-width: 1200px) {
@@ -216,17 +217,22 @@ html .edit-post-visual-editor .logo__main {
 
 html .edit-post-visual-editor .logo-small {
     opacity: 0;
-    visibility: hidden;
     margin-right: 38px;
-    font-family: 'Antiqua';
+    font-family: 'Antiqua', serif;
     font-size: 22px;
     letter-spacing: 0.026em;
     line-height: 1.1;
     font-weight: 400;
-    transform: translateX(-2em);
-    transition: transform .3s .3s, opacity .5s;
+    transition: opacity .3s, visibility 0s .3s;
     position: absolute;
-    left: 0;
+    visibility: hidden;
+    top: 60px;
+}
+
+@media (max-width: 1199px) {
+    html .edit-post-visual-editor .logo-small {
+        display: none;
+    }
 }
 
 html .edit-post-visual-editor .title {
@@ -301,17 +307,172 @@ html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
 }
 
+html .edit-post-visual-editor .cta-section {
+    background-color: #fff;
+}
+
+html .edit-post-visual-editor .cta-section--cream {
+    background-color: #F2F0EC;
+}
+
+html .edit-post-visual-editor .cta-section__inner {
+    padding: 55px 0 68px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-section__inner {
+        padding: 90px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .cta-section__inner {
+        padding: 186px 140px 170px 85px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__title {
+    font: 500 28px/1.1 'Antiqua', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 43px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-section__title {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__img-wrapper {
+    position: relative;
+}
+
+@media (max-width: 998px) {
+    html .edit-post-visual-editor .cta-section__img-wrapper {
+        margin-bottom: 43px;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-section__img-wrapper.mob {
+        display: none;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__img-wrapper.desktop {
+    display: none;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-section__img-wrapper.desktop {
+        display: block;
+        width: 29%;
+        max-width: 308px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__img-wrapper::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .cta-section__img-wrapper {
+        max-width: 450px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__img {
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-section__content {
+        width: 57%;
+        max-width: 503px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__text {
+    margin-bottom: 22px;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .cta-section__text {
+        margin-bottom: 32px;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__btn {
+    padding: 12px 28px;
+    min-height: 43px;
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .cta-section__btn {
+        margin-right: 41px;
+    }
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .cta-section__link-wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+html .edit-post-visual-editor .cta-section__link {
+    display: none;
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+html .edit-post-visual-editor .cta-section__link::before {
+    background: currentColor;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    right: 0;
+    height: 1px;
+    opacity: 0;
+    transform: scaleX(0.5);
+    transform-origin: 0 50%;
+    transition: all .2s ease;
+}
+
+html .edit-post-visual-editor .cta-section__link:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .cta-section__link {
+        display: inline-flex;
+    }
+}
+
 html .edit-post-visual-editor .hero-info {
     position: relative;
     margin-top: -90px;
     color: #fff;
-    min-height: 736px;
-}
-
-@media (min-width: 1200px) {
-    html .edit-post-visual-editor .hero-info {
-        min-height: 1070px;
-    }
+    min-height: 100vh;
 }
 
 html .edit-post-visual-editor .hero-info__bg {
@@ -333,20 +494,28 @@ html .edit-post-visual-editor .hero-info__bg {
     }
 }
 
+html .edit-post-visual-editor .hero-info__bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
 html .edit-post-visual-editor .hero-info__center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 387px 20px 50px;
+    padding: 36vh 20px 50px;
     max-width: 720px;
 }
 
 @media (min-width: 999px) {
     html .edit-post-visual-editor .hero-info__center {
         max-width: 850px;
-        padding-top: 317px;
+        padding-top: 29vh;
     }
 }
 
