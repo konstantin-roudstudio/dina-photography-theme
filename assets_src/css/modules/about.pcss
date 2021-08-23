@@ -1,5 +1,46 @@
 .about {
-	&__inner {
-		padding: 70px 0 61px;
-	}
+	background: #F2F0EC;
+
+  &__center {}
+
+  &__inner {
+    padding: 70px 0 61px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.36;
+    letter-spacing: 0.028em;
+    margin-bottom: 36px;
+
+    @media (--laptop-up) {
+      font-size: 38px;
+    }
+  }
+
+  &__content-wrapper {}
+
+  &__img {
+  	margin-bottom: 41px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__content {}
+
+  &__text {
+  	max-width: 308px;
+  	margin-bottom: 26px;
+  }
+
+  &__btn {
+  	min-width: 150px;
+  	padding: 13px 35px;
+  	font-size: 13px;
+  	letter-spacing: 0.026em;
+  }
+
+  &__partners {}
 }

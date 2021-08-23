@@ -307,8 +307,45 @@ html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
 }
 
+html .edit-post-visual-editor .about {
+    background: #F2F0EC;
+}
+
 html .edit-post-visual-editor .about__inner {
     padding: 70px 0 61px;
+}
+
+html .edit-post-visual-editor .about__title {
+    font-size: 28px;
+    line-height: 1.36;
+    letter-spacing: 0.028em;
+    margin-bottom: 36px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .about__title {
+        font-size: 38px;
+    }
+}
+
+html .edit-post-visual-editor .about__img {
+    margin-bottom: 41px;
+}
+
+html .edit-post-visual-editor .about__img img {
+    display: block;
+}
+
+html .edit-post-visual-editor .about__text {
+    max-width: 308px;
+    margin-bottom: 26px;
+}
+
+html .edit-post-visual-editor .about__btn {
+    min-width: 150px;
+    padding: 13px 35px;
+    font-size: 13px;
+    letter-spacing: 0.026em;
 }
 
 html .edit-post-visual-editor .hero-info {
