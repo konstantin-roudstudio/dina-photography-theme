@@ -302,26 +302,39 @@ html .edit-post-visual-editor .wysiwyg-content img {
 }
 
 html .edit-post-visual-editor .feedback {
-    min-height: 600px;
+    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-@media (min-width: 999px) {
+@media (min-width: 768px) {
     html .edit-post-visual-editor .feedback {
-        min-height: 800px;
         flex-direction: row;
     }
 }
 
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback {
+        min-height: 832px;
+    }
+}
+
 html .edit-post-visual-editor .feedback__bg {
+    background: #d8d8d8;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(./images/feedback-bg.jpg) no-repeat center/cover;
+}
+
+html .edit-post-visual-editor .feedback__bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 html .edit-post-visual-editor .feedback__center {
@@ -342,10 +355,10 @@ html .edit-post-visual-editor .feedback__content {
     padding-bottom: 50px;
 }
 
-@media (min-width: 999px) {
+@media (min-width: 768px) {
     html .edit-post-visual-editor .feedback__content {
         max-width: 645px;
-        padding-bottom: 70px;
+        padding-bottom: 67px;
     }
 }
 
@@ -371,35 +384,30 @@ html .edit-post-visual-editor .feedback__content-bg {
     }
 }
 
-html .edit-post-visual-editor .feedback__img {
+html .edit-post-visual-editor .feedback__quotemark {
     width: 25px;
     height: 17px;
     margin-bottom: 25px;
 }
 
-html .edit-post-visual-editor .feedback blockquote {
-    margin: 0 0 30px;
+html .edit-post-visual-editor .feedback__quotemark-svg {
+    fill: currentcolor;
 }
 
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .feedback blockquote {
-        display: flex;
-    }
+html .edit-post-visual-editor .feedback__quote {
+    margin: 0 0 8px;
 }
 
-html .edit-post-visual-editor .feedback blockquote p {
+html .edit-post-visual-editor .feedback__quote p {
     margin-bottom: 20px;
 }
 
-html .edit-post-visual-editor .feedback blockquote p:last-child {
-    margin-bottom: 0;
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .feedback blockquote p {
-        width: 50%;
-        margin-bottom: 0;
-        padding-right: 20px;
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .feedback__quote {
+        -moz-column-count: 2;
+             column-count: 2;
+        -moz-column-gap: 30px;
+             column-gap: 30px;
     }
 }
 

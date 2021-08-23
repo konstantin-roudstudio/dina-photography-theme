@@ -5,6 +5,7 @@ import testimonials from './modules/testimonials'
 import mobMenu from './modules/mob-menu';
 import windowWidthResize from './utils/windowWidthResize';
 import stickyHeader from './modules/header';
+import feedbackSlider from './modules/feedback-slider';
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -16,7 +17,8 @@ import stickyHeader from './modules/header';
     animations,
     /*disablePageScroll,*/
     mobMenu,
-    stickyHeader
+    stickyHeader,
+    feedbackSlider,
   ];
 
   $(() => {
