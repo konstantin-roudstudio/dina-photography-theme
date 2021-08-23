@@ -1,9 +1,27 @@
 .header {
   min-height: 60px;
+  transition: color .3s ease;
 
   &__inner {
-    transition: transform .3s;
-    position: relative;
+    background: rgba(255, 255, 255, 0);
+    transition: transform .3s ease;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    &::before {
+      background: #ffffff;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: -11px;
+      transition: opacity .3s ease;
+      z-index: -1;
+      opacity: 0;
+    }
   }
 
   &__center {
@@ -29,9 +47,13 @@
     }
   }
 
+  &__block {
+    display: flex;
+  }
+
   &__info {
     z-index: 5;
-    transition: opacity .3s;
+    transition: opacity .3s ease, transform .3s ease;
 
     @media (--desktop-up) {
       border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -39,12 +61,18 @@
   }
 
   &__btn {
-    display: none;
     padding: 14px 20px 13px;
+    transition: padding .3s ease, transform .3s ease;
+    color: currentColor;
+    transform: translate(0, 0);
+
+    @media (--laptop-down) {
+      display: none;
+    }
 
     @media (--desktop-up) {
-      display: inline-flex;
-      margin-top: 4px;
+      //display: inline-flex;
+      //margin: 4px 2px 0 0;
     }
   }
 
@@ -54,59 +82,45 @@
     .header__info {
       border: none;
     }
-
-    .btn {
-      color: #fff;
-    }
   }
 }
 
 .header-fixed {
-  .header {
-    background-color: #fff;
-  }
+  @media (--desktop-up) {
+    .header {
+      color: #000;
+    }
 
-  .header__inner {
-    position: fixed;
-    left: 0;
-    right: 0;
-    padding-bottom: 11px;
-    margin-bottom: 11px;
-    transform: translateY(11px);
-  }
+    .header__inner {
+      transform: translateY(-42px);
 
-  .main-nav__inner {
-    padding: 0;
-  }
+      &::before {
+        opacity: .8;
+      }
+    }
 
-  .main-nav__main {
-    align-items: center;
-  }
+    .main-nav__main {
+      transform: translateX(90px);
+    }
 
-  .main-nav__secondary {
-    align-items: center;
-  }
+    .main-nav__secondary {
+      align-items: center;
+    }
 
-  .header__info {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-  }
+    .header__info {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
 
-  .header__btn {
-    margin-top: 0;
-    padding: 11px 0;
-  }
+    .header__btn {
+      padding: 11px 0;
+      transform: translateY(24px);
+    }
 
-  .header__block {
-    display: flex;
-    /*align-items: center;*/
-  }
-
-  .logo-small {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-    position: relative;
+    .logo-small {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s ease, visibility 0s 0s;
+    }
   }
 }

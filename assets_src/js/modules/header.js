@@ -1,5 +1,6 @@
 export default function stickyHeader($) {
     const $wrapper = $('.wrapper');
+    const $subMenus = $('.sub-menu');
     let wait = false;
     let lastVal = window.scrollY;
     let actualVal = window.scrollY;
@@ -18,6 +19,11 @@ export default function stickyHeader($) {
             isFixed = false;
         }
     }
+
+    $subMenus.each(function () {
+       const $items = $(this).find('>.menu-item');
+       if ($items.length > 5) $(this).addClass('sub-menu--multiline');
+    });
 
     document.addEventListener('scroll', function () {
         actualVal = window.scrollY;
