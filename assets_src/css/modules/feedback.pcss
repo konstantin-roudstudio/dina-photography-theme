@@ -1,21 +1,31 @@
 .feedback {
-  min-height: 600px;
+  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
 
-  @media (--laptop-up) {
-    min-height: 800px;
+  @media (--tablet-up) {
     flex-direction: row;
   }
 
+  @media (--laptop-up) {
+    min-height: 832px;
+  }
+
   &__bg {
+    background: #d8d8d8;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(./images/feedback-bg.jpg) no-repeat center/cover;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__center {
@@ -33,9 +43,9 @@
     color: #fff;
     padding-bottom: 50px;
 
-    @media (--laptop-up) {
+    @media (--tablet-up) {
       max-width: 645px;
-      padding-bottom: 70px;
+      padding-bottom: 67px;
     }
   }
 
@@ -57,33 +67,26 @@
     }
   }
 
-  &__img {
+  &__quotemark {
     width: 25px;
     height: 17px;
     margin-bottom: 25px;
-
-    img {}
   }
 
-  blockquote {
-    margin: 0 0 30px;
+  &__quotemark-svg {
+    fill: currentcolor;
+  }
 
-    @media (--laptop-up) {
-      display: flex;
-    }
+  &__quote {
+    margin: 0 0 8px;
 
     p {
       margin-bottom: 20px;
+    }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (--laptop-up) {
-        width: 50%;
-        margin-bottom: 0;
-        padding-right: 20px;
-      }
+    @media (--tablet-up) {
+      column-count: 2;
+      column-gap: 30px;
     }
   }
 
