@@ -1,8 +1,7 @@
 .hero-slider {
-  min-height: 100vh;
-  margin-top: -90px;
-
-  @media (--tablet-up) {
+  &__inner {
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -18,14 +17,7 @@
     justify-content: flex-end;
     pointer-events: none;
     padding: 100px 16px 67px;
-
-    @media (--mobile) {
-      display: none;
-    }
-
-    @media (--tablet-up) {
-      flex-grow: 0;
-    }
+    flex-grow: 0;
 
     @media (--laptop-up) {
       padding: 200px 20px 62px;
@@ -76,15 +68,13 @@
   }
 
   .swiper-container {
-    @media (--mobile) {
-      height: 100vh;
-    }
+    position: absolute;
+    height: 100%;
+    width: 100%;
 
     @media (--tablet-up) {
-      pointer-events: none;
-      position: absolute;
-      height: 100%;
-      width: 100%;
+      //pointer-events: none;
+
     }
 
     &::before,
@@ -95,6 +85,8 @@
       opacity: 0.5;
       z-index: 3;
       pointer-events: none;
+      left: 0;
+      right: 0;
     }
 
     &::before {
@@ -103,14 +95,9 @@
     }
 
     &::after {
-      display: none;
       height: 63vh;
       bottom: 0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
-
-      @media (--laptop-up) {
-        display: block;
-      }
     }
   }
 
@@ -172,6 +159,11 @@
         border-style: solid;
         top: calc(50% - 4px);
       }
+    }
+
+    &.swiper-button-disabled {
+      opacity: .4;
+      pointer-events: none;
     }
   }
 
@@ -237,7 +229,7 @@
     }
 
     @media (--laptop-up) {
-      line-height: 1.11;
+      line-height: 1.12;
       font-size: 47px;
       margin-bottom: 20px;
     }
@@ -269,25 +261,6 @@
     align-items: center;
     text-align: center;
     display: block;
-
-    //&:not(:last-child)::after {
-    //  content: '';
-    //  position: absolute;
-    //  top: 50%;
-    //  right: -2px;
-    //  width: 4px;
-    //  height: 4px;
-    //  background-color: #fff;
-    //  border-radius: 50%;
-    //
-    //  @media (--laptop-up) {
-    //    margin-left: 31px;
-    //  }
-    //
-    //  @media (min-width: 1440px) {
-    //    margin: 0 62px;
-    //  }
-    //}
   }
 
   &__dot {
