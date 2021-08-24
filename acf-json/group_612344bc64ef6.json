@@ -1,11 +1,30 @@
 {
-    "key": "group_611de43300ac5",
-    "title": "Block Hero Info",
+    "key": "group_612344bc64ef6",
+    "title": "CTA section",
     "fields": [
         {
-            "key": "field_611de45acf408",
+            "key": "field_6123454a30900",
             "label": "Title",
-            "name": "title",
+            "name": "cta_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6123455b30901",
+            "label": "Text",
+            "name": "cta_text",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -22,9 +41,9 @@
             "new_lines": ""
         },
         {
-            "key": "field_611de4a3cf409",
-            "label": "Background image",
-            "name": "image",
+            "key": "field_6123456f30902",
+            "label": "Image",
+            "name": "cta_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,33 +65,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_611de4c2cf40a",
-            "label": "Background Image Mobile",
-            "name": "image_mobile",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_611de4e3cf40b",
-            "label": "Button",
-            "name": "button",
+            "key": "field_6123457e30903",
+            "label": "Link",
+            "name": "cta_link",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -89,8 +84,8 @@
         [
             {
                 "param": "post_type",
-                "operator": "!=",
-                "value": "page"
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -102,5 +97,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629349209
+    "modified": 1629702341
 }
