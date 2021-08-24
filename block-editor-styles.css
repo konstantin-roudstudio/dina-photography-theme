@@ -679,7 +679,7 @@ button.swiper-pagination-bullet {
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -695,7 +695,7 @@ button.swiper-pagination-bullet {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
@@ -921,6 +921,93 @@ html .edit-post-visual-editor .title {
     html .edit-post-visual-editor .title {
         font-size: 52px;
     }
+}
+
+html .edit-post-visual-editor .center--article {
+    max-width: 683px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content {
+    padding: 50px 0;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .wysiwyg-content {
+        padding-top: 115px;
+    }
+}
+
+html .edit-post-visual-editor .wysiwyg-content h2 {
+    font: 500 38px/1.1 'Antiqua', serif;
+    text-transform: uppercase;
+}
+
+html .edit-post-visual-editor .wysiwyg-content h2:first-of-type {
+    margin-bottom: 21px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content h2:nth-of-type(2) {
+    margin: 35px 0 21px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .wysiwyg-content h2:nth-of-type(2) {
+        margin: 55px 0 27px;
+    }
+}
+
+html .edit-post-visual-editor .wysiwyg-content h2:last-of-type {
+    margin-bottom: 22px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content p {
+    margin-bottom: 22px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content ol {
+    counter-reset: counter;
+    margin: 35px 0 35px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .wysiwyg-content ol {
+        margin: 60px 0 75px;
+    }
+}
+
+html .edit-post-visual-editor .wysiwyg-content ol li {
+    display: block;
+    position: relative;
+    list-style-type: none;
+    counter-increment: counter;
+    padding-left: 44px;
+    margin-bottom: 28px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content ol li::before {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    content: counter(counter);
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 2px 2px 2px;
+}
+
+html .edit-post-visual-editor .wysiwyg-content ol li h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.16;
+    margin-bottom: 23px;
 }
 
 html .edit-post-visual-editor .wysiwyg-content img {
