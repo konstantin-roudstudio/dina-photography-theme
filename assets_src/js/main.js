@@ -4,6 +4,7 @@ import fixVhOnResize from './utils/fixVhOnResize';
 import testimonials from './modules/testimonials'
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
+import portfolioSlider from './modules/portfolio-slider';
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -14,7 +15,8 @@ import stickyHeader from './modules/header';
     animations,
     /*disablePageScroll,*/
     mobMenu,
-    stickyHeader
+    stickyHeader,
+    portfolioSlider,
   ];
 
   $(() => {
