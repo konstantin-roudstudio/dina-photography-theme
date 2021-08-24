@@ -6,21 +6,78 @@
     color: #fff;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    pointer-events: none;
+    padding: 100px 16px 67px;
+
+    @media (--mobile) {
+      display: none;
+    }
+
+    @media (--tablet-up) {
+      min-height: 100vh;
+    }
+
+    @media (--laptop-up) {
+      padding: 200px 20px 62px;
+    }
 
     @media (--desktop-up) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
+
+    .hero-slider__text {
+      @media (--mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__content-mobile {
+    position: relative;
+    bottom: -2px;
+    z-index: 1;
+    padding: 40px 16px;
+    background-color: #fff;
+    color: #000;
+
+    p {
+      margin-bottom: 21px;
+    }
+
+    @media (--tablet-up) {
+      display: none;
+    }
+  }
+
+  &__text {
+    @media (--tablet-up) {
+      margin: 0 -10px 52px;
+      column-count: 2;
+      column-gap: 16px;
+    }
+
+    @media (--desktop-up) {
+      margin: 0 1px 53px auto;
+      width: 656px;
+      max-width: 656px;
+    }
   }
 
   .swiper-container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    @media (--mobile) {
+      height: 100vh;
+    }
 
     @media (--tablet-up) {
       pointer-events: none;
+      position: absolute;
+      height: 100%;
+      width: 100%;
     }
 
     &::before,
@@ -152,44 +209,6 @@
     }
   }
 
-  &__content {
-    position: relative;
-    pointer-events: none;
-    padding: 57vh 16px 67px;
-
-    @media (--laptop-up) {
-      padding: 69vh 20px 62px;
-    }
-
-    .hero-slider__text {
-      display: none;
-
-      @media (--tablet-up) {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 -10px 52px;
-      }
-
-      @media (--desktop-up) {
-        margin: 0 1px 53px auto;
-        width: 656px;
-        max-width: 656px;
-      }
-
-      p {
-        @media (--tablet-up) {
-          width: 50%;
-          margin: 0 15px;
-        }
-
-        @media (--desktop-up) {
-          max-width: 308px;
-          margin: 0 13px;
-        }
-      }
-    }
-  }
-
   &__title {
     text-transform: uppercase;
     letter-spacing: 0.019em;
@@ -250,23 +269,6 @@
       @media (min-width: 1440px) {
         margin: 0 62px;
       }
-    }
-  }
-
-  &__content-mobile {
-    position: relative;
-    bottom: -2px;
-    z-index: 1;
-    padding: 40px 16px;
-    background-color: #fff;
-    color: #000;
-
-    p {
-      margin-bottom: 21px;
-    }
-
-    @media (--tablet-up) {
-      display: none;
     }
   }
 }

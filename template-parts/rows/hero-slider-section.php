@@ -1,22 +1,29 @@
 <?php
-//$title = get_sub_field('about_title');
-//$image = get_sub_field('about_image');
+$slides = get_sub_field('hero_slides');
+$title = get_sub_field('hero_title');
+$text = get_sub_field('hero_text');
+$destinations = get_sub_field('hero_destinations');
 
 ?>
 
 <section class="hero-slider">
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background-color:#f1f1f1"></div>
-			<div class="swiper-slide" style="background-color:#b1b1b1"></div>
-			<div class="swiper-slide" style="background-color:#818181"></div>
-			<div class="swiper-slide" style="background-color:#555555"></div>
-			<div class="swiper-slide" style="background-color:#404040"></div>
-		</div>
-	</div>
+  <?php if (!empty($slides)) : ?>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <?php foreach ($slides as $slide) : ?>
+          <div class="swiper-slide">
+            <?php wp_get_attachment_image($slide['image'], 'full') ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  <?php endif; ?>
 
 	<div class="hero-slider__content center">
-		<h1 class="hero-slider__title title">Capturing Special Moments Throught the Art of Photography</h1>
+    <?php if ($title) : ?>
+      <h1 class="hero-slider__title title"><?= nl2br($title) ?></h1>
+    <?php endif; ?>
+
 		<div class="hero-slider__nav">
 			<div class="hero-slider__nav-inner">
 				<div class="swiper-button-prev">
@@ -25,45 +32,33 @@
 				<div class="hero-slider__numbers">
 					<span class="hero-slider__number current">1</span>
 					<span class="hero-slider__slash"></span>
-					<span class="hero-slider__number total">5</span>
+					<span class="hero-slider__number total"><?= count($slides) ?></span>
 				</div>
 				<div class="swiper-button-next">
 					<span></span>
 				</div>
 			</div>
 		</div>
-		<div class="hero-slider__text">
-			<p>
-				A wedding, pre-wedding and fashion photographer based in central Europe, I specialise in telling visual stories
-				and shooting destination weddings. My work combines my two great loves: photography and travel.
-			</p>
 
-			<p>
-				There is nowhere and no lengths I won’t go to capture a wedding or engagement – the more unique the better. I’ll
-				be wherever you are!
-			</p>
-		</div>
-		<ul class="hero-slider__destinations">
-			<li class="hero-slider__destination">France</li>
-			<li class="hero-slider__destination">Italy</li>
-			<li class="hero-slider__destination">Austria</li>
-			<li class="hero-slider__destination">Sweden</li>
-			<li class="hero-slider__destination">Czech Republic</li>
-			<li class="hero-slider__destination">Poland</li>
-			<li class="hero-slider__destination">Worldwide</li>
-		</ul>
+    <?php if ($text) : ?>
+      <div class="hero-slider__text wysiwyg-content">
+        <?= $text ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if($destinations) : ?>
+      <ul class="hero-slider__destinations">
+        <?php foreach ($destinations as $destination) : ?>
+          <li class="hero-slider__destination"><?= $destination['text'] ?></li>
+        <?php endforeach; ?>
+      </ul>
+    <?php endif; ?>
 	</div>
 	<div class="hero-slider__content-mobile">
-		<div class="hero-slider__text">
-			<p>
-				A wedding, pre-wedding and fashion photographer based in central Europe, I specialise in telling visual stories
-				and shooting destination weddings. My work combines my two great loves: photography and travel.
-			</p>
-
-			<p>
-				There is nowhere and no lengths I won’t go to capture a wedding or engagement – the more unique the better. I’ll
-				be wherever you are!
-			</p>
-		</div>
+    <?php if ($text) : ?>
+      <div class="hero-slider__text wysiwyg-content">
+        <?= $text ?>
+      </div>
+    <?php endif; ?>
 	</div>
 </section>

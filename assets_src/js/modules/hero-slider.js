@@ -1,31 +1,32 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, {Navigation} from 'swiper';
 
 export default function heroSlider($) {
-  const hero = document.querySelectorAll('.hero-slider'); {
-    for (const block of hero) {
-      let slide = block.querySelectorAll('.swiper-slide');
-      let sliderNumCurrent = block.querySelector('.current');
-      let sliderNumTotal = block.querySelector('.total');
+    const $hero = $('.hero-slider');
+    {
+        $hero.each(function () {
+            const container = $(this).find('.swiper-container')[0];
+            const $current = $(this).find('.current');
+            const $total = $(this).find('.total');
+            const $slides = $('.swiper-slide:not(.swiper-slide-duplicate)');
+
+            Swiper.use([Navigation]);
+
+            const swiper = new Swiper(container, {
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                on: {
+                    init: function (sw) {
+                        $total.text($slides.length);
+                        $current.text(sw.realIndex + 1)
+                    },
+                    slideChange: function (sw) {
+                        $current.text(sw.realIndex + 1)
+                    },
+                },
+            });
+        })
     }
-  }
-  Swiper.use([Navigation]);
-
-  const swiper = new Swiper('.hero-slider .swiper-container', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      init: function(sw) {
-        $('.total').text($('.swiper-slide:not(.swiper-slide-duplicate)').length)
-        $('.current').text(sw.realIndex + 1)
-      },
-      slideChange: function(sw) {
-        $('.current').text(sw.realIndex + 1)
-      },
-    },
-  });
-
-
 }
