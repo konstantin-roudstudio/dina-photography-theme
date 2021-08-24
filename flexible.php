@@ -6,6 +6,14 @@
 get_header();
 ?>
   <main id="main" class="main">
+
+<!--    TEMPORARY!!!  -->
+    <div class="center center--article">
+      <div class="wysiwyg-content">
+        CONTENT
+      </div>
+    </div>
+
     <?php
     if (have_rows('page_builder')):
       while (have_rows('page_builder')): the_row();
