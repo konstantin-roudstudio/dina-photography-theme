@@ -1,3 +1,35 @@
 .portfolio-slider {
   background-color: lightskyblue;
+
+  &__inner {
+    padding: 64px 0 50px;
+  }
+
+  &__content {
+    margin-bottom: 55px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.57;
+    letter-spacing: 0.026em;
+    margin-bottom: 15px;
+
+    @media (--laptop-up) {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 26px;
+  }
+
+  &__btn {
+    min-width: 232px;
+    padding: 13px 36px;
+    letter-spacing: 0.026em;
+    font-size: 13px;
+  }
 }
