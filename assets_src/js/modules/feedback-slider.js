@@ -1,13 +1,7 @@
 import Swiper, { Navigation } from 'swiper';
 
 export default function feedbackSlider($) {
-  /*const hero = document.querySelectorAll('.hero-slider'); {
-    for (const block of hero) {
-      let slide = block.querySelectorAll('.swiper-slide');
-      let sliderNumCurrent = block.querySelector('.current');
-      let sliderNumTotal = block.querySelector('.total');
-    }
-  }*/
+
   Swiper.use([Navigation]);
 
   const swiper = new Swiper('.swiper-container', {
@@ -26,6 +20,5 @@ export default function feedbackSlider($) {
       },
     },
   });
-
 
 }
