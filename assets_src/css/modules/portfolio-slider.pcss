@@ -1,12 +1,29 @@
 .portfolio-slider {
-  background-color: lightskyblue;
 
   &__inner {
     padding: 64px 0 50px;
+
+    @media (--tablet-up) {
+      display: flex;
+    }
+
+    @media (--laptop-up) {
+      padding: 132px 0 88px;
+    }
   }
 
   &__content {
     margin-bottom: 55px;
+
+    @media (--tablet-up) {
+      margin: 50px 30px 0 0;
+      height: fit-content;
+    }
+
+    @media (--laptop-up) {
+      margin: 112px 116px 0 0;
+      min-width: 276px;
+    }
   }
 
   &__title {
@@ -18,7 +35,7 @@
     @media (--laptop-up) {
       font-size: 38px;
       line-height: 1.15;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
   }
 
@@ -37,17 +54,30 @@
 
   &__container {
     margin-bottom: 40px;
+
+    @media (--laptop-up) {
+      margin-bottom: 116px;
+    }
   }
 
   &__item {
     max-width: 310px;
     margin-right: 24px;
+
+    @media (--laptop-up) {
+      max-width: 360px;
+      margin-right: 98px;
+    }
   }
 
   &__img-wrapper {
     position: relative;
     background-color: red;
     width: 310px;
+
+    @media (--laptop-up) {
+      width: 360px;
+    }
 
     &::after {
       content: '';
@@ -68,10 +98,18 @@
     font-size: 18px;
     line-height: 1.89;
     margin-top: 24px;
+
+    @media (--laptop-up) {
+      margin-top: 20px;
+    }
   }
 
   .swiper-container {
     overflow: visible;
+
+    @media (--tablet-up) {
+      overflow: hidden;
+    }
 
     &:not(.swiper-container-initialized) {
       overflow: hidden;
@@ -100,16 +138,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (--tablet-up) {
+      position: absolute;
+      right: 20px;
+      width: 140px;
+    }
   }
 
-  .swiper-button-next, 
+  .swiper-button-next,
   .swiper-button-prev {
     position: relative;
     display: block;
     width: 57px;
-    height: 1px;
+    height: 100%;
     opacity: 1;
     background-color: transparent;
+    top: 11px;
 
     &::after {
       display: none;
@@ -130,6 +175,10 @@
 
   .swiper-pagination {
     position: relative;
+
+    @media (--tablet-up) {
+      display: none;
+    }
   }
 
   .swiper-pagination-bullet {
