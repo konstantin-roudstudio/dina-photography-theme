@@ -1,1 +1,3 @@
-<section class="text-boxes"></section>
+<section class="text-boxes">
+  TEXT BOXES
+</section>
