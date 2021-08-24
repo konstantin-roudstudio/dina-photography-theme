@@ -11,11 +11,11 @@ get_header();
         <?php
 
 //        TEMP!
-        get_template_part('template-parts/rows/hero-slider-section');
 
         if (have_rows('page_builder')):
             while (have_rows('page_builder')): the_row();
                 if (get_row_layout() == 'hero_info_section'): get_template_part('template-parts/rows/hero-info-section', 'section');
+                elseif (get_row_layout() == 'hero_slider_section'): get_template_part('template-parts/rows/hero-slider-section', 'section');
                 endif;
             endwhile;
         endif;

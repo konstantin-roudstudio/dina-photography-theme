@@ -12,7 +12,7 @@ $destinations = get_sub_field('hero_destinations');
       <div class="swiper-wrapper">
         <?php foreach ($slides as $slide) : ?>
           <div class="swiper-slide">
-            <?php wp_get_attachment_image($slide['image'], 'full') ?>
+            <?= wp_get_attachment_image($slide['image'], 'full') ?>
           </div>
         <?php endforeach; ?>
       </div>
@@ -48,12 +48,14 @@ $destinations = get_sub_field('hero_destinations');
 
     <?php if($destinations) : ?>
       <ul class="hero-slider__destinations">
-        <?php foreach ($destinations as $destination) : ?>
+        <?php foreach ($destinations as $index => $destination) : ?>
+        <?php if ($index > 0) : ?><li class="hero-slider__dot"></li><?php endif; ?>
           <li class="hero-slider__destination"><?= $destination['text'] ?></li>
         <?php endforeach; ?>
       </ul>
     <?php endif; ?>
 	</div>
+
 	<div class="hero-slider__content-mobile">
     <?php if ($text) : ?>
       <div class="hero-slider__text wysiwyg-content">

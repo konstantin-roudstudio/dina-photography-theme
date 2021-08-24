@@ -1,9 +1,9 @@
 {
-    "key": "group_60fd940e5b637",
+    "key": "group_611de3edea9be",
     "title": "Flexible content",
     "fields": [
         {
-            "key": "field_60fd9424d0240",
+            "key": "field_611de3fce43d8",
             "label": "Page Builder",
             "name": "page_builder",
             "type": "flexible_content",
@@ -16,16 +16,16 @@
                 "id": ""
             },
             "layouts": {
-                "layout_60fd94370f279": {
-                    "key": "layout_60fd94370f279",
-                    "name": "hero_section",
-                    "label": "Hero section",
+                "layout_611de4144422d": {
+                    "key": "layout_611de4144422d",
+                    "name": "hero_info_section",
+                    "label": "Hero Info Section",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60fd9466d0241",
-                            "label": "Hero section",
-                            "name": "hero_section",
+                            "key": "field_611de57e24fdd",
+                            "label": "Hero Info",
+                            "name": "hero_info",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -36,7 +36,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60fd8f2734624"
+                                "group_611de43300ac5"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -47,16 +47,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60fd953ed0243": {
-                    "key": "layout_60fd953ed0243",
-                    "name": "about_section",
-                    "label": "About section",
+                "layout_611e03a6796fa": {
+                    "key": "layout_611e03a6796fa",
+                    "name": "hero_reviews_section",
+                    "label": "Hero Reviews Section",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60fd9549d0244",
-                            "label": "About section",
-                            "name": "about_section",
+                            "key": "field_611e03b6796fb",
+                            "label": "Hero Reviews Section",
+                            "name": "hero_reviews_section",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -67,7 +67,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60fd92177e00e"
+                                "group_611e026b827ed"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -78,16 +78,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60fe7586fa321": {
-                    "key": "layout_60fe7586fa321",
-                    "name": "facts_section",
-                    "label": "Facts section",
+                "layout_611e1fb137bc1": {
+                    "key": "layout_611e1fb137bc1",
+                    "name": "hero_about_section",
+                    "label": "Hero About Section",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60fe7591fa322",
-                            "label": "Facts section",
-                            "name": "facts_section",
+                            "key": "field_611e1fbf37bc2",
+                            "label": "Hero About Section",
+                            "name": "hero_about_section",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -98,7 +98,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60fe71f52769e"
+                                "group_611e182b7f4c5"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -109,16 +109,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60fe924049ef0": {
-                    "key": "layout_60fe924049ef0",
-                    "name": "services_section",
-                    "label": "Services section",
+                "layout_6123478e195bc": {
+                    "key": "layout_6123478e195bc",
+                    "name": "about_info_section",
+                    "label": "About Info Sectin",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60fe924849ef1",
-                            "label": "Services section",
-                            "name": "services_section",
+                            "key": "field_612347ac195bd",
+                            "label": "About Info Section",
+                            "name": "about_info_section",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -129,7 +129,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60fe88ae0a199"
+                                "group_612345d9bde80"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -140,16 +140,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60fe927049ef2": {
-                    "key": "layout_60fe927049ef2",
-                    "name": "testimonials_section",
-                    "label": "Testimonials section",
+                "layout_612347cd195be": {
+                    "key": "layout_612347cd195be",
+                    "name": "text_images_section",
+                    "label": "Text Images Section",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60fe928a49ef3",
-                            "label": "Testimonials section",
-                            "name": "testimonials_section",
+                            "key": "field_612347e2195bf",
+                            "label": "Text Images Section",
+                            "name": "text_images_section",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -160,7 +160,69 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_60fe913f9f67c"
+                                "group_612346ce4c1f8"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_61234805195c0": {
+                    "key": "layout_61234805195c0",
+                    "name": "cta_section",
+                    "label": "CTA Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61234812195c1",
+                            "label": "CTA Section",
+                            "name": "cta_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_612344bc64ef6"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_612496daf0055": {
+                    "key": "layout_612496daf0055",
+                    "name": "hero_slider_section",
+                    "label": "Hero Slider Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_612496e6f0056",
+                            "label": "Hero Slider Section",
+                            "name": "hero_slider_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_61249167d0853"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -180,7 +242,7 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_template",
                 "operator": "==",
                 "value": "flexible.php"
             }
@@ -194,5 +256,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628507274
+    "modified": 1629793509
 }

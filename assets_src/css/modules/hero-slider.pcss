@@ -2,6 +2,13 @@
   min-height: 100vh;
   margin-top: -90px;
 
+  @media (--tablet-up) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   &__content {
     color: #fff;
     position: relative;
@@ -17,17 +24,18 @@
     }
 
     @media (--tablet-up) {
-      min-height: 100vh;
+      flex-grow: 0;
     }
 
     @media (--laptop-up) {
       padding: 200px 20px 62px;
+      margin: 0;
     }
 
     @media (--desktop-up) {
-      display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .hero-slider__text {
@@ -56,15 +64,14 @@
 
   &__text {
     @media (--tablet-up) {
-      margin: 0 -10px 52px;
+      margin: 0 0 52px;
       column-count: 2;
-      column-gap: 16px;
+      column-gap: 26px;
     }
 
     @media (--desktop-up) {
-      margin: 0 1px 53px auto;
-      width: 656px;
-      max-width: 656px;
+      margin: 0 0px 32px auto;
+      max-width: 644px;
     }
   }
 
@@ -104,6 +111,15 @@
       @media (--laptop-up) {
         display: block;
       }
+    }
+  }
+
+  .swiper-slide {
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -250,25 +266,36 @@
 
   &__destination {
     position: relative;
-    display: flex;
     align-items: center;
+    text-align: center;
+    display: block;
 
-    &:not(:last-child)::after {
-      content: '';
-      display: block;
-      width: 4px;
-      height: 4px;
-      background-color: #fff;
-      border-radius: 50%;
-      margin-left: 20px;
+    //&:not(:last-child)::after {
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  right: -2px;
+    //  width: 4px;
+    //  height: 4px;
+    //  background-color: #fff;
+    //  border-radius: 50%;
+    //
+    //  @media (--laptop-up) {
+    //    margin-left: 31px;
+    //  }
+    //
+    //  @media (min-width: 1440px) {
+    //    margin: 0 62px;
+    //  }
+    //}
+  }
 
-      @media (--laptop-up) {
-        margin-left: 31px;
-      }
-
-      @media (min-width: 1440px) {
-        margin: 0 62px;
-      }
-    }
+  &__dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 50%;
+    margin-bottom: 2px;
   }
 }
