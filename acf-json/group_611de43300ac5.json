@@ -1,6 +1,6 @@
 {
     "key": "group_611de43300ac5",
-    "title": "Block Hero Info",
+    "title": "Hero Info",
     "fields": [
         {
             "key": "field_611de45acf408",
@@ -89,8 +89,8 @@
         [
             {
                 "param": "post_type",
-                "operator": "!=",
-                "value": "page"
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -102,5 +102,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629349209
+    "modified": 1629874685
 }
