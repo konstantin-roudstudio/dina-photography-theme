@@ -1,34 +1,61 @@
 <?php
+  $title = get_field('about_title');
+  $text = get_field('about_text');
+  $button = get_field('about_button');
+  $img_1_id = get_field('about_image_1');
+  $img_2_id = get_field('about_image_2');
+  $logos = get_field('about_logos');
+
+  var_dump($title);
+var_dump($text);
+
+$img_1 = $img_1_id ? wp_get_attachment_image($img_1_id, 'full') : null;
+$img_2 = $img_2_id ? wp_get_attachment_image($img_2_id, 'full') : null;
+
+if ($button) {
+  $button_url = $button['url'];
+  $button_title = $button['title'];
+  $button_target = $button['target'] ? $button['target'] : '_self';
+}
+
 ?>
 
 <section class="about">
   <div class="about__center center">
     <div class="about__inner">
-      <div class="about__title title">I work to capture the beauty, emotion and magic of the most important day of your life. </div>
+      <?php if ($title) : ?>
+        <div class="about__title title"><?= $title ?></div>
+      <?php endif; ?>
+
       <div class="about__img-desktop">
-        <img src="<?php echo get_template_directory_uri(); ?>">
+        <?= $img_1 ?>
       </div>
+
       <div class="about__content-wrapper">
         <div class="about__img">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/about__img.jpg" alt="">
+          <?= $img_2 ?>
         </div>
+
         <div class="about__content">
-          <div class="about__text">My philosophy is to create understanding relationships with clients, listen to their vision, and incorporate it with my style – I have found this approach results in beautiful, authentic photographs that will become your legacy for future generations.</div>
-          <a href="#" class="about__btn btn">My Story</a>
+          <?php if ($text) : ?>
+            <div class="about__text"><?= $text ?></div>
+          <?php endif ?>
+
+          <?php if ($button) : ?>
+            <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="about__btn btn"><?= $button_title ?></a>
+          <?php endif; ?>
         </div>
       </div>
-      <div class="about__bottom-items">
-        <div class="about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-01.png" alt="">
+      <?php if (!empty($logos)) : ?>
+        <div class="about__bottom-items">
+          <?php foreach ($logos as $logo) : ?>
+            <div class="about__bottom-item">
+              <?= wp_get_attachment_image($logo['image'], 'full') ?>
+            </div>
+          <?php endforeach; ?>
         </div>
-        <div class="about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-02.png" alt="">
-        </div>
-        <div class="about__bottom-item">
-          <img src="<?php echo get_template_directory_uri(); ?> /images/about-partners-03.png" alt="">
-        </div>
-      </div>
+      <?php endif; ?>
     </div>
-  </div> 
+  </div>
 </section>
 
