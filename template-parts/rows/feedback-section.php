@@ -1,10 +1,7 @@
 <?php
-$review_post = get_field('review_post');
-var_dump($review_post);
-$text = get_field('text', $review_post->ID);
-$img = get_field('image', $review_post->ID);
-var_dump($text);
-var_dump($img);
+$review_post = get_sub_field('review_post');
+$text = $review_post->post_content;
+$img = get_post_thumbnail_id($review_post);
 ?>
 
 <section class="feedback">
