@@ -1446,6 +1446,11 @@ html .edit-post-visual-editor .cta-form {
     }
 }
 
+html .edit-post-visual-editor .cta-form__content {
+    max-width: 643px;
+    margin: auto;
+}
+
 html .edit-post-visual-editor .cta-form__title {
     font-size: 28px;
     line-height: 1.1;
@@ -1458,6 +1463,32 @@ html .edit-post-visual-editor .cta-form__title {
         font-size: 38px;
         margin-bottom: 50px;
     }
+}
+
+html .edit-post-visual-editor .cta-form__field {
+    border: 1px solid #000000;
+    border-radius: 25px;
+    background: transparent;
+}
+
+html .edit-post-visual-editor .cta-form__field--select {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0 24px 0 26px;
+    margin-bottom: 25px;
+}
+
+html .edit-post-visual-editor .cta-form__field--select::-ms-expand {
+    display: none;
+}
+
+html .edit-post-visual-editor .cta-form__field--textarea {
+    border-radius: 15px;
 }
 
 html .edit-post-visual-editor .cta-form--cream {

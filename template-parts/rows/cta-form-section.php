@@ -8,8 +8,10 @@ $class = $bg_color != 'white' ? ' cta-form--'.$bg_color : null;
 
 <section class="cta-form<?= $class ?>">
   <div class="center cta-form__center">
-  <h2 class="cta-form__title title"><?= $title ?></h2>
+    <div class="cta-form__content">
+      <h2 class="cta-form__title title"><?= $title ?></h2>
 
-    <?= do_shortcode($shortcode); ?>
+      <?= do_shortcode($shortcode); ?>
+    </div>  
   </div>
 </section>
