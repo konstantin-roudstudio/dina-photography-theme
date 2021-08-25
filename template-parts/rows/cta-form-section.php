@@ -1,6 +1,6 @@
 <?php
-$title = get_field('form_title');
-$bg_color = get_field('background_color');
+$title = get_sub_field('form_title');
+$bg_color = get_sub_field('background_color');
 $class = $bg_color != 'white' ? ' cta-form--'.$bg_color : null;
 
 ?>

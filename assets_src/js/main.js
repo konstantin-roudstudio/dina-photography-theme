@@ -1,6 +1,5 @@
 import 'regenerator-runtime/runtime.js';
 // import animations from './utils/animations';
-import fixVhOnResize from './utils/fixVhOnResize';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
 import heroSlider from './modules/hero-slider'
@@ -9,8 +8,6 @@ import heroSlider from './modules/hero-slider'
 
 (function ($) {
   const initMethods = [
-    fixVhOnResize,
-    windowWidthResize,
     // animations,
     /*disablePageScroll,*/
     mobMenu,

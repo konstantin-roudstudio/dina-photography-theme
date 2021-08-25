@@ -1,13 +1,10 @@
 <?php
-  $title = get_field('about_title');
-  $text = get_field('about_text');
-  $button = get_field('about_button');
-  $img_1_id = get_field('about_image_1');
-  $img_2_id = get_field('about_image_2');
-  $logos = get_field('about_logos');
-
-  var_dump($title);
-var_dump($text);
+  $title = get_sub_field('about_title');
+  $text = get_sub_field('about_text');
+  $button = get_sub_field('about_button');
+  $img_1_id = get_sub_field('about_image_1');
+  $img_2_id = get_sub_field('about_image_2');
+  $logos = get_sub_field('about_logos');
 
 $img_1 = $img_1_id ? wp_get_attachment_image($img_1_id, 'full') : null;
 $img_2 = $img_2_id ? wp_get_attachment_image($img_2_id, 'full') : null;
