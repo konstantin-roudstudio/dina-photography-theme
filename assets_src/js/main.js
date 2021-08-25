@@ -10,7 +10,7 @@ import heroSlider from './modules/hero-slider'
 (function ($) {
   const initMethods = [
     fixVhOnResize,
-    windowWidthResize,
+    /*windowWidthResize,*/
     // animations,
     /*disablePageScroll,*/
     mobMenu,

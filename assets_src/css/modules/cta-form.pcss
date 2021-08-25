@@ -1,4 +1,23 @@
 .cta-form {
+  padding: 30px 0;
+
+  @media (--laptop-up) {
+    padding: 115px 0 104px;
+  }
+
+  &__center {}
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (--laptop-up) {
+      font-size: 38px;  
+      margin-bottom: 50px;  
+    }
+  }
   &--cream {
     background: #F2F0EC;
   }
