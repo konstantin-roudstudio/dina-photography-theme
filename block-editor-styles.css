@@ -1461,44 +1461,138 @@ html .edit-post-visual-editor .cta-form__title {
 @media (min-width: 999px) {
     html .edit-post-visual-editor .cta-form__title {
         font-size: 38px;
-        margin-bottom: 50px;
+        max-width: 600px;
+        margin: 0 auto 52px;
     }
 }
 
-html .edit-post-visual-editor .cta-form__field {
+@media (min-width: 600px) {
+    html .edit-post-visual-editor .cta-form__row {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 600px) {
+    html .edit-post-visual-editor .cta-form__field {
+        width: calc(50% - 12px);
+    }
+}
+
+html .edit-post-visual-editor .cta-form__field .ajax-loader {
+    display: none;
+}
+
+html .edit-post-visual-editor .cta-form__field input,
+html .edit-post-visual-editor .cta-form__field select {
     border: 1px solid #000000;
     border-radius: 25px;
     background: transparent;
     height: 50px;
     outline: none;
     padding: 0 24px 0 26px;
+    width: 100%;
+    margin: 10px 0 25px;
 }
 
-html .edit-post-visual-editor .cta-form__field--narrow {
-    width: 100%;
-    margin-bottom: 25px;
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-form__field input,
+    html .edit-post-visual-editor .cta-form__field select {
+        margin-bottom: 15px;
+    }
 }
 
-html .edit-post-visual-editor .cta-form__field--select {
-    width: 100%;
+html .edit-post-visual-editor .cta-form__field input.btn,
+html .edit-post-visual-editor .cta-form__field select.btn {
+    margin: 0;
+}
+
+html .edit-post-visual-editor .cta-form__field--select select {
     cursor: pointer;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    margin-bottom: 25px;
 }
 
-html .edit-post-visual-editor .cta-form__field--select::-ms-expand {
+html .edit-post-visual-editor .cta-form__field--select select::-ms-expand {
     display: none;
 }
 
-html .edit-post-visual-editor .cta-form__field--textarea {
+@media (min-width: 600px) {
+    html .edit-post-visual-editor .cta-form__field--select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-form__field--select {
+        margin-bottom: 10px;
+    }
+}
+
+html .edit-post-visual-editor .cta-form__field--select .select-arrow {
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 26px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+}
+
+html .edit-post-visual-editor .cta-form__field--textarea textarea {
     width: 100%;
     border-radius: 15px;
+    border: 1px solid #000000;
+    background: transparent;
     height: 104px;
-    margin-bottom: 23px;
+    margin: 10px 0 23px;
     padding: 10px 24px 10px 26px;
     resize: none;
+    outline: none;
+}
+
+@media (min-width: 600px) {
+    html .edit-post-visual-editor .cta-form__field--textarea {
+        width: 100%;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-form__field--textarea {
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 600px) {
+    html .edit-post-visual-editor .cta-form__field--btn {
+        width: 210px;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .cta-form__field--btn input {
+        height: auto;
+        padding: 14px;
+    }
+}
+
+html .edit-post-visual-editor .cta-form__select-wrapper {
+    position: relative;
+}
+
+html .edit-post-visual-editor .cta-form__label {
+    font-weight: 700;
+}
+
+html .edit-post-visual-editor .cta-form .wpcf7-not-valid-tip {
+    margin-bottom: 10px;
+}
+
+html .edit-post-visual-editor .cta-form .wpcf7-not-valid {
+    border: 1px solid #dc3232;
 }
 
 html .edit-post-visual-editor .cta-form--cream {
