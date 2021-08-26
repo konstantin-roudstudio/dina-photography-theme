@@ -1,5 +1,5 @@
 /**
- * Swiper 6.8.2
+ * Swiper 6.7.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: August 16, 2021
+ * Released on: June 23, 2021
  */
 
 @font-face {
@@ -333,10 +333,6 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
-}
-
-.swiper-pagination-bullet:only-child {
-  display: none !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -679,7 +675,7 @@ button.swiper-pagination-bullet {
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -695,7 +691,7 @@ button.swiper-pagination-bullet {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
