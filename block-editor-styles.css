@@ -1595,6 +1595,10 @@ html .edit-post-visual-editor .cta-form .wpcf7-not-valid {
     border: 1px solid #dc3232;
 }
 
+html .edit-post-visual-editor .cta-form .invalid label {
+    color: #dc3232;
+}
+
 html .edit-post-visual-editor .cta-form--cream {
     background: #F2F0EC;
 }
