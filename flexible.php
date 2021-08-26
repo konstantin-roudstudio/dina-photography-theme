@@ -7,6 +7,8 @@ get_header();
 ?>
   <main id="main" class="main">
     <?php
+
+    get_template_part('template-parts/rows/gallery-section', 'section');
     if (have_rows('page_builder')):
       while (have_rows('page_builder')): the_row();
         if (get_row_layout() == 'about_info_section'): get_template_part('template-parts/rows/about-info-section', 'section');
@@ -17,6 +19,7 @@ get_header();
         elseif (get_row_layout() == 'hero_about_section'): get_template_part('template-parts/rows/hero-about-section', 'section');
         elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
         elseif (get_row_layout() == 'cta_form_section'): get_template_part('template-parts/rows/cta-form-section', 'section');
+//        elseif (get_row_layout() == 'gallery_section'): get_template_part('template-parts/rows/gallery-section', 'section');
         elseif (get_row_layout() == 'cta_section'):
           get_template_part('template-parts/rows/cta-section', 'section');
 //                  if (get_sub_field('override')) :
