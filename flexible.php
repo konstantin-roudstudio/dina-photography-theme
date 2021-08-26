@@ -9,6 +9,7 @@ get_header();
     <?php
 
     get_template_part('template-parts/rows/gallery-section', 'section');
+
     if (have_rows('page_builder')):
       while (have_rows('page_builder')): the_row();
         if (get_row_layout() == 'about_info_section'): get_template_part('template-parts/rows/about-info-section', 'section');

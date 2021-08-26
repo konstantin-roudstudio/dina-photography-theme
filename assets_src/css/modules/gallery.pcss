@@ -1,5 +1,26 @@
 .gallery {
   &__row {
     display: flex;
+
+    @media (--tablet-up) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+
+    @media (--tablet-up) {
+      margin: 0 20px;
+    }
+  }
+
+  &__item-wrapper {
+    background: #d8d8d8;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
   }
 }
