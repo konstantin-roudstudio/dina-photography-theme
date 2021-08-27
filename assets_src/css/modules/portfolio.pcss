@@ -1,5 +1,167 @@
 .portfolio {
-  color: green;
-  font-size: 40px;
-  padding: 100px 0;
+
+  &__center {}
+
+  &__inner {
+    padding: 120px 0 30px;
+
+    @media (--laptop-up) {
+      display: flex;
+      padding: 174px 0 44px;
+    }
+  }
+
+  &__items-column {
+
+    @media (--laptop-up) {
+      /*width: 33.333%;*/
+
+      &:nth-child(2) {
+        padding-right: 30px;
+        width: 32%;
+      }
+
+      &:nth-child(3) {
+        padding: 0 30px;
+        border-left: 1px solid #F2F0EC;
+        border-right: 1px solid #F2F0EC;
+        width: 36%;
+      }
+
+      &:nth-child(4) {
+        padding-left: 30px;
+        width: 32%;
+      }
+    }
+
+    @media (--desktop-up) {
+      &:nth-child(2) {
+        padding-right: 58px;
+        margin-top: 126px;
+      }
+
+      &:nth-child(3) {
+        padding: 0 55px;
+        margin-top: 66px;
+      }
+
+      &:nth-child(4) {
+        padding-left: 58px;
+      }
+    }
+
+  }
+
+  &__item {
+    margin-bottom: 50px;
+
+    @media (--tablet-up) {
+      max-width: 560px;
+      margin: auto;
+    }
+
+    @media (--laptop-up) {
+      max-width: 360px;
+      margin-bottom: 120px;
+    }
+
+    @media (--desktop-up) {
+      margin-bottom: 170px;
+    }
+
+    &--mobile {
+
+      @media (--laptop-up) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (--laptop-up) {
+        display: block;
+      }
+    }
+
+    &--text {
+      text-align: center;
+    }
+
+    &--high {
+      .portfolio__img-wrapper {
+        padding-bottom: 126%;
+
+        @media (--laptop-up) {
+          padding-bottom: 146%;
+        }
+      }
+
+      @media (--laptop-up) {
+        margin-bottom: 100px;
+      }
+
+      @media (--desktop-up) {
+        margin-bottom: 150px;
+      }
+
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    background: grey;
+    padding-bottom: 75%;
+
+    @media (--laptop-up) {
+      padding-bottom: 78%;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {}
+
+  &__item-subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__item-title {
+    line-height: 1.15;
+    margin-bottom: 37px;
+    letter-spacing: 0.026em;
+    padding: 0 10px;
+
+    &--small {
+      @media (--laptop-up) {
+        font-size: 34px;
+      }
+
+      @media (--desktop-up) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 35px;
+    text-align: center;
+
+    p {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item-btn {}
 }
