@@ -1,6 +1,6 @@
 <?php
 $title = get_sub_field('title');
-$title = get_sub_field('text');
+$text = get_sub_field('text');
 $bg_id = get_sub_field('image');
 $bg_mob_id = get_sub_field('image_mobile');
 $button = get_sub_field('button');
