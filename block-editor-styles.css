@@ -11,7 +11,7 @@
 }
 
 .edit-post-visual-editor.editor-styles-wrapper {
-    /*overflow-x: hidden; */
+    /*overflow-x: hidden; */
 }
 
 .block-editor-block-list__block {
@@ -27,7 +27,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-text-size-adjust: 100%;
-    /* Copied form basic.pcss */
+    /* Copied form basic.pcss */
 }
 
 @media (min-width: 768px) {
@@ -174,7 +174,7 @@ html .edit-post-visual-editor .center {
 }
 
 html .edit-post-visual-editor .logo {
-    font-family: 'Antiqua';
+    font-family: 'Antiqua', serif;
     font-weight: 400;
     line-height: 1.1;
     display: flex;
@@ -184,6 +184,7 @@ html .edit-post-visual-editor .logo {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    color: inherit;
 }
 
 @media (min-width: 1200px) {
@@ -216,17 +217,22 @@ html .edit-post-visual-editor .logo__main {
 
 html .edit-post-visual-editor .logo-small {
     opacity: 0;
-    visibility: hidden;
     margin-right: 38px;
-    font-family: 'Antiqua';
+    font-family: 'Antiqua', serif;
     font-size: 22px;
     letter-spacing: 0.026em;
     line-height: 1.1;
     font-weight: 400;
-    transform: translateX(-2em);
-    transition: transform .3s .3s, opacity .5s;
+    transition: opacity .3s, visibility 0s .3s;
     position: absolute;
-    left: 0;
+    visibility: hidden;
+    top: 60px;
+}
+
+@media (max-width: 1199px) {
+    html .edit-post-visual-editor .logo-small {
+        display: none;
+    }
 }
 
 html .edit-post-visual-editor .title {
@@ -299,108 +305,6 @@ html .edit-post-visual-editor .wysiwyg-content ol li:last-child {
 
 html .edit-post-visual-editor .wysiwyg-content img {
     display: block;
-}
-
-html .edit-post-visual-editor .feedback {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .feedback {
-        flex-direction: row;
-    }
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .feedback {
-        min-height: 832px;
-    }
-}
-
-html .edit-post-visual-editor .feedback__bg {
-    background: #d8d8d8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-html .edit-post-visual-editor .feedback__bg img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-}
-
-html .edit-post-visual-editor .feedback__center {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .feedback__center {
-        /*   margin: 0;
-      max-width: 1440px;*/
-    }
-}
-
-html .edit-post-visual-editor .feedback__content {
-    color: #fff;
-    padding-bottom: 50px;
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .feedback__content {
-        max-width: 645px;
-        padding-bottom: 67px;
-    }
-}
-
-html .edit-post-visual-editor .feedback__content-bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 50%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
-}
-
-html .edit-post-visual-editor .feedback__quotemark {
-    width: 25px;
-    height: 17px;
-    margin-bottom: 25px;
-}
-
-html .edit-post-visual-editor .feedback__quotemark-svg {
-    fill: currentcolor;
-}
-
-html .edit-post-visual-editor .feedback__quote {
-    margin: 0 0 8px;
-}
-
-html .edit-post-visual-editor .feedback__quote p {
-    margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    html .edit-post-visual-editor .feedback__quote {
-        -moz-column-count: 2;
-             column-count: 2;
-        -moz-column-gap: 30px;
-             column-gap: 30px;
-    }
-}
-
-html .edit-post-visual-editor .feedback__author {
-    font-weight: 600;
-    font-style: italic;
 }
 
 html .edit-post-visual-editor .hero-info {
@@ -476,6 +380,220 @@ html .edit-post-visual-editor .hero-info__btn {
     font-size: 13px;
     line-height: 1.23;
     letter-spacing: 0.026em;
+}
+
+html .edit-post-visual-editor .hero-reviews {
+    position: relative;
+    margin-top: -90px;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-reviews {
+        margin-top: -92px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d8d8d8;
+}
+
+@media (max-width: 767px) {
+    html .edit-post-visual-editor .hero-reviews__bg--desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .hero-reviews__bg--mobile {
+        display: none;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__bg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+html .edit-post-visual-editor .hero-reviews__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 150px 20px 60px;
+    min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .hero-reviews__center {
+        padding: 200px 30px 80px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__quote {
+    width: 25px;
+    height: 17px;
+    fill: #fff;
+    margin-bottom: 29px;
+}
+
+html .edit-post-visual-editor .hero-reviews__title {
+    max-width: 810px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 29px;
+}
+
+html .edit-post-visual-editor .hero-reviews__text {
+    position: relative;
+    max-width: 642px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-reviews__text {
+        margin-bottom: 60px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__text:last-child {
+    margin-bottom: 120px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .hero-reviews__text:last-child {
+        margin-bottom: 190px;
+    }
+}
+
+html .edit-post-visual-editor .hero-reviews__arrow {
+    display: block;
+    width: 7px;
+    height: 49px;
+    fill: #fff;
+}
+
+html .edit-post-visual-editor .promo {
+    position: relative;
+    background: #d8d8d8;
+    min-height: 884px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo {
+        flex-direction: row;
+    }
+}
+
+html .edit-post-visual-editor .promo__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background: url(./images/.jpg) no-repeat center/cover;*/
+}
+
+html .edit-post-visual-editor .promo__bg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo__bg::after {
+        height: 100%;
+        width: 60%;
+        background: linear-gradient(to right, #000, transparent);
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .promo__bg::after {
+        width: 54%;
+    }
+}
+
+html .edit-post-visual-editor .promo__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+html .edit-post-visual-editor .promo__content {
+    position: relative;
+    margin: 0 8px;
+    padding-bottom: 150px;
+    color: #fff;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo__content {
+        max-width: 643px;
+        margin: 0;
+    }
+}
+
+html .edit-post-visual-editor .promo__title {
+    font-size: 28px;
+    line-height: 1.37;
+    letter-spacing: 0.026em;
+    margin-bottom: 14px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo__title {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+}
+
+html .edit-post-visual-editor .promo__text:nth-last-child(n+2) {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo__text {
+        max-width: 363px;
+    }
+}
+
+html .edit-post-visual-editor .promo__btn {
+    color: inherit;
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo--text-right .promo__center {
+        align-items: flex-end;
+    }
+}
+
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .promo--text-right .promo__overlay {
+        right: 0;
+        left: auto;
+        width: 67%;
+        background: linear-gradient(to left, #000, transparent);
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .promo--text-right .promo__overlay {
+        width: 60%;
+    }
 }
 
 /*# sourceMappingURL=block-editor-styles.css.map */
