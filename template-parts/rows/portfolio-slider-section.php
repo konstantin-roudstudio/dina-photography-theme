@@ -3,6 +3,7 @@
 $title = get_sub_field('title');
 $text = get_sub_field('text');
 $button = get_sub_field('link');
+$items = get_sub_field('items');
 
 if ($button) {
   $button_url = $button['url'];
@@ -33,30 +34,21 @@ if ($button) {
 
       <?php if (!empty($items)) : ?>
         <div class="portfolio-slider__slider">
+
           <div class="swiper-container portfolio-slider__container">
 
             <div class="swiper-wrapper">
 
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
+              <?php foreach ($items as $item) :
+                $project = $item['project'];
+                ?>
+                <div class="swiper-slide portfolio-slider__item">
+                  <div class="portfolio-slider__img-wrapper">
+                    <img src="" alt="">
+                  </div>
+                  <div class="portfolio-slider__item-text"><?= get_the_title( $project ); ?></div>
                 </div>
-                <div class="portfolio-slider__item-text">Sam & Paul</div>
-              </div>
-
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
-                </div>
-                <div class="portfolio-slider__item-text">Stefania & Rodoulfe</div>
-              </div>
-
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
-                </div>
-                <div class="portfolio-slider__item-text">Stefania & Rodoulfe</div>
-              </div>
+              <?php endforeach; ?>
 
             </div>
 
