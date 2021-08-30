@@ -1,25 +1,36 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 export default function portfolioSlider() {
+  const portSlider = document.querySelectorAll('.portfolio-slider');
 
-  Swiper.use([Navigation, Pagination]);
+  for (const block of portSlider) {
+    const portfolioContainer = block.querySelector('.swiper-container');
 
-  const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    breakpoints: {
+    Swiper.use([Navigation, Pagination]);
+
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      breakpoints: {
         767: {
-          slidesPerView: 2,
+          slidesPerView: 3,
+          /*slidesPerGroup: 2,*/
         },
+        999: {
+          slidesPerView: 2,    
+          spaceBetween: 98,
+        }
       },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-  });
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
 
+  }
 }
