@@ -3,7 +3,8 @@ import 'regenerator-runtime/runtime.js';
 import fixVhOnResize from './utils/fixVhOnResize';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
-import heroSlider from './modules/hero-slider'
+import heroSlider from './modules/hero-slider';
+import form from './modules/form';
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -16,6 +17,7 @@ import heroSlider from './modules/hero-slider'
     mobMenu,
     stickyHeader,
     heroSlider,
+    form
   ];
 
   $(() => {
