@@ -1579,6 +1579,14 @@ html .edit-post-visual-editor .cta-form__field--textarea textarea {
     }
 }
 
+html .edit-post-visual-editor .cta-form__field.error input {
+    border: 1px solid #dc3232;
+}
+
+html .edit-post-visual-editor .cta-form__field.error label {
+    color: #dc3232;
+}
+
 html .edit-post-visual-editor .cta-form__select-wrapper {
     position: relative;
 }
@@ -1589,14 +1597,6 @@ html .edit-post-visual-editor .cta-form__label {
 
 html .edit-post-visual-editor .cta-form .wpcf7-not-valid-tip {
     margin-bottom: 10px;
-}
-
-html .edit-post-visual-editor .cta-form .wpcf7-not-valid {
-    border: 1px solid #dc3232;
-}
-
-html .edit-post-visual-editor .cta-form .invalid label {
-    color: #dc3232;
 }
 
 html .edit-post-visual-editor .cta-form--cream {
