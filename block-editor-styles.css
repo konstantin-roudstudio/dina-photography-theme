@@ -409,35 +409,21 @@ html .edit-post-visual-editor .feedback__author {
     font-style: italic;
 }
 
+html .edit-post-visual-editor .feedback--slider {
+    height: 800px;
+    min-height: 800px;
+}
+
 html .edit-post-visual-editor .feedback--slider .feedback__content {
     max-width: 100%;
     padding-bottom: 0;
-}
-
-@media (min-width: 999px) {
-    html .edit-post-visual-editor .feedback--slider .feedback__content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        max-width: 1355px;
-        padding: 0 30px 66px;
-    }
-}
-
-@media (min-width: 1200px) {
-    html .edit-post-visual-editor .feedback--slider .feedback__content {
-        padding: 0 80px 66px;
-    }
-}
-
-@media (min-width: 1355px) {
-    html .edit-post-visual-editor .feedback--slider .feedback__content {
-        padding: 0 20px 66px;
-    }
+    margin: auto;
+    width: 100%;
+    height: 800px;
 }
 
 html .edit-post-visual-editor .feedback--slider .swiper-container {
-    max-width: 643px;
+    height: 100%;
 }
 
 @media (min-width: 999px) {
@@ -446,19 +432,23 @@ html .edit-post-visual-editor .feedback--slider .swiper-container {
     }
 }
 
-html .edit-post-visual-editor .feedback--slider .center {
-    padding: 0;
-}
-
 html .edit-post-visual-editor .feedback--slider .feedback__container {
     padding: 0 18px;
-    margin-bottom: 20px;
+    margin-bottom: 102px;
+    z-index: 1;
 }
 
 @media (min-width: 999px) {
     html .edit-post-visual-editor .feedback--slider .feedback__container {
-        padding: 0;
-        margin: 0;
+        margin-bottom: 52px;
+        max-width: 643px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .feedback--slider .feedback__container {
+        padding: 0 10px 0 57px;
+        margin-bottom: 65px;
     }
 }
 
@@ -472,6 +462,23 @@ html .edit-post-visual-editor .feedback--slider .feedback__container {
     html .edit-post-visual-editor .feedback--slider .feedback__author {
         margin-top: -19px;
     }
+}
+
+html .edit-post-visual-editor .feedback--slider .swiper-slide {
+    background: lightgrey;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__slide-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 html .edit-post-visual-editor .feedback--slider .swiper-button-prev,
@@ -508,15 +515,34 @@ html .edit-post-visual-editor .feedback--slider .swiper-button-next {
 
 html .edit-post-visual-editor .feedback--slider .feedback__nav-content {
     width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 24px;
 }
 
 html .edit-post-visual-editor .feedback--slider .feedback__nav-content svg {
     fill: currentColor;
 }
 
+@media (min-width: 768px) {
+    html .edit-post-visual-editor .feedback--slider .feedback__nav-content {
+        bottom: 0;
+    }
+}
+
 @media (min-width: 999px) {
     html .edit-post-visual-editor .feedback--slider .feedback__nav-content {
         max-width: 298px;
+        right: 4%;
+        left: auto;
+        z-index: 1;
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .feedback--slider .feedback__nav-content {
+        bottom: 72px;
     }
 }
 
@@ -530,6 +556,12 @@ html .edit-post-visual-editor .feedback--slider .feedback__nav-block {
         display: block;
         margin-bottom: 55px;
         padding: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    html .edit-post-visual-editor .feedback--slider .feedback__nav-block {
+        margin-bottom: 48px;
     }
 }
 
@@ -551,13 +583,20 @@ html .edit-post-visual-editor .feedback--slider .feedback__nav-text {
     line-height: 1.71;
 }
 
+@media (min-width: 999px) {
+    html .edit-post-visual-editor .feedback--slider .feedback__nav-text {
+        margin-right: 5px;
+    }
+}
+
 html .edit-post-visual-editor .feedback--slider .feedback__slider-nav {
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 15px auto 40px;
+    margin: 15px auto;
     padding: 0 20px;
     max-width: 643px;
+    /*width: 100%;*/
 }
 
 @media (min-width: 999px) {
@@ -573,6 +612,7 @@ html .edit-post-visual-editor .feedback--slider .feedback__numbers {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 html .edit-post-visual-editor .feedback--slider .feedback__number {
