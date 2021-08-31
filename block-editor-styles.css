@@ -478,7 +478,7 @@ html .edit-post-visual-editor .feedback--slider .swiper-button-prev,
 html .edit-post-visual-editor .feedback--slider .swiper-button-next {
     width: 56px;
     opacity: 1;
-    color: transparent;
+    color: #fff;
 }
 
 html .edit-post-visual-editor .feedback--slider .swiper-button-prev::after,
@@ -508,6 +508,10 @@ html .edit-post-visual-editor .feedback--slider .swiper-button-next {
 
 html .edit-post-visual-editor .feedback--slider .feedback__nav-content {
     width: 100vw;
+}
+
+html .edit-post-visual-editor .feedback--slider .feedback__nav-content svg {
+    fill: currentColor;
 }
 
 @media (min-width: 999px) {

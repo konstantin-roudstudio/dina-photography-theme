@@ -1,24 +1,32 @@
 import Swiper, { Navigation } from 'swiper';
 
 export default function feedbackSlider($) {
+  const $feedback = $('.feedback'); {
+    $feedback.each(function() {
 
-  Swiper.use([Navigation]);
+      const container = $(this).find('.swiper-container')[0];
+      const $current = $(this).find('.current');
+      const $total = $(this).find('.total');
+      const $slides = $('.swiper-slide:not(.swiper-slide-duplicate)');
 
-  const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      init: function(sw) {
-        $('.total').text($('.swiper-slide:not(.swiper-slide-duplicate)').length)
-        $('.current').text(sw.realIndex + 1)
-      },
-      slideChange: function(sw) {
-        $('.current').text(sw.realIndex + 1)
-      },
-    },
-  });
+      Swiper.use([Navigation]);
 
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          init: function(sw) {
+            $total.text($slides.length);
+            $current.text(sw.realIndex + 1)
+          },
+          slideChange: function(sw) {
+            $current.text(sw.realIndex + 1)
+          },
+        },
+      });
+    })
+  }
 }

@@ -56,7 +56,7 @@
         <div class="feedback__slider-nav">        
           <div class="swiper-button-prev">
             <svg width="56" height="7" viewBox="0 0 56 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M55.5 4H56V3H55.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM55.5 3H5V4H55.5V3Z" fill="white"/>
+              <path d="M55.5 4H56V3H55.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM55.5 3H5V4H55.5V3Z"/>
             </svg>
           </div>
 
@@ -68,7 +68,7 @@
 
           <div class="swiper-button-next">
             <svg width="57" height="7" viewBox="0 0 57 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.5 3H0V4H0.5V3ZM56.5 3.5L51.5 0.613249V6.38675L56.5 3.5ZM0.5 4H52V3H0.5V4Z" fill="white"/>
+              <path d="M0.5 3H0V4H0.5V3ZM56.5 3.5L51.5 0.613249V6.38675L56.5 3.5ZM0.5 4H52V3H0.5V4Z"/>
             </svg>
           </div>
         </div>

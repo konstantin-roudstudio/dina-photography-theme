@@ -151,7 +151,7 @@
     .swiper-button-next {
       width: 56px;
       opacity: 1;
-      color: transparent;
+      color: #fff;
 
       &::after {
         display: none;
@@ -176,6 +176,10 @@
 
     .feedback__nav-content {
       width: 100vw;
+
+      svg {
+        fill: currentColor;
+      }
 
       @media (--laptop-up) {
         max-width: 298px;
