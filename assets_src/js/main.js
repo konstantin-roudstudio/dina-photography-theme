@@ -3,6 +3,7 @@ import 'regenerator-runtime/runtime.js';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
 import heroSlider from './modules/hero-slider'
+import blogSlider from './modules/blog-slider'
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -12,7 +13,8 @@ import heroSlider from './modules/hero-slider'
     /*disablePageScroll,*/
     mobMenu,
     stickyHeader,
-    heroSlider
+    heroSlider,
+    blogSlider
   ];
 
   $(() => {
