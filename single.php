@@ -55,7 +55,22 @@ $archive_link = get_post_type_archive_link( $type );
 //    endwhile;
 //    ?>
 
-    ADD SECTIONS HERE
+    <section class="post-cta">
+      <div class="post-cta__bg">
+        <div class="post-cta__bg-overlay"></div>
+        <img src="<?php echo get_template_directory_uri(); ?> /images/post-cta__bg.jpg" alt="">     
+      </div>
+      <div class="center center--narrow">
+        <div class="post-cta__content">
+          <div class="post-cta__title title">Looking for photograpeher?</div>
+          <div class="post-cta__text">Let’s chat more about your wedding or pre-wedding photosession.</div>
+          <div class="post-cta__links-wrapper">
+            <a href="#" class="post-cta__btn btn btn--calendar">check your date</a>
+            <a href="#" class="post-cta__link">explore portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main><!-- #main -->
 
