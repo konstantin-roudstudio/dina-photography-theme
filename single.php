@@ -56,10 +56,7 @@ $archive_link = get_post_type_archive_link( $type );
 //    ?>
 
     <section class="post-cta">
-      <div class="post-cta__bg">
-        <div class="post-cta__bg-overlay"></div>
-        <img src="<?php echo get_template_directory_uri(); ?> /images/post-cta__bg.jpg" alt="">     
-      </div>
+      <div class="post-cta__bg"></div>
       <div class="center center--narrow">
         <div class="post-cta__content">
           <div class="post-cta__title title">Looking for photograpeher?</div>
