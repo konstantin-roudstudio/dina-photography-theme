@@ -55,6 +55,31 @@ $archive_link = get_post_type_archive_link( $type );
 //    endwhile;
 //    ?>
 
+    <div class="breadcrumbs">
+      <div class="center center--narrow center--skew">
+        <div class="breadcrumbs__inner">
+          <a href="#">Blog</a>
+          <span class="breadcrumbs__divider">/</span>
+          <span>Black and White Wedding Photography</span>
+        </div> 
+      </div>           
+    </div>
+
+    <div class="article-head">
+      <div class="center center--narrow center--skew">
+        <h1 class="article-head__title title">Black and White Wedding Photography</h1>
+      </div>
+    </div>
+
+    <section class="blog-post">
+      <div class="center center--narrow center--skew">
+        <div class="blog-post__inner">
+          <div class="blog-post__date">Aug 13, 2021</div>
+          <div class="blog-post__text">Does black and white wedding photography sound old-fashioned for you? Some people might think this way, but the truth is, it is the best way to convey the emotion and clearly show the message of the picture. Removing the color in the images can make the pictures look more dramatic or stronger. It makes the viewer center their attention on the subject and not on the backgrounds and other elements in the image.</div>
+        </div>
+      </div>
+    </section>
+    
     <section class="info-block">
       <div class="info-block__center center center--narrow">
         <div class="info-block__inner">
