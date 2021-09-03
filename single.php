@@ -69,6 +69,20 @@ $archive_link = get_post_type_archive_link( $type );
         </div>
       </div>
     </section>
+
+    <section class="info-block info-block--inverted">
+      <div class="info-block__center center center--narrow">
+        <div class="info-block__inner">
+          <div class="info-block__img-wrapper">
+            <img src="" alt="">
+          </div>
+          <div class="info-block__content">
+            <div class="info-block__title">It can be Helpful with Difficult Lighting</div>
+            <div class="info-block__text">Since black and white is perfect in high contrast shots, it is very helpful if your photographer is working in difficult lighting. There are instances were modifying the light is not possible because the wedding is held outdoors. Or the ceremony restricted the use of flash. Also if you need to deal with a bright sun penetrating the venue.</div>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <section class="blog-slider">
       <div class="blog-slider__center center center--narrow">

@@ -4,12 +4,23 @@
     padding: 0;
   }
 
-  &__inner {}
+  &__inner {
+    padding-bottom: 50px;
+
+    @media (--tablet-up) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 94px;
+      padding-bottom: 0;
+    }
+  }
 
   &__img-wrapper {
     background-color: grey;
     position: relative;
-    margin-bottom: 30px;
+    max-width: 308px;
+    margin: 0 auto 30px;
 
     &::after {
       content: '';
@@ -24,11 +35,20 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @media (--tablet-up) {
+      width: 38%;
+      margin: 0;
+    }
   }
 
   &__content {
-    padding: 0 20px;
-    margin-bottom: 50px;
+    padding: 0 18px;
+
+    @media (--tablet-up) {
+      width: 54%;
+      margin-bottom: 44px;
+    }
   }
 
   &__title {
@@ -39,9 +59,15 @@
   }
 
   &__text {
+    font-family: 'RF Dewi', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.625;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+
+    @media (--tablet-up) {
+      max-width: 334px;
+    }
   }
 
   &__link {
@@ -66,6 +92,26 @@
 
     &:hover::after {
       transform: translateY(-3px);
+    }
+  }
+
+  &--inverted {
+
+    .info-block__inner {
+      flex-direction: row-reverse;
+    }
+
+    .info-block__content {
+      @media (--tablet-up) {
+        padding: 0 20px 0 84px;
+        margin: 13px 0 0;
+      }
+    }
+
+    .info-block__title {
+      @media (--tablet-up) {
+        margin-bottom: 22px;
+      }
     }
   }
 }
