@@ -54,6 +54,21 @@ $archive_link = get_post_type_archive_link( $type );
 <!--    --><?php
 //    endwhile;
 //    ?>
+
+    <section class="info-block">
+      <div class="info-block__center center center--narrow">
+        <div class="info-block__inner">
+          <div class="info-block__img-wrapper">
+            <img src="" alt="">
+          </div>
+          <div class="info-block__content">
+            <div class="info-block__title">More Contrast</div>
+            <div class="info-block__text">Monochrome photography is best applied to images with lots of contrast. It focuses on the difference between light and the dark, and not on the colors in the pictures. Images with harsh lighting will look good in black and white. It will be easier to control how the color changes to a different shade of gray.</div>
+            <a href="#" class="info-block__link">read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
     
     <section class="blog-slider">
       <div class="blog-slider__center center center--narrow">

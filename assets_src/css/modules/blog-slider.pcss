@@ -1,46 +1,54 @@
 .blog-slider {
 
-	&__center {
-		padding: 0;
-	}
+  &__center {
+    padding: 0;
+  }
 
-	&__inner {
-		padding-bottom: 40px;
+  &__inner {
+    padding-bottom: 40px;
 
-		@media (--laptop-up) {
-			padding-bottom: 74px;
-		}
-	}
+    @media (--laptop-up) {
+      padding-bottom: 74px;
+    }
+  }
 
-	&__nav {
-		pointer-events: auto;
+  &__nav {
+    pointer-events: auto;
     position: relative;
     width: fit-content;
     margin: auto;
-	}
 
-	&__nav-inner {
-		position: relative;
+    @media (--laptop-up) {
+      position: inherit;
+    }
+  }
+
+  &__nav-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 250px;
-	}
 
-	&__numbers {
-		display: flex;
+    @media (--laptop-up) {
+      position: inherit;
+    }
+  }
+
+  &__numbers {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-	}
+  }
 
-	&__number {
-		line-height: 1.21;
+  &__number {
+    line-height: 1.21;
     min-width: 20px;
     padding: 0 5px;
-	}
+  }
 
-	&__slash {
-		position: relative;
+  &__slash {
+    position: relative;
     width: 16px;
     height: 30px;
 
@@ -55,35 +63,75 @@
       transform: rotate(30deg);
       background-color: currentColor;
     }
-	}
+  }
 
-	.swiper-container {
-		margin-bottom: 40px;
-	}
+  .swiper-container {
+    margin-bottom: 34px;
 
-	.swiper-wrapper {}
+    @media (--laptop-up) {
+      position: relative;
+    }
+  }
 
-	.swiper-slide {
-		height: 501px;
-		background-color: red;
-	}
+  .swiper-wrapper {}
 
-	.swiper-button-prev,
-	.swiper-button-next {
-		width: 57px;
-		height: 100%;
-		top: calc(50% + 6px);
+  .swiper-slide {
+    /*height: 501px;*/
+    background-color: grey;
+    position: relative;
 
-		&::after {
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 61.8%;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 57px;
+    height: 100%;
+    top: calc(50% + 6px);
+
+    &::after {
       display: none;
     }
 
-    svg {    	
-    	color: currentColor;
+    svg {
+      color: currentColor;
     }
-	}
 
-	.swiper-button-prev {}
+    @media (--laptop-up) {
+      height: 30px;
+      top: 40.8%;
+    }
+  }
 
-	.swiper-button-next {}
+  .swiper-button-prev {
+    @media (--laptop-up) {
+      left: -9%;
+    }
+
+    @media (--desktop-up) {
+      left: -13.8%;
+    }
+  }
+
+  .swiper-button-next {
+    @media (--laptop-up) {
+      right: -9%;
+    }
+
+    @media (--desktop-up) {
+      right: -13.8%;
+    }
+  }
 }
