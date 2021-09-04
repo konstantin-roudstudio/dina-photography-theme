@@ -17,6 +17,7 @@ get_header();
         elseif (get_row_layout() == 'hero_about_section'): get_template_part('template-parts/rows/hero-about-section', 'section');
         elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
         elseif (get_row_layout() == 'cta_form_section'): get_template_part('template-parts/rows/cta-form-section', 'section');
+        elseif (get_row_layout() == 'portfolio_slider_section'): get_template_part('template-parts/rows/portfolio-slider-section', 'section');
         elseif (get_row_layout() == 'cta_section'):
           get_template_part('template-parts/rows/cta-section', 'section');
 //                  if (get_sub_field('override')) :

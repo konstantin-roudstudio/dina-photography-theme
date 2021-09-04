@@ -2,6 +2,7 @@ import 'regenerator-runtime/runtime.js';
 // import animations from './utils/animations';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
+import portfolioSlider from './modules/portfolio-slider';
 import heroSlider from './modules/hero-slider'
 /*import disablePageScroll from './utils/scroll';*/
 
@@ -13,6 +14,7 @@ import heroSlider from './modules/hero-slider'
     mobMenu,
     stickyHeader,
     heroSlider
+    portfolioSlider,
   ];
 
   $(() => {
