@@ -12,12 +12,15 @@ export default function portfolioSlider() {
       slidesPerView: 1,
       spaceBetween: 24,
       breakpoints: {
-        767: {
-          slidesPerView: 3,
-          /*slidesPerGroup: 2,*/
+        768: {
+          spaceBetween: 60,
         },
         999: {
-          slidesPerView: 2,    
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+        1200: {
+          slidesPerView: 2,
           spaceBetween: 98,
         }
       },
