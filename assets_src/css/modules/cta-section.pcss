@@ -1,6 +1,4 @@
-.cta-section {
-  background-color: #fff;
-
+.cta {
   &--cream {
     background-color: #F2F0EC;
   }
@@ -8,7 +6,7 @@
   &__inner {
     padding: 55px 0 68px;
 
-    @media (--laptop-up) {
+    @media (--tablet-up) {
       padding: 90px 30px;
       display: flex;
       align-items: center;
@@ -35,12 +33,12 @@
   &__img-wrapper {
     position: relative;
 
-    @media (--tablet-down) {
+    @media (--mobile) {
       margin-bottom: 43px;
     }
 
     &.mob {
-      @media (--laptop-up) {
+      @media (--tablet-up) {
         display: none;
       }
     }
@@ -48,10 +46,11 @@
     &.desktop {
       display: none;
 
-      @media (--laptop-up) {
+      @media (--tablet-up) {
         display: block;
         width: 29%;
         max-width: 308px;
+        flex-shrink: 0;
       }
     }
 
@@ -77,9 +76,10 @@
   }
 
   &__content {
-    @media (--laptop-up) {
-      width: 57%;
-      max-width: 503px;
+    @media (--tablet-up) {
+      //width: 57%;
+      max-width: 550px;
+      padding-left: 50px;
     }
   }
 
