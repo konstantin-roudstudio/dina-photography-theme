@@ -13,7 +13,7 @@ import heroSlider from './modules/hero-slider'
     /*disablePageScroll,*/
     mobMenu,
     stickyHeader,
-    heroSlider
+    heroSlider,
     portfolioSlider,
   ];
 
