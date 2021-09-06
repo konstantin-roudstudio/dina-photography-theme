@@ -1,81 +1,35 @@
+<?php
+$title = get_sub_field('title');
+$text = get_sub_field('description');
+$gallery = get_sub_field('gallery');
+?>
+
 <section class="gallery">
   <div class="gallery__inner">
     <div class="gallery__content center">
-      <div class="gallery__title title">porfolio gallery</div>
-      <div class="gallery__text">
-        <p>To stand out as a wedding photographer can be very hard. I try to make my wedding photography style unique and creative for each couple. I love to make a reportage of the wedding day as well as implement magazine style in my photography work.</p>
-        <p>Here is a quick overview of my wedding photography style!</p>
-      </div>
-    </div>
-    <div class="gallery__row">
-      <div class="gallery__item">
-        <div class="gallery__item-wrapper" style="padding-bottom:55.5%;"><img src="" alt=""></div>
-      </div>
+      <?php if ($title) : ?>
+        <div class="gallery__title title"><?= $title ?></div>
+      <?php endif; ?>
+
+      <?php if ($text) : ?>
+        <div class="gallery__text"><?= $text ?></div>
+      <?php endif; ?>
     </div>
 
-    <div class="gallery__row center">
-      <div class="gallery__item gallery__item--half">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
+    <?php foreach ($gallery as $row) : ?>
+      <div class="gallery__row<?php if (!$row['full_width']) echo ' center'; ?>">
+        <?php foreach($row['row'] as $item) :
+          $ratio = $item['aspect_ratio'] === 'unset' ? null : 'padding-bottom:'.$item['aspect_ratio'].'%;';
+          $width = $item['image_width'] === 'unset' ? null : 'width:'.$item['image_width'].'%;';
+          ?>
+          <div class="gallery__item"  <?php if ($width) echo 'style="'.$width.'"' ?>>
+            <div class="gallery__item-wrapper" <?php if ($ratio) echo 'style="'.$ratio.'"' ?>>
+              <?= wp_get_attachment_image($item['image'], 'full') ?>
+            </div>
+          </div>
+        <?php endforeach; ?>
       </div>
-
-      <div class="gallery__item gallery__item--half">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
-      </div>
-    </div>
-
-    <div class="gallery__row center">
-      <div class="gallery__item">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-    </div>
-
-    <div class="gallery__row center">
-      <div class="gallery__item gallery__item--half">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--half">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-    </div>
-
-    <div class="gallery__row center">
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
-      </div>
-    </div>
-
-    <div class="gallery__row center">
-      <div class="gallery__item gallery__item--two-thirds">
-        <div class="gallery__item-wrapper" style="padding-bottom:71.2%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:150%;"><img src="" alt=""></div>
-      </div>
-    </div>
-
-    <div class="gallery__row center">
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-
-      <div class="gallery__item gallery__item--third">
-        <div class="gallery__item-wrapper" style="padding-bottom:66.6%;"><img src="" alt=""></div>
-      </div>
-    </div>
+    <?php endforeach; ?>
 
   </div>
 </section>

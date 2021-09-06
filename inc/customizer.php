@@ -132,11 +132,11 @@ function custom_post_type() {
 // Set other options for Custom Post Type
 
   $reviews_args = array(
-      'label'               => __( 'projects', 'dina-photography' ),
+      'label'               => __( 'reviews', 'dina-photography' ),
       'description'         => __( 'Reviews', 'dina-photography' ),
       'labels'              => $reviews_labels,
     // Features this CPT supports in Post Editor
-      'supports'            => array( 'title', 'editor', 'thumbnail'),
+      'supports'            => array( 'title', 'thumbnail'),
     // You can associate this CPT with a taxonomy or custom taxonomy.
 //      'taxonomies'          => array( 'genres' ),
     /* A hierarchical CPT is like Pages and can have

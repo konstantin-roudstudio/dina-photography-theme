@@ -178,10 +178,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_61234812195c1",
-                            "label": "CTA Section",
-                            "name": "cta_section",
-                            "type": "clone",
+                            "key": "field_61349404e08d1",
+                            "label": "Cream background",
+                            "name": "cream_background",
+                            "type": "true_false",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -190,13 +190,11 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "clone": [
-                                "group_612344bc64ef6"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
+                            "default_value": 0,
+                            "message": "",
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         }
                     ],
                     "min": "",
@@ -294,6 +292,99 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_61288877a8fee": {
+                    "key": "layout_61288877a8fee",
+                    "name": "promo_section",
+                    "label": "Promo Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6128887da8fef",
+                            "label": "Promo Section",
+                            "name": "promo_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_61288759dba3f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_612c996559630": {
+                    "key": "layout_612c996559630",
+                    "name": "portfolio_slider_section",
+                    "label": "Portfolio Slider Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_612c997259631",
+                            "label": "Portfolio Slider Section",
+                            "name": "portfolio_slider_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_612c97273ba1f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6135fa0694d84": {
+                    "key": "layout_6135fa0694d84",
+                    "name": "gallery_section",
+                    "label": "Gallery Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6135fa1594d85",
+                            "label": "Gallery Section",
+                            "name": "gallery_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6135f815db20d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -318,5 +409,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629919055
+    "modified": 1630927418
 }
