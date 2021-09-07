@@ -2,7 +2,7 @@
 $title = get_sub_field('title');
 $text = get_sub_field('text');
 $link = get_sub_field('link');
-$img = get_sub_field('img');
+$img = get_sub_field('image');
 $inverted = get_sub_field('inverted');
 
 if ($link) {
@@ -28,7 +28,7 @@ if ($link) {
         <?php endif; ?>
 
         <?php if ($link) : ?>
-          <a href="#" class="info-block__link">read more</a>
+          <a href="#" target="<?= $link_target ?>" class="info-block__link"><?= $link_title ?></a>
         <?php endif; ?>
       </div>
     </div>

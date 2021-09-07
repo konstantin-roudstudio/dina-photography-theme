@@ -44,7 +44,7 @@
             "key": "field_613723f2cc200",
             "label": "Link",
             "name": "link",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -53,11 +53,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "array"
         },
         {
             "key": "field_61376b2876707",
@@ -120,5 +116,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1631055882
+    "modified": 1631057578
 }
