@@ -4,6 +4,7 @@ import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
 import portfolioSlider from './modules/portfolio-slider';
 import heroSlider from './modules/hero-slider'
+import blogSlider from './modules/blog-slider'
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -15,6 +16,8 @@ import heroSlider from './modules/hero-slider'
     stickyHeader,
     heroSlider,
     portfolioSlider,
+    heroSlider,
+    blogSlider
   ];
 
   $(() => {
