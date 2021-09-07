@@ -1,6 +1,6 @@
 {
     "key": "group_61249167d0853",
-    "title": "Hero Slider Section",
+    "title": "Section Hero Slider",
     "fields": [
         {
             "key": "field_6124921491d21",
@@ -146,14 +146,7 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1629787678
+    "modified": 1631047140
 }
