@@ -1,3 +1,8 @@
+<?php
+$image = get_sub_field('image');
+if ($image) : ?>
+
 <section class="image-fullwidth">
-  <img src="" alt="">
+  <?= wp_get_attachment_image($image, 'full'); ?>
 </section>
+<?php endif;

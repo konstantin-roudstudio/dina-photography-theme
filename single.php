@@ -43,6 +43,8 @@ $archive_link = get_post_type_archive_link( $type );
           while (have_rows('page_builder')): the_row();
             if (get_row_layout() == 'simple_slider_section'): get_template_part('template-parts/rows/simple-slider-section', 'section');
             elseif (get_row_layout() == 'info_block_section'): get_template_part('template-parts/rows/info-block-section', 'section');
+            elseif (get_row_layout() == 'image_fullwidth_section'): get_template_part('template-parts/rows/image-fullwidth-section', 'section');
+            elseif (get_row_layout() == 'image_simple_section'): get_template_part('template-parts/rows/image-simple-section', 'section');
             elseif (get_row_layout() == 'post_cta_section'):
               if (get_sub_field('override')) :
                 get_template_part('template-parts/rows/post-cta-section', 'section');
