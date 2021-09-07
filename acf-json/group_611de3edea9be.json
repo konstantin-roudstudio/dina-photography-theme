@@ -480,7 +480,15 @@
                             "type": "group",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_6137abd79e001",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -538,5 +546,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631038626
+    "modified": 1631054912
 }

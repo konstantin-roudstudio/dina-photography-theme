@@ -7,7 +7,7 @@
   <div class="center center--narrow">
     <div class="wysiwyg-section__inner">
       <?php if ($show_date) : ?>
-        <div class="wysiwyg-section__date"><!--Aug 13, 2021--> <?= get_the_date(); ?></div>
+        <div class="wysiwyg-section__date"><?= get_the_date('M d, Y'); ?></div>
       <?php endif; ?>
 
       <div class="wysiwyg-section__text wysiwyg-content">
