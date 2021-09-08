@@ -17,7 +17,7 @@ $archive_link = get_post_type_archive_link( $type );
 ?>
   <main id="primary" class="main">
     <div class="breadcrumbs">
-      <div class="center center--narrow center--skew">
+      <div class="breadcrumbs__center center center--narrow">
         <div class="breadcrumbs__inner">
           <a href="<?= get_post_type_archive_link($type) ?>">Blog</a>
           <span class="breadcrumbs__divider">/</span>
@@ -33,7 +33,7 @@ $archive_link = get_post_type_archive_link( $type );
 
       <article class="post">
         <div class="article-head">
-          <div class="center center--narrow center--skew">
+          <div class="article-head__center center center--narrow">
             <h1 class="article-head__title title"><?= the_title(); ?></h1>
           </div>
         </div>
