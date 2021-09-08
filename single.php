@@ -33,7 +33,7 @@ $archive_link = get_post_type_archive_link( $type );
 
       <article class="post">
         <div class="article-head">
-          <div class="center center--narrow">
+          <div class="center center--narrow center--skew">
             <h1 class="article-head__title title"><?= the_title(); ?></h1>
           </div>
         </div>
