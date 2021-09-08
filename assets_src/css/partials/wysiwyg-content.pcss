@@ -18,7 +18,7 @@
       margin: 35px 0 21px;
 
       @media (--laptop-up) {
-        margin: 55px 0 27px;
+        margin: 41px 0 27px;
       }
     }
 
@@ -32,8 +32,18 @@
     margin-bottom: 23px;
   }
 
-  p {
-    margin-bottom: 22px;
+  h4 {
+    font: 700 14px/1.16 'RF Dewi Extended', serif;
+  }
+
+  h5 {
+    font: 700 12px/1.16 'RF Dewi Extended', serif;
+  }
+
+  p {   
+    &:nth-last-child(n+2) {
+      margin-bottom: 22px;
+    }
   }
 
   ol {
@@ -41,7 +51,7 @@
     margin: 35px 0 35px;
 
     @media (--laptop-up) {
-      margin: 60px 0 55px;
+      margin: 39px 0 55px;
     }
 
     li {
@@ -70,15 +80,14 @@
         justify-content: center;
         padding: 1px 2px 2px 2px;
       }
+    }
+  }
 
-      p {}
+  ul {
+    margin-bottom: 20px;
 
-      /*h3 {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.16;
-        margin-bottom: 23px;
-      }*/
+    @media (--laptop-up) {
+      margin-bottom: 46px;
     }
   }
 
