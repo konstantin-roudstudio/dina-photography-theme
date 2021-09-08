@@ -1,20 +1,23 @@
 import 'regenerator-runtime/runtime.js';
-import animations from './utils/animations';
-import fixVhOnResize from './utils/fixVhOnResize';
-import testimonials from './modules/testimonials'
+// import animations from './utils/animations';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
+import portfolioSlider from './modules/portfolio-slider';
+import heroSlider from './modules/hero-slider'
+import blogSlider from './modules/blog-slider'
 /*import disablePageScroll from './utils/scroll';*/
 
 
 (function ($) {
   const initMethods = [
-    // fixVhOnResize,
-    testimonials,
-    animations,
+    // animations,
     /*disablePageScroll,*/
     mobMenu,
-    stickyHeader
+    stickyHeader,
+    heroSlider,
+    portfolioSlider,
+    heroSlider,
+    blogSlider
   ];
 
   $(() => {

@@ -21,7 +21,7 @@
       overflow: auto;
       opacity: 0;
       transform: translateY(-20px);
-      transition: all .2s ease;
+      transition: transform .3s ease;
       padding: 0 25px 0 22px;
       height: 100%;
     }
@@ -90,7 +90,7 @@
     font-family: 'Antiqua', serif;
     font-weight: 400;
     margin-bottom: 24px;
-    transition: all .3s ease;
+    transition: transform .3s ease;
 
     @media (min-width: 380px) {
       font-size: 38px;
@@ -158,6 +158,8 @@
     }
 
     .sub-menu {
+      color: #000;
+
       @media (--laptop-down) {
         padding: 0 20px;
 
@@ -171,7 +173,7 @@
         flex-wrap: wrap;
         justify-content: center;
         opacity: 0;
-        transition: all .3s ease;
+        transition: opacity .3s ease, transform .3s ease;
 
         .menu-item {
           width: 20%;
@@ -269,6 +271,7 @@
           visibility: hidden;
           position: absolute;
           left: 0;
+          top: calc(100% + 11px);
           width: 100%;
           transform-origin: 50% 0;
           transition: all .3s .2s ease, visibility 0s .5s;
@@ -287,40 +290,60 @@
       }
     }
 
-    .menu-item-has-children > a {
-      display: block;
-      position: relative;
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 24px;
-        right: 0;
+    .menu-item-has-children {
+      > a {
         display: block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 4px 4px 0 4px;
-        border-color: currentColor transparent transparent transparent;
-        transition: transform .3s;
+        position: relative;
 
-        @media (--desktop-up) {
-          border-width: 3px 3px 0 3px;
-          top: 6px;
-          right: -12px;
+        span {
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -24px;
+            height: 24px;
+            pointer-events: none;
+          }
         }
-      }
 
-      @media (--laptop-down) {
-        .menu-item {
-          &:last-child {
-            padding-bottom: 20px;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 24px;
+          right: 0;
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 4px 4px 0 4px;
+          border-color: currentColor transparent transparent transparent;
+          transition: transform .3s ease;
+
+          @media (--desktop-up) {
+            border-width: 3px 3px 0 3px;
+            top: 6px;
+            right: -12px;
+          }
+        }
+
+        @media (--laptop-down) {
+          .menu-item {
+            &:last-child {
+              padding-bottom: 20px;
+            }
           }
         }
       }
     }
 
     .menu-item-has-children:hover {
+      > a span::after {
+        pointer-events: auto;
+      }
+
       .sub-menu {
         @media (--desktop-up) {
           opacity: 1;
