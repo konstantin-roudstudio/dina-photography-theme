@@ -1,20 +1,21 @@
 .wysiwyg-section {
-
   &__center {
     @media (--laptop-up) {
       padding: 0;
-    }
-
-    @media (--desktop-up) {
-      right: 83px;
     }
   }
 
   &__inner {
     padding-bottom: 30px;
 
-    @media (min-width: 550px) {
-      position: relative;
+    @media (--laptop-up) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (--desktop-up) {
+      padding-left: 85px;
+      padding-right: 85px;
     }
   }
 
@@ -22,28 +23,18 @@
     line-height: 1.5;
     opacity: .5;
     margin-bottom: 10px;
-    padding-right: 10px;
 
-    @media (min-width: 550px) {
+    @media (--desktop-up) {
+      white-space: nowrap;
       position: absolute;
-      left: 2px;
       top: 3px;
+      left: -80px;
       margin-bottom: 0;
     }
   }
 
   &__text {
     font: 400 16px / 1.625 'RF Dewi', sans-serif;
-
-    &:nth-child(2) {
-      @media (min-width: 550px) {
-        margin-left: 20.7%;
-      }
-    }
-
-    @media (--desktop-up) {
-      margin-left: 20.7%;
-    }
 
     &.wysiwyg-content {
       padding: 0;
