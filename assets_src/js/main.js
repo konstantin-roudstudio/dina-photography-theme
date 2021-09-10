@@ -5,6 +5,8 @@ import stickyHeader from './modules/header';
 import portfolioSlider from './modules/portfolio-slider';
 import heroSlider from './modules/hero-slider'
 import blogSlider from './modules/blog-slider'
+import heroSlider from './modules/hero-slider';
+import form from './modules/form';
 /*import disablePageScroll from './utils/scroll';*/
 
 
@@ -16,8 +18,8 @@ import blogSlider from './modules/blog-slider'
     stickyHeader,
     heroSlider,
     portfolioSlider,
-    heroSlider,
     blogSlider
+    form
   ];
 
   $(() => {
