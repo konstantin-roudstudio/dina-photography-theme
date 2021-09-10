@@ -1,5 +1,5 @@
 export default function ($) {
-    const $form = $('.cta-form');
+    const $form = $('.cta-form, .contact');
 
     $form.each(function () {
         const $fields = $(this).find('.wpcf7-form-control');
