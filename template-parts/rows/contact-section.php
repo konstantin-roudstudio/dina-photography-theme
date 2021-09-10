@@ -10,7 +10,7 @@ $shortcode = get_sub_field('form');
   <div class="contact__content">
     <h1 class="title contact__title"><?= $title ?></h1>
     <div class="contact__text"><?= $text ?></div>
-    <div class="contact__form"></div>
+    <div class="contact__form"><?= do_shortcode($shortcode); ?></div>
   </div>
 </section>
 
