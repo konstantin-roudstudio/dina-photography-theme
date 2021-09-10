@@ -28,7 +28,7 @@ if ($link) {
         <?php endif; ?>
 
         <?php if ($link) : ?>
-          <a href="#" target="<?= $link_target ?>" class="info-block__link"><?= $link_title ?></a>
+          <a href="<?= $link_url ?>" target="<?= $link_target ?>" class="info-block__link"><?= $link_title ?></a>
         <?php endif; ?>
       </div>
     </div>
