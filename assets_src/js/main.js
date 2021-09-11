@@ -3,8 +3,7 @@ import 'regenerator-runtime/runtime.js';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
 import portfolioSlider from './modules/portfolio-slider';
-import heroSlider from './modules/hero-slider'
-import blogSlider from './modules/blog-slider'
+import blogSlider from './modules/blog-slider';
 import heroSlider from './modules/hero-slider';
 import form from './modules/form';
 /*import disablePageScroll from './utils/scroll';*/
@@ -18,7 +17,7 @@ import form from './modules/form';
     stickyHeader,
     heroSlider,
     portfolioSlider,
-    blogSlider
+    blogSlider,
     form
   ];
 
