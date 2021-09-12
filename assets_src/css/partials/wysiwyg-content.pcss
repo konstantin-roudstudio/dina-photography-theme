@@ -1,83 +1,97 @@
 .wysiwyg-content {
+  padding: 50px 0;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {}
-
-  h1 {}
-
-  h2,
-  h3,
-  h4,
-  h5 {}
+  @media (--laptop-up) {
+    padding-top: 115px;
+  }
 
   h2 {
-    font: 600 28px/1.2 'Cormorant Garamond', serif;
+    font: 500 38px/1.1 'Antiqua', serif;
+    text-transform: uppercase;
+
+
+    &:first-of-type {
+      margin-bottom: 21px;
+    }
+
+    &:nth-of-type(2) {
+      margin: 35px 0 21px;
+
+      @media (--laptop-up) {
+        margin: 41px 0 27px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 22px;
+    }
   }
 
   h3 {
-    font-size: 18px;
+    font: 700 18px/1.16 'RF Dewi Extended', serif;
+    margin-bottom: 23px;
   }
 
-  a:not(.btn) {
-    font-weight: 600;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background-color: #8FCDB8;
-      transition: transform .2s ease;
-    }
-
-    &:hover {
-      &:before {
-        transform: translateY(-2px) scaleY(1.5);
-      }
-    }
+  h4 {
+    font: 700 14px/1.16 'RF Dewi Extended', serif;
   }
 
-  p {}
+  h5 {
+    font: 700 12px/1.16 'RF Dewi Extended', serif;
+  }
 
-  ol,
-  ul {}
-
-  ul {
-    li {
-      position: relative;
-      padding-left: 22px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 7px;
-        width: 11px;
-        height: 12px;
-        background: url('images/list-shape.png') no-repeat center / contain;
-      }
+  p {   
+    &:nth-last-child(n+2) {
+      margin-bottom: 22px;
     }
   }
 
   ol {
-    li {
-      margin: 0 0 21px 20px;
+    counter-reset: counter;
+    margin: 35px 0 35px;
 
-      &:last-child {
-        margin-bottom: 0;
+    @media (--laptop-up) {
+      margin: 39px 0 55px;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      list-style-type: none;
+      counter-increment: counter;
+      padding-left: 44px;
+      margin-bottom: 28px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 3px;
+        content: counter(counter);
+        min-width: 24px;
+        min-height: 24px;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1px 2px 2px 2px;
       }
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+
+    @media (--laptop-up) {
+      margin-bottom: 46px;
     }
   }
 
   img {
     display: block;
   }
-
-  .aligncenter {}
 }

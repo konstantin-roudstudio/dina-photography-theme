@@ -1,0 +1,45 @@
+.wysiwyg-section {
+  &__center {
+    @media (--laptop-up) {
+      padding: 0;
+    }
+  }
+
+
+  &__inner {
+    padding-bottom: 30px;
+
+    @media (--laptop-up) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media (--desktop-up) {
+      padding-left: 85px;
+      padding-right: 85px;
+    }
+  }
+
+
+  &__date {
+    line-height: 1.5;
+    opacity: .5;
+    margin-bottom: 10px;
+
+    @media (--desktop-up) {
+      white-space: nowrap;
+      position: absolute;
+      top: 3px;
+      left: -80px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font: 400 16px / 1.625 'RF Dewi', sans-serif;
+
+    &.wysiwyg-content {
+      padding: 0;
+    }
+  }
+}

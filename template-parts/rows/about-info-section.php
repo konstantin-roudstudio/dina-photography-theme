@@ -1,55 +1,57 @@
 <?php
-$title = get_sub_field('about_title');
-$subtitle = get_sub_field('about_subtitle');
-$text = get_sub_field('about_text');
-$image = get_sub_field('about_image');
-$bg_color = get_sub_field('about_bg_color');
-$shift = get_sub_field('about_shift');
-$anchor = get_sub_field('anchor_id');
+  $title = get_sub_field('about_title');
+  $text = get_sub_field('about_text');
+  $button = get_sub_field('about_button');
+  $img_1_id = get_sub_field('about_image_1');
+  $img_2_id = get_sub_field('about_image_2');
+  $logos = get_sub_field('about_logos');
+
+$img_1 = $img_1_id ? wp_get_attachment_image($img_1_id, 'full') : null;
+$img_2 = $img_2_id ? wp_get_attachment_image($img_2_id, 'full') : null;
+
+if ($button) {
+  $button_url = $button['url'];
+  $button_title = $button['title'];
+  $button_target = $button['target'] ? $button['target'] : '_self';
+}
+
 ?>
 
 <section class="about">
-  <?php if ($anchor) : ?>
-    <div class="anchor" id="<?= $anchor ?>"></div>
-  <?php endif ?>
-
-  <div class="center">
+  <div class="about__center center">
     <div class="about__inner">
+      <?php if ($title) : ?>
+        <div class="about__title title"><?= $title ?></div>
+      <?php endif; ?>
 
-      <div class="about__title-mob">
-        <?php if ($title) : ?>
-          <h1 class="about__title title"><?= $title ?></h1>
-        <?php endif; ?>
-
-        <?php if ($subtitle) : ?>
-          <h1 class="about__subtitle subtitle"><?= $subtitle ?></h1>
-        <?php endif; ?>
+      <div class="about__img-desktop">
+        <?= $img_1 ?>
       </div>
 
-      <div class="about__img<?php if ($shift == 'right') {
-        echo ' about__img--right';
-      } ?>">
-        <div class="about__img-bg parallax-slow" style="background-color: <?= $bg_color ?>;"></div>
-
-        <div class="about__img-inner">
-          <?php echo wp_get_attachment_image($image, 'full', '', array('class' => 'parallax-fast')); ?>
+      <div class="about__content-wrapper">
+        <div class="about__img">
+          <?= $img_2 ?>
         </div>
-      </div>
 
-      <div class="about__info">
-        <div class="about__title-desktop">
-          <?php if ($title) : ?>
-            <h1 class="about__title title"><?= $title ?></h1>
-          <?php endif; ?>
+        <div class="about__content">
+          <?php if ($text) : ?>
+            <div class="about__text"><?= $text ?></div>
+          <?php endif ?>
 
-          <?php if ($subtitle) : ?>
-            <h1 class="about__subtitle subtitle"><?= $subtitle ?></h1>
+          <?php if ($button) : ?>
+            <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="about__btn btn"><?= $button_title ?></a>
           <?php endif; ?>
         </div>
-        <?php if ($text) : ?>
-          <div class="about__text wysiwyg-content"><?= $text ?></div>
-        <?php endif; ?>
       </div>
+      <?php if (!empty($logos)) : ?>
+        <div class="about__bottom-items">
+          <?php foreach ($logos as $logo) : ?>
+            <div class="about__bottom-item">
+              <?= wp_get_attachment_image($logo['image'], 'full') ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>
