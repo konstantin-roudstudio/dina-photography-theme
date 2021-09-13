@@ -1,14 +1,14 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
-export default function portfolioSlider() {
-  const portSlider = document.querySelectorAll('.portfolio-slider');
+export default function portfolioSlider($) {
+  const $portSlider = $('.portfolio-slider');
 
-  for (const block of portSlider) {
-    const portfolioContainer = block.querySelector('.swiper-container');
+  $portSlider.each(function () {
+    const container = $(this).find('.swiper-container')[0];
 
     Swiper.use([Navigation, Pagination]);
 
-    const swiper = new Swiper('.swiper-container', {
+    const swiper = new Swiper(container, {
       slidesPerView: 1,
       spaceBetween: 24,
       breakpoints: {
@@ -35,5 +35,5 @@ export default function portfolioSlider() {
       },
     });
 
-  }
+  });
 }

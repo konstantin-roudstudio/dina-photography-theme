@@ -1,17 +1,16 @@
 import Swiper, { Navigation } from 'swiper';
 
 export default function feedbackSlider($) {
-  const $feedback = $('.feedback'); {
+  const $feedback = $('.feedback--slider'); {
     $feedback.each(function() {
-
       const container = $(this).find('.swiper-container')[0];
       const $current = $(this).find('.current');
       const $total = $(this).find('.total');
-      const $slides = $('.swiper-slide:not(.swiper-slide-duplicate)');
+      const $slides = $(this).find('.swiper-slide:not(.swiper-slide-duplicate)');
 
       Swiper.use([Navigation]);
 
-      const swiper = new Swiper('.swiper-container', {
+      const swiper = new Swiper(container, {
         slidesPerView: 1,
         navigation: {
           nextEl: ".swiper-button-next",
