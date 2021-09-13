@@ -1,18 +1,27 @@
 .socials {
   margin: 0 -4px;
 
-  &__icon {
-    margin: 0 4px;
-    width: 38px;
+  &__link {
+    background: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    width: 37px;
     height: 37px;
+    margin: 0 4px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+    height: 100%;
+    width: 100%;
     transition: transform .3s;
 
     &:hover {
       transform: scale(1.1);
     }
-  }
-
-  &__icon-path {
-    fill: #131313;
   }
 }

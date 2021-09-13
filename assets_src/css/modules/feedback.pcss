@@ -49,17 +49,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, .8) 80%);
-
-    @media (--tablet-up) {
-      height: 70%;
-    }
-
-    @media (--desktop-up) {
-      height: 50%;
-      background: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, .5) 80%);
-    }
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, .6) 100%);
   }
 
   &__quotemark {
@@ -75,13 +66,14 @@
   &__quote {
     margin: 0 0 8px;
 
-    p {
-      margin-bottom: 20px;
-    }
+    //p {
+    //  margin-bottom: 20px;
+    //}
 
     @media (--tablet-up) {
       column-count: 2;
       column-gap: 30px;
+      padding-bottom: 20px;
     }
   }
 
