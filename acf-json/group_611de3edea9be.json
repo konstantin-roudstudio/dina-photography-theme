@@ -553,6 +553,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_613e68abc0c97": {
+                    "key": "layout_613e68abc0c97",
+                    "name": "text_blocks",
+                    "label": "Text Boxes Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_613e68bfc0c98",
+                            "label": "Text Boxes Section",
+                            "name": "text_boxes_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_613e669256f15"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -577,5 +608,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631278895
+    "modified": 1631480029
 }
