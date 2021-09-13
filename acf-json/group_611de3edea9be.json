@@ -78,6 +78,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_613f20b0935ea": {
+                    "key": "layout_613f20b0935ea",
+                    "name": "feedback_slider_section",
+                    "label": "Feedback Slider Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_613f20be935eb",
+                            "label": "Feedback Slider Section",
+                            "name": "feedback_slider_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_613f1eb3839ef"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_611e1fb137bc1": {
                     "key": "layout_611e1fb137bc1",
                     "name": "hero_about_section",
@@ -556,7 +587,7 @@
                 },
                 "layout_613e68abc0c97": {
                     "key": "layout_613e68abc0c97",
-                    "name": "text_blocks",
+                    "name": "text_boxes_section",
                     "label": "Text Boxes Section",
                     "display": "block",
                     "sub_fields": [
@@ -608,5 +639,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631480029
+    "modified": 1631527144
 }
