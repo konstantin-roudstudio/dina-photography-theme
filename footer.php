@@ -115,7 +115,7 @@ $bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
       <?php foreach ($logos as $item) :
         $img = wp_get_attachment_image($item['logo'], 'large');
       ?>
-        <div href="#"><?= $img ?></div>
+        <div><?= $img ?></div>
       <?php endforeach; ?>
     </div>
     <?php endif; ?>

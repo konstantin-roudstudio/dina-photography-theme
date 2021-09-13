@@ -154,7 +154,7 @@ function custom_post_type() {
       'can_export'          => true,
       'has_archive'         => true,
       'exclude_from_search' => false,
-      'publicly_queryable'  => true,
+      'publicly_queryable'  => false,
       'capability_type'     => 'post',
       'show_in_rest' => true,
 
