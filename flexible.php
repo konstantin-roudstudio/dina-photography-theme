@@ -31,6 +31,7 @@ get_header();
           endif;
         elseif (get_row_layout() == 'simple_slider_section'): get_template_part('template-parts/rows/simple-slider-section', 'section');
         elseif (get_row_layout() == 'text_boxes_section'): get_template_part('template-parts/rows/text-boxes-section', 'section');
+        elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
         endif;
       endwhile;
     endif;
