@@ -1,0 +1,48 @@
+.breadcrumbs {
+  .center {
+    @media (--laptop-up) {
+      padding: 0;
+    }
+  }
+
+  &__center {
+    @media (--desktop-up) {
+      right: 83px;
+    }
+  }
+
+  &__inner {
+    padding: 100px 0 29px;
+    color: #7F7F7F;
+    line-height: 2.5;
+
+    @media (min-width: 390px) {
+      line-height: 1.5;
+      padding-top: 120px;
+    }
+
+    @media (--laptop-up) {
+      padding: 142px 0 30px;
+    }
+
+    a {
+      font-weight: 700;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 1px;
+        background: #7F7F7F;
+        border-radius: 0.5px;
+      }
+    }
+  }
+
+  &__divider {
+    padding: 0 4px;
+  }
+}

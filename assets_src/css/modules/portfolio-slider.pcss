@@ -1,0 +1,257 @@
+.portfolio-slider {
+  overflow: hidden;
+  &__inner {
+    padding: 64px 0 50px;
+
+    @media (--tablet-up) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (--laptop-up) {
+      padding: 132px 0 88px;
+    }
+  }
+
+  &__content {
+    padding-bottom: 55px;
+
+    @media (--tablet-up) {
+      padding: 0 30px 40px 0;
+      height: fit-content;
+      width: 262px;
+    }
+
+    @media (--laptop-up) {
+      margin: 0;
+      padding: 0 66px 150px 0;
+      width: 342px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.57;
+    letter-spacing: 0.026em;
+    margin-bottom: 15px;
+
+    @media (--laptop-up) {
+      font-size: 38px;
+      line-height: 1.15;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 26px;
+  }
+
+  &__btn {
+    min-width: 232px;
+    padding: 13px 36px;
+    letter-spacing: 0.026em;
+    font-size: 13px;
+  }
+
+  &__slider {
+    @media (--tablet-up) {
+      width: calc(100% - 262px);
+      padding-left: 30px;
+      position: relative;
+
+      &::after {
+        background: #f2f0ec;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 1px;
+        bottom: 30px;
+        position: absolute;
+      }
+    }
+
+    @media (--laptop-up) {
+      width: calc(100% - 342px);
+
+      &::after {
+        bottom: 106px;
+      }
+    }
+
+    @media (--desktop-up) {
+      padding-left: 48px;
+    }
+  }
+
+  &__slider-wrapper {
+    @media (--tablet-up) {
+      margin-right: -50vw;
+      padding-right: calc(50vw + 108px);
+      overflow: hidden;
+    }
+  }
+
+  &__container {
+    margin-bottom: 40px;
+
+    @media (--laptop-up) {
+      margin-bottom: 116px;
+    }
+  }
+
+  &__item {
+    @media (--tablet-up) {
+      &:nth-child(n+2)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -30px;
+        bottom: -10px;
+        width: 1px;
+        background: #F2F0EC;
+      }
+    }
+
+    @media (--desktop-up) {
+      &:nth-child(n+2)::after {
+        left: -48px;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    background-color: #d8d8d8;
+    width: 100%;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 131%;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 1.89;
+    margin-top: 24px;
+
+    @media (--laptop-up) {
+      margin-top: 20px;
+    }
+  }
+
+  .swiper-container {
+    overflow: visible;
+
+    &:not(.swiper-container-initialized) {
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+
+      .portfolio-slider__item {
+        width: 100%;
+
+        &:nth-child(n+2) {
+          display: none;
+        }
+
+        @media (--laptop-up) {
+          width: calc(50% - 30px);
+
+          &:first-child {
+            margin-right: 60px;
+          }
+
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+
+        @media (--desktop-up) {
+          width: calc(50% - 49px);
+
+          &:first-child {
+            margin-right: 98px;
+          }
+        }
+      }
+
+      .portfolio-slider__img-wrapper {
+        width: 100%;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (--tablet-up) {
+      position: absolute;
+      right: 5px;
+      width: 140px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: inherit;
+    position: relative;
+    display: block;
+    width: 57px;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    top: 11px;
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-disabled {
+    opacity: .3;
+  }
+
+  .swiper-pagination {
+    position: relative;
+
+    @media (--tablet-up) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    margin-right: 13px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
+}

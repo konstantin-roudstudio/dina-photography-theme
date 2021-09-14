@@ -1,0 +1,88 @@
+.hero-reviews {
+  position: relative;
+  //margin-top: -90px;
+  color: #fff;
+
+  @media (--desktop-up) {
+    margin-top: -92px;
+  }
+
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d8d8d8;
+
+    @media (--mobile) {
+      &--desktop {
+        display: none;
+      }
+    }
+
+    @media (--tablet-up) {
+      &--mobile {
+        display: none;
+      }
+    }
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 150px 20px 60px;
+    min-height: 100vh;
+
+    @media (--desktop-up) {
+      padding: 200px 30px 80px;
+    }
+  }
+
+  &__quote {
+    width: 25px;
+    height: 17px;
+    fill: #fff;
+    margin-bottom: 29px;
+  }
+
+  &__title {
+    max-width: 810px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.019em;
+    margin-bottom: 29px;
+  }
+
+  &__text {
+    position: relative;
+    max-width: 642px;
+    margin-bottom: 30px;
+
+    @media (--laptop-up) {
+      margin-bottom: 60px;
+    }
+
+    &:last-child {
+      margin-bottom: 120px;
+
+      @media (--laptop-up) {
+        margin-bottom: 190px;
+      }
+    }
+  }
+
+  &__arrow {
+    display: block;
+    width: 7px;
+    height: 49px;
+    fill: #fff;
+  }
+}
