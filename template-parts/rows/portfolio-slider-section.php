@@ -45,10 +45,10 @@ if ($button) {
                   $thumb_id = get_field('thumbnail_portrait', $project);
                   ?>
                   <div class="swiper-slide portfolio-slider__item">
-                    <div class="portfolio-slider__img-wrapper">
+                    <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__img-wrapper">
                       <?= wp_get_attachment_image($thumb_id, 'full') ?>
-                    </div>
-                    <div class="portfolio-slider__item-text"><?= get_the_title( $project ); ?></div>
+                    </a>
+                    <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__item-text"><?= get_the_title( $project ); ?></a>
                   </div>
                 <?php endforeach; ?>
 

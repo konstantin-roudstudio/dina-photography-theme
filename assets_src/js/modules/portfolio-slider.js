@@ -11,6 +11,7 @@ export default function portfolioSlider($) {
     const swiper = new Swiper(container, {
       slidesPerView: 1,
       spaceBetween: 24,
+      loop: true,
       breakpoints: {
         768: {
           spaceBetween: 60,
@@ -34,6 +35,14 @@ export default function portfolioSlider($) {
         clickable: true,
       },
     });
+
+    // $(container)
+    //     .on('click', '.swiper-button-prev', function() {
+    //       swiper.slidePrev();
+    //     })
+    //     .on('click', '.swiper-button-next', function() {
+    //       swiper.slideNext();
+    //     });
 
   });
 }
