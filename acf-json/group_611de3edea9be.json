@@ -646,6 +646,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6141db13da1e5": {
+                    "key": "layout_6141db13da1e5",
+                    "name": "text_wysiwyg_section",
+                    "label": "Text WYSIWYG Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6141db2cda1e6",
+                            "label": "Text WYSIWYG Section",
+                            "name": "text_wysiwyg_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6137c8e2c8351"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -670,5 +701,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631705222
+    "modified": 1631706002
 }
