@@ -50,7 +50,7 @@ $light_header = get_field('light_header');
 		<div class="wrapper">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dina_photography' ); ?></a>
 
-			<header class="header<?php if($light_header) echo ' header--light'; ?>" id="header">
+			<header class="header<?php if($light_header || is_singular('projects')) echo ' header--light'; ?>" id="header">
         <div class="header__inner">
           <div class="header__center center">
             <div class="header__wrapper">
