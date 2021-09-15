@@ -21,6 +21,7 @@ get_header();
         elseif (get_row_layout() == 'hero_reviews_section'): get_template_part('template-parts/rows/hero-reviews-section', 'section');
         elseif (get_row_layout() == 'hero_slider_section'): get_template_part('template-parts/rows/hero-slider-section', 'section');
         elseif (get_row_layout() == 'hero_about_section'): get_template_part('template-parts/rows/hero-about-section', 'section');
+        elseif (get_row_layout() == 'image_fullwidth_section'): get_template_part('template-parts/rows/image-fullwidth-section', 'section');
         elseif (get_row_layout() == 'info_block_section'): get_template_part('template-parts/rows/info-block-section', 'section');
         elseif (get_row_layout() == 'portfolio_slider_section'): get_template_part('template-parts/rows/portfolio-slider-section', 'section');
         elseif (get_row_layout() == 'post_cta_section'):
