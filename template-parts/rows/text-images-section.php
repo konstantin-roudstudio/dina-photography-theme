@@ -9,6 +9,12 @@ $text = get_sub_field('text');
 $note = get_sub_field('note');
 $image1 = get_sub_field('image_1');
 $image2 = get_sub_field('image_2');
+$classes = $color != 'white' ? ' text-images--'. $color : '';
+
+if ($inverted) {
+  $classes = $classes . ' text-images--inverted';
+}
+
 
 if ($button) {
   $button_url = $button['url'];
@@ -17,7 +23,7 @@ if ($button) {
 }
 ?>
 
-<section class="text-images<?php if ($color != 'white') echo ' text-images--' . $color; ?>">
+<section class="text-images<?= $classes ?>">
   <div class="center">
     <div class="text-images__inner">
       <div class="text-images__content">
@@ -25,13 +31,23 @@ if ($button) {
           <h2 class="text-images__title"><?= $title ?></h2>
         <?php endif; ?>
 
-        <div class="text-images__img-wrapper mob">
+        <?php if ($subtitle) : ?>
+          <h3 class="text-images__subtitle"><?= $subtitle ?></h3>
+        <?php endif; ?>
+
+        <div class="text-images__img-wrapper text-images__img-wrapper--mob">
           <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img')) ?>
         </div>
 
         <?php if ($text) : ?>
           <div class="text-images__text wysiwyg-content">
             <?= $text ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if ($note) : ?>
+          <div class="text-images__note">
+            <?= $note ?>
           </div>
         <?php endif; ?>
 
@@ -53,13 +69,13 @@ if ($button) {
       </div>
       <div class="text-images__wrap">
         <?php if ($image1) : ?>
-          <div class="text-images__img-wrapper desktop horisontal">
+          <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--horisontal">
             <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img')) ?>
           </div>
         <?php endif; ?>
 
         <?php if ($image2) : ?>
-          <div class="text-images__img-wrapper desktop vertical">
+          <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--vertical">
             <?= wp_get_attachment_image($image2, 'full', null, array('class' => 'text-images__img')) ?>
           </div>
         <?php endif; ?>
