@@ -113,6 +113,10 @@
       label {
         color: #dc3232;
       }
+
+      .wpcf7-not-valid-tip {
+        opacity: 1;
+      }
     }
   }
 
@@ -126,5 +130,11 @@
 
   .wpcf7-not-valid-tip {
     margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
   }
 }
