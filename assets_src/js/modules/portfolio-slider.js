@@ -12,6 +12,7 @@ export default function portfolioSlider($) {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
+      threshold: 5,
       breakpoints: {
         768: {
           spaceBetween: 60,
