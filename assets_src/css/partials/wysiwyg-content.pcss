@@ -2,36 +2,34 @@
   h2 {
     font: 500 38px/1.1 'Antiqua', serif;
     text-transform: uppercase;
+    margin-bottom: 21px;
 
-
-    &:first-of-type {
-      margin-bottom: 21px;
+    @media (--laptop-up) {
+      margin-bottom: 27px;
     }
 
-    &:nth-of-type(2) {
+    &:not(:last-child):not(:first-child) {
       margin: 35px 0 21px;
 
       @media (--laptop-up) {
         margin: 41px 0 27px;
       }
     }
-
-    &:last-of-type {
-      margin-bottom: 22px;
-    }
   }
 
-  h3 {
-    font: 700 18px/1.16 'RF Dewi Extended', serif;
+  h3,
+  h4,
+  h5 {
+    font: 700 18px/1.16 'RF Dewi Extended', sans-serif;
     margin-bottom: 23px;
   }
 
   h4 {
-    font: 700 14px/1.16 'RF Dewi Extended', serif;
+    font-size: 14px;
   }
 
   h5 {
-    font: 700 12px/1.16 'RF Dewi Extended', serif;
+    font-size: 12px;
   }
 
   p {
@@ -82,6 +80,12 @@
 
     @media (--laptop-up) {
       margin-bottom: 46px;
+    }
+
+    li {
+      &::before {
+        content: '- ';
+      }
     }
   }
 

@@ -33,7 +33,7 @@ get_header();
         elseif (get_row_layout() == 'simple_slider_section'): get_template_part('template-parts/rows/simple-slider-section', 'section');
         elseif (get_row_layout() == 'text_boxes_section'): get_template_part('template-parts/rows/text-boxes-section', 'section');
         elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
-        elseif (get_row_layout() == 'text_wysiwyg_section'): get_template_part('template-parts/rows/text-wysiwyg-section', 'section');
+        elseif (get_row_layout() == 'text_wysiwyg_section'): get_template_part('template-parts/rows/wysiwyg-section', 'section');
         endif;
       endwhile;
     endif;
