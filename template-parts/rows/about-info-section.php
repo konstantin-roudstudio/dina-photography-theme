@@ -20,20 +20,19 @@ if ($button) {
 <section class="about">
   <div class="about__center center">
     <div class="about__inner">
-      <?php if ($title) : ?>
-        <div class="about__title title"><?= $title ?></div>
-      <?php endif; ?>
-
-      <div class="about__img-desktop">
-        <?= $img_1 ?>
+      <div class="about__images">
+        <div class="about__img about__img--portrait"><?= $img_1 ?></div>
+        <div class="about__img about__img--landscape"><?= $img_2 ?></div>
       </div>
 
-      <div class="about__content-wrapper">
-        <div class="about__img">
-          <?= $img_2 ?>
-        </div>
+      <div class="about__content">
+        <?php if ($title) : ?>
+          <div class="about__title title"><?= $title ?></div>
+        <?php endif; ?>
 
-        <div class="about__content">
+        <div class="about__img about__img--mobile"><?= $img_2 ?></div>
+
+        <div class="about__content-wrap">
           <?php if ($text) : ?>
             <div class="about__text"><?= $text ?></div>
           <?php endif ?>
@@ -43,16 +42,17 @@ if ($button) {
           <?php endif; ?>
         </div>
       </div>
-      <?php if (!empty($logos)) : ?>
-        <div class="about__bottom-items">
-          <?php foreach ($logos as $logo) : ?>
-            <div class="about__bottom-item">
-              <?= wp_get_attachment_image($logo['image'], 'full') ?>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
     </div>
+
+    <?php if (!empty($logos)) : ?>
+      <div class="about__bottom-items">
+        <?php foreach ($logos as $logo) : ?>
+          <div class="about__bottom-item">
+            <?= wp_get_attachment_image($logo['image'], 'full') ?>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
   </div>
 </section>
 
