@@ -79,24 +79,75 @@ $bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full') 
           <?php endforeach; ?>
         </div>
 
-        <div class="post__content wysiwyg-content">
-          <!--            --><?php
-          //            the_content(
-          //                sprintf(
-          //                    wp_kses(
-          //                    /* translators: %s: Name of current post. Only visible to screen readers */
-          //                        __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'dina-photography'),
-          //                        array(
-          //                            'span' => array(
-          //                                'class' => array(),
-          //                            ),
-          //                        )
-          //                    ),
-          //                    wp_kses_post(get_the_title())
-          //                )
-          //            );
-          //            ?>
-        </div>
+        <?php
+        $id = get_the_ID();
+        $categories = !empty(wp_get_post_categories($id)) ? implode(", ", wp_get_post_categories($id)) : 0;
+
+        $items = get_posts( array(
+            'numberposts' => 8,
+            'category'    => $categories,
+            'orderby'     => 'date',
+            'order'       => 'DESC',
+            'include'     => array(),
+            'exclude'     => $id,
+            'post_type'   => 'projects',
+            'suppress_filters' => true,
+        ) );
+
+        ?>
+
+
+        <?php if (count($items) >= 3) : ?>
+
+        <section class="portfolio-slider">
+          <div class="portfolio-slider__center center">
+            <div class="portfolio-slider__inner">
+              <div class="portfolio-slider__content">
+                <div class="portfolio-slider__title title">Explore More</div>
+              </div>
+                <div class="portfolio-slider__slider">
+
+                  <div class="portfolio-slider__slider-wrapper">
+                    <div class="swiper-container portfolio-slider__container">
+
+                      <div class="swiper-wrapper">
+
+                        <?php foreach ($items as $item) :
+                            $thumb_id = get_field('thumbnail_portrait', $item);
+                          ?>
+                          <div class="swiper-slide portfolio-slider__item">
+                            <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__img-wrapper">
+                              <?= wp_get_attachment_image($thumb_id, 'full') ?>
+                            </a>
+                            <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__item-text"><?= get_the_title( $item ); ?></a>
+                          </div>
+                        <?php endforeach; ?>
+
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-slider__nav">
+                      <div class="swiper-button-prev">
+                        <svg width="57" height="7" viewBox="0 0 57 7" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M56.5 4H57V3H56.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM56.5 3H5V4H56.5V3Z"/>
+                        </svg>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-button-next">
+                        <svg width="57" height="7" viewBox="0 0 57 7" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.5 3H0V4H0.5V3ZM56.5 3.5L51.5 0.613249V6.38675L56.5 3.5ZM0.5 4H52V3H0.5V4Z"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <?php endif; ?>
       </article>
     <?php
     endwhile; // End of the loop.
