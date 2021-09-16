@@ -79,6 +79,8 @@ $bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full') 
           <?php endforeach; ?>
         </div>
 
+        <?php get_template_part('template-parts/rows/cta-form-section', 'section'); ?>
+
         <?php
         $id = get_the_ID();
         $categories = !empty(wp_get_post_categories($id)) ? implode(", ", wp_get_post_categories($id)) : 0;

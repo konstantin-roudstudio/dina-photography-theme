@@ -19,7 +19,7 @@
                 "layout_6123478e195bc": {
                     "key": "layout_6123478e195bc",
                     "name": "about_info_section",
-                    "label": "About Info Sectin",
+                    "label": "About Info Section",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -701,5 +701,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631706002
+    "modified": 1631818276
 }

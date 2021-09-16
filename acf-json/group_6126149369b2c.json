@@ -3,25 +3,6 @@
     "title": "Section CTA Form",
     "fields": [
         {
-            "key": "field_612614a9a7459",
-            "label": "Title",
-            "name": "form_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_612614b6a745a",
             "label": "Background color",
             "name": "background_color",
@@ -45,25 +26,6 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_61261acff758d",
-            "label": "Form Shortcode",
-            "name": "form_shortcode",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
         }
     ],
     "location": [
@@ -83,5 +45,5 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
-    "modified": 1631046669
+    "modified": 1631828870
 }
