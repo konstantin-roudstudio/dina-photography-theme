@@ -1,76 +1,100 @@
 .wysiwyg-content {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {}
-
-  h1 {}
-
-  h2,
-  h3,
-  h4,
-  h5 {}
-
   h2 {
-    font: 600 28px/1.2 'Cormorant Garamond', serif;
-  }
+    font: 500 38px/1.1 'Antiqua', serif;
+    text-transform: uppercase;
+    margin-bottom: 21px;
 
-  h3 {
-    font-size: 18px;
-  }
-
-  a:not(.btn) {
-    font-weight: 600;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background-color: #8FCDB8;
-      transition: transform .2s ease;
+    @media (--laptop-up) {
+      margin-bottom: 27px;
     }
 
-    &:hover {
-      &:before {
-        transform: translateY(-2px) scaleY(1.5);
+    &:not(:last-child):not(:first-child) {
+      margin: 35px 0 21px;
+
+      @media (--laptop-up) {
+        margin: 41px 0 27px;
       }
     }
   }
 
-  p {}
+  h3,
+  h4,
+  h5 {
+    font: 700 18px/1.16 'RF Dewi Extended', sans-serif;
+    margin-bottom: 23px;
+  }
 
-  ol,
-  ul {}
+  h4 {
+    font-size: 14px;
+  }
 
-  ul {
-    li {
-      position: relative;
-      padding-left: 22px;
+  h5 {
+    font-size: 12px;
+  }
 
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 7px;
-        width: 11px;
-        height: 12px;
-        background: url('images/list-shape.png') no-repeat center / contain;
-      }
+  p {
+    &:nth-last-child(n+2) {
+      margin-bottom: 22px;
     }
   }
 
   ol {
-    li {
-      margin: 0 0 21px 20px;
+    counter-reset: counter;
+    margin: 35px 0 35px;
 
-      &:last-child {
-        margin-bottom: 0;
+    h3,
+    h4,
+    h5 {
+      margin-bottom: 16px;
+      line-height: 26px;
+    }
+
+    @media (--laptop-up) {
+      margin: 39px 0 55px;
+    }
+
+    li {
+      display: block;
+      position: relative;
+      list-style-type: none;
+      counter-increment: counter;
+      padding-left: 44px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 3px;
+        content: counter(counter);
+        min-width: 24px;
+        min-height: 24px;
+        border-radius: 50%;
+        background-color: #000;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1px 2px 2px 2px;
+      }
+
+      &:nth-last-child(n+2) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+
+    @media (--laptop-up) {
+      margin-bottom: 46px;
+    }
+
+    li {
+      &::before {
+        content: '- ';
       }
     }
   }
@@ -78,6 +102,4 @@
   img {
     display: block;
   }
-
-  .aligncenter {}
 }

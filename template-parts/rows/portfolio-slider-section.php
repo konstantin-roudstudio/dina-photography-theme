@@ -3,6 +3,7 @@
 $title = get_sub_field('title');
 $text = get_sub_field('text');
 $button = get_sub_field('link');
+$items = get_sub_field('items');
 
 if ($button) {
   $button_url = $button['url'];
@@ -33,46 +34,40 @@ if ($button) {
 
       <?php if (!empty($items)) : ?>
         <div class="portfolio-slider__slider">
-          <div class="swiper-container portfolio-slider__container">
 
-            <div class="swiper-wrapper">
+          <div class="portfolio-slider__slider-wrapper">
+            <div class="swiper-container portfolio-slider__container">
 
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
-                </div>
-                <div class="portfolio-slider__item-text">Sam & Paul</div>
-              </div>
+              <div class="swiper-wrapper">
 
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
-                </div>
-                <div class="portfolio-slider__item-text">Stefania & Rodoulfe</div>
-              </div>
+                <?php foreach ($items as $item) :
+                  $project = $item['project'];
+                  $thumb_id = get_field('thumbnail_portrait', $project);
+                  ?>
+                  <div class="swiper-slide portfolio-slider__item">
+                    <a href="<?= get_post_permalink($project); ?>" class="portfolio-slider__img-wrapper">
+                      <?= wp_get_attachment_image($thumb_id, 'full') ?>
+                    </a>
+                    <a href="<?= get_post_permalink($project); ?>" class="portfolio-slider__item-text"><?= get_the_title( $project ); ?></a>
+                  </div>
+                <?php endforeach; ?>
 
-              <div class="swiper-slide portfolio-slider__item">
-                <div class="portfolio-slider__img-wrapper">
-                  <img src="" alt="">
-                </div>
-                <div class="portfolio-slider__item-text">Stefania & Rodoulfe</div>
               </div>
 
             </div>
 
-          </div>
-
-          <div class="portfolio-slider__nav">
-            <div class="swiper-button-prev">
-              <svg width="57" height="7" viewBox="0 0 57 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M56.5 4H57V3H56.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM56.5 3H5V4H56.5V3Z" fill="black"/>
-              </svg>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next">
-              <svg width="57" height="7" viewBox="0 0 57 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.5 3H0V4H0.5V3ZM56.5 3.5L51.5 0.613249V6.38675L56.5 3.5ZM0.5 4H52V3H0.5V4Z" fill="black"/>
-              </svg>
+            <div class="portfolio-slider__nav">
+              <div class="swiper-button-prev">
+                <svg width="57" height="7" viewBox="0 0 57 7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M56.5 4H57V3H56.5V4ZM0.5 3.5L5.5 6.38675V0.613249L0.5 3.5ZM56.5 3H5V4H56.5V3Z"/>
+                </svg>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next">
+                <svg width="57" height="7" viewBox="0 0 57 7" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 3H0V4H0.5V3ZM56.5 3.5L51.5 0.613249V6.38675L56.5 3.5ZM0.5 4H52V3H0.5V4Z"/>
+                </svg>
+              </div>
             </div>
           </div>
 

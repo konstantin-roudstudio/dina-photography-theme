@@ -76,6 +76,29 @@
   &__nav {
     width: 50%;
 
+    a {
+        position: relative;
+
+        &::after {
+          background: currentColor;
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 4px;
+          right: 0;
+          height: 1px;
+          opacity: 0;
+          transform: scaleX(.5);
+          transform-origin: 0 50%;
+          transition: all .2s ease;
+        }
+
+        &:hover::after {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+      }
+
     @media (--tablet-down) {
       margin-bottom: 33px;
     }
@@ -264,8 +287,7 @@
     max-width: 310px;
     margin: auto;
 
-    a {
-      display: block;
+    div {
       margin-right: 34px;
 
       &:last-child {

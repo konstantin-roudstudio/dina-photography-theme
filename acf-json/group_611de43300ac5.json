@@ -1,6 +1,6 @@
 {
     "key": "group_611de43300ac5",
-    "title": "Hero Info",
+    "title": "Section Hero Info",
     "fields": [
         {
             "key": "field_611de45acf408",
@@ -91,11 +91,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "post"
-            },
-            {
-                "param": "post_type",
-                "operator": "!=",
-                "value": "post"
             }
         ]
     ],
@@ -105,7 +100,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
-    "modified": 1630310475
+    "modified": 1631046718
 }
