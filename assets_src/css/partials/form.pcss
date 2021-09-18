@@ -1,0 +1,140 @@
+.form {
+  &__row {
+    @media (min-width: 600px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__field {
+
+    @media (min-width: 600px) {
+      width: calc(50% - 12px);
+    }
+
+    .ajax-loader {
+      display: none;
+    }
+
+    input,
+    select {
+      border: 1px solid #000000;
+      border-radius: 25px;
+      background: transparent;
+      height: 50px;
+      outline: none;
+      padding: 0 24px 0 26px;
+      width: 100%;
+      margin: 10px 0 25px;
+
+      @media (--laptop-up) {
+        margin-bottom: 15px;
+      }
+
+      &.btn {
+        margin: 0;
+      }
+    }
+
+    &--select {
+
+      select {
+        cursor: pointer;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+
+      @media (min-width: 600px) {
+        width: 100%;
+      }
+
+      @media (--laptop-up) {
+        margin-bottom: 10px;
+      }
+
+      .select-arrow {
+        position: absolute;
+        top: calc(50% - 3px);
+        right: 26px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #000 transparent transparent transparent;
+      }
+    }
+
+    &--textarea {
+      textarea {
+        width: 100%;
+        border-radius: 15px;
+        border: 1px solid #000000;
+        background: transparent;
+        height: 104px;
+        margin: 10px 0 23px;
+        padding: 10px 24px 10px 26px;
+        resize: none;
+        outline: none;
+      }
+
+      @media (min-width: 600px) {
+        width: 100%;
+      }
+
+      @media (--laptop-up) {
+        margin-top: 8px;
+      }
+    }
+
+    &--btn {
+      @media (min-width: 600px) {
+        width: 210px;
+        margin-left: auto;
+      }
+
+      @media (--laptop-up) {
+        input {
+          height: auto;
+          padding: 14px;
+        }
+      }
+    }
+
+    &.error {
+      input {
+        border: 1px solid #dc3232;
+      }
+
+      label {
+        color: #dc3232;
+      }
+
+      .wpcf7-not-valid-tip {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__select-wrapper {
+    position: relative;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+}

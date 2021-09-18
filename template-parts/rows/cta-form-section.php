@@ -1,13 +1,21 @@
 <?php
-$title = get_sub_field('form_title');
+$title = get_field('cta_form_title', 'option');
 $bg_color = get_sub_field('background_color');
-$class = $bg_color != 'white' ? ' cta-form--'.$bg_color : null;
+$shortcode = get_field('cta_form_shortcode', 'option');
 
+if (is_single()) {
+  $class = ' cta-form--cream';
+} else {
+  $class = $bg_color && $bg_color != 'white' ? ' cta-form--'.$bg_color : null;
+};
 ?>
 
 <section class="cta-form<?= $class ?>">
   <div class="center cta-form__center">
-  <h2 class="cta-form__title"><?= $title ?></h2>
-    <?php do_shortcode('[contact-form-7 id="197" title="Default Contact Form"]'); ?>
+    <div class="cta-form__content">
+      <h2 class="cta-form__title title"><?= $title ?></h2>
+
+      <?= do_shortcode($shortcode); ?>
+    </div>
   </div>
 </section>

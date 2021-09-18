@@ -110,6 +110,7 @@ function custom_post_type() {
       'publicly_queryable'  => true,
       'capability_type'     => 'post',
       'show_in_rest' => true,
+      'taxonomies' => ['category']
 
   );
 
@@ -132,7 +133,7 @@ function custom_post_type() {
 // Set other options for Custom Post Type
 
   $reviews_args = array(
-      'label'               => __( 'projects', 'dina-photography' ),
+      'label'               => __( 'reviews', 'dina-photography' ),
       'description'         => __( 'Reviews', 'dina-photography' ),
       'labels'              => $reviews_labels,
     // Features this CPT supports in Post Editor
@@ -154,7 +155,7 @@ function custom_post_type() {
       'can_export'          => true,
       'has_archive'         => true,
       'exclude_from_search' => false,
-      'publicly_queryable'  => true,
+      'publicly_queryable'  => false,
       'capability_type'     => 'post',
       'show_in_rest' => true,
 
