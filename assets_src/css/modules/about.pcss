@@ -4,7 +4,7 @@
   &__center {}
 
   &__inner {
-    padding: 70px 0 68px;
+    padding: 70px 0 0;
     position: relative;
 
     @media (--laptop-up) {
@@ -161,6 +161,11 @@
     align-items: center;
     max-width: 386px;
     margin: auto;
+    padding-bottom: 50px;
+
+    @media (--laptop-up) {
+      padding-bottom: 0;
+    }
   }
 
   &__bottom-item {
