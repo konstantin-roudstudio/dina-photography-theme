@@ -1,0 +1,247 @@
+.portfolio {
+  padding: 120px 0 30px;
+
+  @media (--laptop-up) {
+    padding: 174px 0 44px;
+  }
+
+  &__head {
+    @media (--tablet-down) {
+      max-width: 560px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    @media (--laptop-up) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    @media (--laptop-up) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -40px;
+      padding-bottom: 80px;
+    }
+
+    @media (--desktop-up) {
+      margin: 0 -55px;
+      padding-bottom: 120px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-bottom: 200px;
+    }
+  }
+
+  &__item {
+    padding-bottom: 50px;
+
+    @media (--tablet-up) {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    @media (--laptop-up) {
+      padding: 30px 40px 30px;
+      width: 33.33%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &:nth-child(2n) {
+        position: relative;
+
+        &::before,
+        &::after {
+          background: #f2f0ec;
+          width: 1px;
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+        }
+
+        &::before {
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      &:first-child,
+      &:nth-child(3n+3) {
+        justify-content: flex-start;
+
+        .portfolio__img-wrapper,
+        .portfolio__text {
+          transform: translateY(-30px);
+        }
+
+        &.portfolio__item--landscape {
+          justify-content: center;
+        }
+      }
+
+      &:nth-child(3n+1) {
+        justify-content: flex-end;
+
+        .portfolio__img-wrapper,
+        .portfolio__text {
+          transform: translateY(20px);
+        }
+
+        &.portfolio__item--landscape {
+          justify-content: center;
+
+          .portfolio__img-wrapper,
+          .portfolio__text {
+            transform: translateY(30px);
+          }
+        }
+      }
+    }
+
+    @media (--desktop-up) {
+      padding: 40px 55px 40px;
+
+      &:first-child,
+      &:nth-child(3n+3) {
+        .portfolio__img-wrapper,
+        .portfolio__text {
+          transform: translateY(-40px);
+        }
+
+        &.portfolio__item--landscape {
+          .portfolio__img-wrapper,
+          .portfolio__text {
+            transform: translateY(-20px);
+          }
+        }
+      }
+
+      &:nth-child(3n+1) {
+        .portfolio__img-wrapper,
+        .portfolio__text {
+          transform: translateY(88px);
+        }
+
+        &.portfolio__item--landscape {
+          .portfolio__img-wrapper,
+          .portfolio__text {
+            transform: translateY(55px);
+          }
+        }
+      }
+    }
+
+    &--text {
+      text-align: center;
+
+      @media (--laptop-up) {
+        padding-top: 75px;
+        padding-bottom: 25px;
+        justify-content: flex-start;
+      }
+
+      @media (--desktop-up) {
+        padding-top: 85px;
+        padding-bottom: 35px;
+      }
+
+      @media (min-width: 1440px) {
+        padding-top: 65px;
+        padding-bottom: 75px;
+      }
+    }
+
+    &--portrait {
+      .portfolio__img-wrapper:after {
+        padding-bottom: 131%;
+      }
+    }
+
+    &--mobile {
+      @media (--laptop-up) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      @media (--tablet-down) {
+        display: none;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    background: grey;
+    width: 100%;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 76.5%;
+    }
+
+    @media (--laptop-up) {
+      margin-bottom: 26px;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    font-family: 'RF Dewi Extended', sans-serif;
+    font-size: 18px;
+  }
+
+  &__item-subtitle {
+    margin-bottom: 17px;
+  }
+
+  &__item-title {
+    line-height: 1.15;
+    margin-bottom: 37px;
+    letter-spacing: 0.026em;
+    padding: 0 10px;
+
+    &--small {
+      @media (--laptop-up) {
+        font-size: 34px;
+      }
+
+      @media (--desktop-up) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &__item-text {
+    text-align: center;
+    line-height: 1.5;
+
+    p {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-last-child(n+2) {
+      margin-bottom: 35px;
+    }
+  }
+}
