@@ -1,4 +1,14 @@
 .main {
   flex-grow: 1;
   min-height: 100vh;
+
+  .admin-bar & {
+    @media (--tablet-up) {
+      min-height: calc(100vh - 46px);
+    }
+
+    @media (min-width: 783px) {
+      min-height: calc(100vh - 32px);
+    }
+  }
 }
