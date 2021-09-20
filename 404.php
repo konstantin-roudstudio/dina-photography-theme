@@ -7,15 +7,33 @@
  * @package DinaPhotography
  */
 
+$title = get_field('404_title', 'option');
+$text = get_field('404_text', 'option');
+$button = get_field('404_button', 'option');
+
+if ($button) {
+  $button_url = $button['url'];
+  $button_title = $button['title'];
+  $button_target = $button['target'] ? $button['target'] : '_self';
+}
+
 get_header();
 ?>
 
     <main id="primary" class="main error-404">
         <div class="center">
             <section class="error-404__inner">
-                <h1 class="error-404__title title">404</h1>
-                <h3 class="error-404__subtitle">Sorry, this page was not found</h3>
-                <a href="index.php" class="btn">Back Home</a>
+              <?php if ($title) : ?>
+                <h1 class="error-404__title title"><?= $title ?></h1>
+              <?php endif; ?>
+
+              <?php if ($text) : ?>
+                <h3 class="error-404__subtitle"><?= $text ?></h3>
+              <?php endif; ?>
+
+              <?php if ($button) : ?>
+                <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="btn"><?= $button_title ?></a>
+              <?php endif; ?>
             </section>
         </div>
     </main>
