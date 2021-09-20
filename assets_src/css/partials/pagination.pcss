@@ -3,9 +3,13 @@
 
   .page-numbers {
     font-size: 18px;
-    margin-right: 16px;
+    margin: 0 8px;
     padding: 0 4px;
     transition: opacity .2s;
+
+    &.dots {
+      margin: 0;
+    }
 
     &:hover {
       opacity: .7;
@@ -13,7 +17,7 @@
   }
 
   .prev {
-    margin-right: 55px;
+    margin-right: 42px;
 
     &::before {
       left: 5px;
@@ -27,7 +31,7 @@
   }
 
   .next {
-    margin-left: 35px;
+    margin-left: 42px;
 
     &::before {
       right: 5px;

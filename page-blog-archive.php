@@ -55,8 +55,11 @@ $max_page = $wp_query->max_num_pages;
             );
 
             $pagination = paginate_links($nav_args);
-            if ($paged === 1) array_unshift($pagination, '<span class="prev page-numbers disabled"></span>');
-            if ($paged === $max_page) array_push($pagination, '<span class="next page-numbers disabled"></span>');
+            if ($paged == 1) {
+              array_unshift($pagination, '<span class="prev page-numbers disabled"></span>');
+            } elseif ($paged == $max_page) {
+              array_push($pagination, '<span class="next page-numbers disabled"></span>');
+            }
           ?>
 
             <div class="pagination"><?= implode('', $pagination); ?></div>
