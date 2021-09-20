@@ -141,7 +141,7 @@ function remove_editor()
     $id = $_GET['post'];
     $template = get_post_meta($id, '_wp_page_template', true);
 
-    if ($template == 'flexible.php') {
+    if ($template == 'flexible.php' || $template == 'portfolio.php') {
       remove_post_type_support('page', 'editor');
     }
   }
