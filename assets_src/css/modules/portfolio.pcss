@@ -141,6 +141,7 @@
 
     &--text {
       text-align: center;
+      align-items: center;
 
       @media (--laptop-up) {
         padding-top: 75px;
@@ -183,6 +184,7 @@
     margin-bottom: 20px;
     background: grey;
     width: 100%;
+    display: block;
 
     &::after {
       content: '';
@@ -205,6 +207,8 @@
   &__text {
     font-family: 'RF Dewi Extended', sans-serif;
     font-size: 18px;
+    display: block;
+    width: fit-content;
   }
 
   &__item-subtitle {

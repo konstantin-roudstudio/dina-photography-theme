@@ -42,14 +42,14 @@ get_header();
             $landscape = ($index % 2 == 0) && $index != 0 ? true : false;
             ?>
             <div class="portfolio__item<?php if (!$landscape) echo ' portfolio__item--portrait'; else echo ' portfolio__item--landscape'; ?>">
-              <div class="portfolio__img-wrapper">
+              <a href="<?= get_permalink( $item ); ?>" class="portfolio__img-wrapper">
                 <?php if (!$landscape) :
                   echo wp_get_attachment_image(get_field('thumbnail_portrait', $item), 'large');
                 else :
                   echo wp_get_attachment_image(get_field('thumbnail_landscape', $item), 'large');
                 endif; ?>
-              </div>
-              <div class="portfolio__text"><?= get_the_title($item); ?></div>
+              </a>
+              <a href="<?= get_permalink( $item ); ?>" class="portfolio__text"><?= get_the_title($item); ?></a>
             </div>
             <?php if ($index === 0) : ?>
             <div class="portfolio__item portfolio__item--text portfolio__item--desktop">
