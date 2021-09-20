@@ -30,6 +30,7 @@ get_header();
           else  :
             get_template_part('template-parts/global-rows/post-cta-section', 'section');
           endif;
+        elseif (get_row_layout() == 'promo_section'): get_template_part('template-parts/rows/promo-section', 'section');
         elseif (get_row_layout() == 'simple_slider_section'): get_template_part('template-parts/rows/simple-slider-section', 'section');
         elseif (get_row_layout() == 'text_boxes_section'): get_template_part('template-parts/rows/text-boxes-section', 'section');
         elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
