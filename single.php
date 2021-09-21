@@ -12,8 +12,7 @@ get_header();
 $id = get_the_ID();
 $thumbnail = get_the_post_thumbnail($id, 'full', array('class' => 'post__image-inner'));
 $type = get_post_type($id);
-$archive_link = get_post_type_archive_link( $type );
-
+$archive_link = get_post_type_archive_link($type);
 ?>
   <main id="primary" class="main">
     <div class="breadcrumbs">
@@ -57,11 +56,38 @@ $archive_link = get_post_type_archive_link( $type );
         endif;
         ?>
       </article>
+
     <?php
     endwhile;
+
+    global $post;
+
+    $related = get_posts(array(
+        'posts_per_page' => '3',
+        'exclude' => $id,
+
+    ))
+
     ?>
 
 
+    <?php if (!empty($related)) : ?>
+      <div class="blog-listing blog-listing--explore">
+        <div class="center blog-listing__center">
+          <div class="blog-listing__title title title--s">Explore More</div>
+          <div class="blog-listing__items">
+            <?php
+            foreach ( $related as $post ) :
+              setup_postdata( $post );
+
+              get_template_part( 'template-parts/listing/blog-item');
+
+            endforeach;
+            wp_reset_postdata() ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
 
   </main><!-- #main -->
 
