@@ -7,7 +7,7 @@
 
   @media (--laptop-up) {
     min-height: 100vh;
-    max-width: 1440px;
+    //max-width: 1440px;
     padding: 116px 20px 132px;
   }
 
@@ -68,10 +68,20 @@
     @media (--laptop-up) {
       max-width: 770px;
       width: 60%;
-      background-color: #fff;
       margin-left: auto;
       margin-right: -20px;
       padding: 54px 27px 40px 31px;
+      position: relative;
+
+      &::before {
+        background-color: #fff;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 60vw;
+      }
     }
 
     @media (--desktop-up) {
@@ -83,6 +93,13 @@
         display: none;
       }
     }
+  }
+
+  &__title,
+  &__block-text,
+  &__items,
+  &__bottom {
+    position: relative;
   }
 
   &__title {
