@@ -185,6 +185,8 @@
     background: grey;
     width: 100%;
     display: block;
+    z-index: 1;
+    overflow: hidden;
 
     &::after {
       content: '';
@@ -201,6 +203,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 1s ease;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -209,6 +218,27 @@
     font-size: 18px;
     display: block;
     width: fit-content;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      background: currentColor;
+      content: '';
+      position: absolute;
+      height: 1px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scaleX(.5);
+      transform-origin: 0 50%;
+      opacity: 0;
+      transition: all .2s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
   }
 
   &__item-subtitle {

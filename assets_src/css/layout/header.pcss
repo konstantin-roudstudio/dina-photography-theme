@@ -1,5 +1,6 @@
 .header {
   transition: color .3s ease;
+  position: relative;
 
   &__inner {
     background: rgba(255, 255, 255, 0);
@@ -144,6 +145,18 @@
       opacity: 1;
       visibility: visible;
       transition: opacity .3s ease, visibility 0s 0s;
+    }
+  }
+}
+
+.menu-shown {
+  .header {
+    color: #000;
+  }
+
+  .header__inner {
+    &::before {
+      opacity: 1;
     }
   }
 }

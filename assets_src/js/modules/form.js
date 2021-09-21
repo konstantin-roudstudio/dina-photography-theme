@@ -3,7 +3,7 @@ export default function ($) {
 
     $form.each(function () {
         const $fields = $(this).find('.wpcf7-form-control');
-        const $dateFields = $(this).find('[name="event-date"]');
+        // const $dateFields = $(this).find('[name="event-date"]');
 
         $(this)[0].addEventListener('wpcf7submit', function () {
             $fields.each(function () {
@@ -24,16 +24,16 @@ export default function ($) {
             })
         });
 
-        $dateFields.each(function () {
-            $(this).focus(function () {
-                if ($(this).val()) return;
-                $(this).val('');
-                $(this).val('/');
-            });
-
-            $(this).blur(function () {
-                if ($(this).val() === "/") $(this).val('');
-            })
-        })
+        // $dateFields.each(function () {
+        //     $(this).focus(function () {
+        //         if ($(this).val()) return;
+        //         $(this).val('');
+        //         $(this).val('/');
+        //     });
+        //
+        //     $(this).blur(function () {
+        //         if ($(this).val() === "/") $(this).val('');
+        //     })
+        // })
     });
 }

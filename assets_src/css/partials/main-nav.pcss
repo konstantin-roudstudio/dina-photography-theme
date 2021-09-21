@@ -2,8 +2,8 @@
   z-index: 4;
 
   @media (--laptop-down) {
+    background: #ffffff;
     position: absolute;
-    width: 100%;
     height: 100vh;
     left: 0;
     right: 0;
@@ -362,7 +362,7 @@
   }
 
   @media (--laptop-down) {
-    &.menu-shown {
+    .menu-shown & {
       opacity: 1;
       transform: scaleY(1);
       visibility: visible;

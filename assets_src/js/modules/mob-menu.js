@@ -1,6 +1,7 @@
 import { disablePageScroll, enableScroll } from '../utils/scroll';
 
 export default function mobMenu($) {
+  const $wrapper = $('.wrapper');
   const $btn = $('.menu-btn');
   const $mobMenu = $('.main-nav');
   const $hasChildren = $('.menu-item-has-children');
@@ -8,10 +9,10 @@ export default function mobMenu($) {
 
   $btn.click(function(event) {
     event.preventDefault();
-    $btn.toggleClass('active');
-    $mobMenu.toggleClass('menu-shown');
+    // $btn.toggleClass('active');
+    $wrapper.toggleClass('menu-shown');
 
-    if ($mobMenu.hasClass('menu-shown')) {
+    if ($wrapper.hasClass('menu-shown')) {
       disablePageScroll(true);
     } else {
       enableScroll();
@@ -24,16 +25,21 @@ export default function mobMenu($) {
   });
 
   $hasChildren.each(function() {
-    $(this).click(function(event) {
+    const $this = $(this);
+    const $link = $this.find('> a');
+
+    $link.click(function(event) {
       event.preventDefault();
       if (window.width >= 1200) return;
 
-      if ($(this).hasClass('visible')) {
-        $(this).find('.sub-menu__container').hide(300);
+      if ($this.hasClass('visible')) {
+        $this.find('.sub-menu__container').hide(300);
+        console.log('HIDE');
       } else {
-        $(this).find('.sub-menu__container').show(300);
+        $this.find('.sub-menu__container').show(300);
+        console.log('SHOW');
       }
-      $(this).toggleClass('visible');
+      $this.toggleClass('visible');
     })
   });
 
