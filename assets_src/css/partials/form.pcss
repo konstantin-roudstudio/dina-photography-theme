@@ -137,4 +137,17 @@
   .wpcf7-form-control-wrap {
     display: block;
   }
+
+  .wpcf7-submit {
+    transition: opacity .2s ease;
+
+    .submitting & {
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+}
+
+.wpcf7-response-output {
+  display: none;
 }
