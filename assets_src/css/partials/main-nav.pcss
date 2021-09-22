@@ -59,7 +59,7 @@
 
   .menu-item {
     @media (--desktop-up) {
-      > a {
+      >a {
         position: relative;
 
         &::before {
@@ -93,7 +93,7 @@
     transition: transform .3s ease;
 
     @media (min-width: 380px) {
-      font-size: 38px;
+      font-size: 36px;
     }
 
     @media (--desktop-up) {
@@ -118,7 +118,7 @@
 
   &__secondary {
     @media (--laptop-down) {
-      > .menu-item {
+      >.menu-item {
         border-bottom: 1px solid rgba(0, 0, 0, .3);
 
         &:first-child {
@@ -161,7 +161,7 @@
       color: #000;
 
       @media (--laptop-down) {
-        padding: 0 20px;
+        padding: 0 20px 20px;
 
         .menu-item__img {
           display: none;
@@ -282,7 +282,7 @@
 
     .visible {
       @media (--laptop-down) {
-        > a {
+        >a {
           &:after {
             transform: rotateX(180deg);
           }
@@ -291,7 +291,7 @@
     }
 
     .menu-item-has-children {
-      > a {
+      >a {
         display: block;
         position: relative;
 
@@ -340,7 +340,7 @@
     }
 
     .menu-item-has-children:hover {
-      > a span::after {
+      >a span::after {
         pointer-events: auto;
       }
 
@@ -373,6 +373,13 @@
         transform: translateY(0);
         transition: all .5s .2s ease-out;
       }
+    }
+  }
+
+  .current-menu-item, .current-menu-parent {
+    a::before {
+      opacity: 1;
+      transform: scaleX(1);
     }
   }
 }

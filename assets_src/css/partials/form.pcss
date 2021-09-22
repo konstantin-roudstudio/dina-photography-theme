@@ -1,4 +1,8 @@
 .form {
+  @media (--tablet-down) {
+    padding: 15px 0 30px;
+  }
+
   &__row {
     @media (min-width: 600px) {
       display: flex;
@@ -20,7 +24,7 @@
     select {
       border: 1px solid #000000;
       border-radius: 25px;
-      background: transparent;
+      /*background: transparent;*/
       height: 50px;
       outline: none;
       padding: 0 24px 0 26px;

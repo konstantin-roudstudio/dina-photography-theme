@@ -40,7 +40,7 @@
   }
 
   &::before {
-    background: currentColor;
+    background-color: currentColor;
     content: '';
     opacity: 0;
     transform: scaleX(0);
@@ -68,10 +68,22 @@
   }
 
   &--solid {
-    background: #ffffff;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+
+    &::before {
+      border-radius: 25px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .9);
+
+      &::before {
+        
+      }
+    }
   }
 
-  &--calendar {
-
-  }
+  &--calendar {}
 }
