@@ -110,11 +110,21 @@
 
   @media (--laptop-down) {
     .header__inner {
-      transform: translateY(-20px);
+      transform: translateY(-90px);
+
+      &::before {
+        transition: opacity .3s .3s ease;
+      }
     }
 
     .header__wrapper {
       transform: translateY(10px);
+    }
+
+    &.header-shown {
+      .header__inner {
+        transform: translateY(-20px);
+      }
     }
   }
 
