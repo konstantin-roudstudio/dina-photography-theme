@@ -40,7 +40,7 @@
   }
 
   &::before {
-    background: currentColor;
+    background-color: currentColor;
     content: '';
     opacity: 0;
     transform: scaleX(0);
@@ -68,10 +68,17 @@
   }
 
   &--solid {
-    background: #ffffff;
+    background-color: #fff;
   }
 
-  &--calendar {
+  &--black {
+    background-color: #000;
+    color: #fff;
 
+    &:hover {
+      opacity: .9;
+    }
   }
+
+  &--calendar {}
 }

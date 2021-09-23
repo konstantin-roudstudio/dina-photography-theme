@@ -1,4 +1,8 @@
 .form {
+  @media (--tablet-down) {
+    padding: 15px 0 30px;
+  }
+
   &__row {
     @media (min-width: 600px) {
       display: flex;
@@ -39,6 +43,10 @@
 
       &.btn {
         margin: 0;
+      }
+
+      &.btn--black {
+        background: #000;
       }
     }
 

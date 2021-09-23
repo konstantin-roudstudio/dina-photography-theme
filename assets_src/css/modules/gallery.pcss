@@ -37,6 +37,10 @@
       }
     }
 
+    a {
+      font-weight: 700;
+    }
+
     &--columns {
       @media(--tablet-up) {
         max-width: 644px;
@@ -61,7 +65,11 @@
 
     &.center {
       max-width: 1238px;
-      margin: 0 auto 50px;
+      margin: 0 auto 20px;
+
+      @media (--tablet-up) {
+        margin: 0 auto 50px;
+      }
     }
   }
 
@@ -97,7 +105,7 @@
   }
 
   &--project {
-    padding-top: 119px;
+    padding-top: 50px;
 
     @media (--laptop-up) {
       padding-top: 119px;
