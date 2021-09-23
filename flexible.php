@@ -35,6 +35,7 @@ get_header();
         elseif (get_row_layout() == 'text_boxes_section'): get_template_part('template-parts/rows/text-boxes-section', 'section');
         elseif (get_row_layout() == 'text_images_section'): get_template_part('template-parts/rows/text-images-section', 'section');
         elseif (get_row_layout() == 'text_wysiwyg_section'): get_template_part('template-parts/rows/wysiwyg-section', 'section');
+        elseif (get_row_layout() == 'thank_you_section'): get_template_part('template-parts/rows/thank-you-section', 'section');
         endif;
       endwhile;
     endif;

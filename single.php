@@ -63,6 +63,7 @@ $archive_link = get_post_type_archive_link($type);
     global $post;
 
     $related = get_posts(array(
+        'orderby' => 'rand',
         'posts_per_page' => '3',
         'exclude' => $id,
 

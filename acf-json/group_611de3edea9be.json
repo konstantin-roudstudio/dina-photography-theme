@@ -677,6 +677,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_614c300f0fd07": {
+                    "key": "layout_614c300f0fd07",
+                    "name": "thank_you_section",
+                    "label": "Thank You Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_614c30190fd08",
+                            "label": "Thank You Section",
+                            "name": "thank_you_section",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_614c2f75b6b7b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -701,5 +732,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631818276
+    "modified": 1632383056
 }
