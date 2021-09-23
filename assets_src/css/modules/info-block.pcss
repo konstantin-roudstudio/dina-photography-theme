@@ -8,7 +8,7 @@
   }
 
   &__inner {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     @media (--tablet-up) {
       display: flex;
@@ -32,7 +32,7 @@
     justify-content: flex-start;
     background-color: grey;
     position: relative;
-    max-width: 308px;
+    max-width: 420px;
     margin: 0 auto 30px;
 
     &::after {
@@ -47,6 +47,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    @media (--tablet-up) {
+      max-width: 308px;
     }
   }
 
@@ -78,7 +82,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.625;
-    margin-bottom: 16px;
 
     @media (--tablet-up) {
       max-width: 334px;
@@ -119,7 +122,7 @@
     .info-block__content {
       @media (--tablet-up) {
         padding: 0 20px 0 84px;
-        margin: 13px 0 0;
+        /*margin: 13px 0 0;*/
       }
     }
 
