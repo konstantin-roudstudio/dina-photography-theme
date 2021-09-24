@@ -114,7 +114,7 @@ add_action( 'widgets_init', 'dina_photography_widgets_init' );
  */
 
 function dina_photography_scripts() {
-//  wp_enqueue_style( 'dina-photography-google-font', 'https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap', [], null );
+  wp_enqueue_style( 'dina-photography-google-font', 'https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap', [], null );
   wp_enqueue_style( 'dina-photography-style', get_stylesheet_uri(), [], _S_VERSION );
 
   wp_enqueue_script( 'dina-photography-main-script', get_theme_file_uri( '/js/main.js' ), [ 'jquery' ], _S_VERSION );
