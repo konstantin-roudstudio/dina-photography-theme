@@ -38,6 +38,20 @@
     }
   }
 
+  .promo__bg {
+    &--mobile {
+      @media (--tablet-up) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      @media (--mobile) {
+        display: none;
+      }
+    }
+  }
+
   &__center {
     display: flex;
     flex-direction: column;
