@@ -21,6 +21,14 @@ if ($button) {
   $button_title = $button['title'];
   $button_target = $button['target'] ? $button['target'] : '_self';
 }
+
+// $section = get_field('text-images');
+
+// if ($section) {
+//   $classes = $classes . ' text-images--positioning';  
+//   $classes = $classes . ' text-images--positioning-inverted';
+// }
+
 ?>
 
 <section class="text-images<?= $classes ?>">
