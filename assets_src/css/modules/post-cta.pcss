@@ -2,6 +2,14 @@
   position: relative;
   color: #fff;
 
+  @media (--hd) {
+    height: 700px;
+
+    .center {
+      height: 100%;
+    }
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -27,6 +35,14 @@
       padding: 165px 0 144px;
       max-width: 667px;
       margin: auto;
+    }
+
+    @media (--hd) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0;
     }
   }
 
