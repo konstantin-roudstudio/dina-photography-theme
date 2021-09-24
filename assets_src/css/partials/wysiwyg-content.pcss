@@ -2,10 +2,10 @@
   h2 {
     font: 500 38px/1.1 'Antiqua', serif;
     text-transform: uppercase;
-    margin-bottom: 21px;
+    /*margin-bottom: 21px;*/
 
     @media (--laptop-up) {
-      margin-bottom: 27px;
+      /*margin-bottom: 27px;*/
     }
 
     &:not(:last-child):not(:first-child) {
@@ -20,7 +20,7 @@
   h3,
   h4,
   h5 {
-    font: 700 18px/1.16 'RF Dewi Extended', sans-serif;
+    font: 700 18px/1.3 'RF Dewi Extended', sans-serif;
     margin-bottom: 23px;
   }
 
@@ -35,6 +35,22 @@
   p {
     &:nth-last-child(n+2) {
       margin-bottom: 22px;
+    }
+    a {
+      /*position: relative;
+      display: inline-block;
+      width: fit-content;*/
+      font-weight: 700;
+
+      /*&::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #000;
+      }*/
     }
   }
 

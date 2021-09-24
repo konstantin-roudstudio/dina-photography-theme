@@ -230,7 +230,6 @@
 
     @media (--laptop-up) {
       padding-right: 44px;
-      flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
     }
@@ -239,6 +238,10 @@
   &__btn {
     @media (--mobile) {
       margin: 0 auto 33px;
+    }
+
+    @media (--laptop-up) {
+      order: 2
     }
   }
 

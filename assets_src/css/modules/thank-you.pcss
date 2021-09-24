@@ -1,0 +1,46 @@
+.thank-you {
+  &__center {
+    max-width: 1000px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+
+    .admin-bar & {
+      @media (--tablet-up) {
+        min-height: calc(100vh - 46px);
+      }
+
+      @media (min-width: 783px) {
+        min-height: calc(100vh - 32px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @media (--laptop-up) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__message {
+    @media (--laptop-up) {
+      font-size: 18px;
+    }
+
+    &:nth-last-child(n+2) {
+      margin-bottom: 20px;
+
+      @media (--laptop-up) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
