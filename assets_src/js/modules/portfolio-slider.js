@@ -5,6 +5,9 @@ export default function portfolioSlider($) {
 
   $portSlider.each(function () {
     const container = $(this).find('.swiper-container')[0];
+    const btnNext = $(this).find('.swiper-button-next')[0];
+    const btnPrev = $(this).find('.swiper-button-prev')[0];
+    const pagination = $(this).find('.swiper-pagination')[0];
 
     Swiper.use([Navigation, Pagination]);
 
@@ -27,11 +30,11 @@ export default function portfolioSlider($) {
         }
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: btnNext,
+        prevEl: btnPrev,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: pagination,
         type: 'bullets',
         clickable: true,
       },

@@ -7,6 +7,14 @@
     justify-content: flex-end;
     align-items: center;
 
+    @media (--tablet-down) {
+      min-height: -webkit-fill-available;
+    }
+
+    @media (--laptop-up) {
+      min-height: 100vh;
+    }
+
     @media (--desktop-up) {
       min-height: calc(100vh + 100px);
     }
