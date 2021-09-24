@@ -10,10 +10,6 @@ $gallery = get_sub_field('gallery');
       <?php if ($title) : ?>
         <div class="gallery__title title"><?= $title ?></div>
       <?php endif; ?>
-
-      <?php if ($text) : ?>
-        <div class="gallery__text"><?= $text ?></div>
-      <?php endif; ?>
     </div>
 
     <?php foreach ($gallery as $row) : ?>
@@ -30,6 +26,9 @@ $gallery = get_sub_field('gallery');
         <?php endforeach; ?>
       </div>
     <?php endforeach; ?>
-
+    
+    <?php if ($text) : ?>
+      <div class="gallery__text"><?= $text ?></div>
+    <?php endif; ?>   
   </div>
 </section>
