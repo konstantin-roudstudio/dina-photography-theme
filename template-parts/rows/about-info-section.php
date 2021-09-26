@@ -38,7 +38,7 @@ if ($button) {
           <?php endif ?>
 
           <?php if ($button) : ?>
-            <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="about__btn btn"><?= $button_title ?></a>
+            <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="about__btn btn"><span><?= $button_title ?></span></a>
           <?php endif; ?>
         </div>
       </div>

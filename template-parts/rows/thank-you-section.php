@@ -22,7 +22,7 @@ if ($button) {
       <?php endif; ?>
 
       <?php if ($button) : ?>
-        <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="btn"><?= $button_title ?></a>
+        <a href="<?= $button_url ?>" target="<?= $button_target ?>" class="btn"><span><?= $button_title ?></span></a>
       <?php endif; ?>
     </div>
   </div>

@@ -35,7 +35,7 @@ if ($button) {
 
     <?php if ($button): ?>
       <a href="<?php echo esc_url($button_url); ?>" target="<?php echo esc_attr($button_target); ?>"
-         class="hero-info__btn btn btn--solid"><?php echo esc_html($button_title); ?></a>
+         class="hero-info__btn btn btn--solid"><span><?php echo esc_html($button_title); ?></span></a>
     <?php endif; ?>
   </div>
 </section>

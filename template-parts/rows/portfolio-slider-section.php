@@ -27,7 +27,7 @@ if ($button) {
 
         <?php if ($button): ?>
           <a href="<?php echo esc_url($button_url); ?>" target="<?php echo esc_attr($button_target); ?>"
-             class="portfolio-slider__btn btn"><?php echo esc_html($button_title); ?></a>
+             class="portfolio-slider__btn btn"><span><?php echo esc_html($button_title); ?></span></a>
         <?php endif; ?>
 
       </div>

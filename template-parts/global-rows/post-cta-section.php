@@ -33,7 +33,7 @@ if ($explore_link) {
       <?php if ($check_link || $explore_link) : ?>
         <div class="post-cta__links-wrapper">
           <?php if ($check_link) : ?>
-            <a href="<?= $check_link_url ?>" target="<?= $check_link_target ?>" class="post-cta__btn btn btn--calendar"><?= $check_link_title ?></a>
+            <a href="<?= $check_link_url ?>" target="<?= $check_link_target ?>" class="post-cta__btn btn btn--calendar"><span><?= $check_link_title ?></span></a>
           <?php endif; ?>
 
           <?php if ($explore_link) : ?>
