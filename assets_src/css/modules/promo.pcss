@@ -4,6 +4,7 @@
   min-height: 884px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   @media (--laptop-up) {
     flex-direction: row;
@@ -15,7 +16,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: url(./images/.jpg) no-repeat center/cover;*/
 
     &::after {
       content: '';
@@ -34,6 +34,18 @@
 
       @media (--desktop-up) {
         width: 54%;
+      }
+    }
+
+    &--desktop {
+      @media(--mobile) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      @media(--tablet-up) {
+        display: none;
       }
     }
   }
