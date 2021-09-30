@@ -42,14 +42,12 @@ export default function mobMenu($) {
             $this.toggleClass('visible');
         });
 
-        $link.hover(
+        $(this).hover(
             function () {
                 $wrapper.addClass('drop-shown');
             },
             function () {
-                setTimeout(function () {
-                    $wrapper.removeClass('drop-shown');
-                }, 300)
+                $wrapper.removeClass('drop-shown');
             }
         )
     });

@@ -1,9 +1,13 @@
 .wysiwyg-section {
   padding: 50px 0;
 
-  /*@media (--laptop-up) {
-    padding-top: 115px;
-  }*/
+  &:first-child {
+    padding-top: 100px;
+
+    @media (--desktop-up) {
+      padding-top: 180px;
+    }
+  }
 
   &__center {
     @media (--laptop-up) {
@@ -13,8 +17,6 @@
 
 
   &__inner {
-    /*padding-bottom: 30px;*/
-
     @media (--laptop-up) {
       padding-left: 50px;
       padding-right: 50px;

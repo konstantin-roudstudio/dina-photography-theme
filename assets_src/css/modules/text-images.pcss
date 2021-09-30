@@ -24,13 +24,18 @@
   }
 
   &__inner {
-    padding: 70px 0 53px;
+    //padding: 70px 0 53px;
+    padding: 35px 0 35px;
 
     @media (--laptop-up) {
       /* padding: 150px 0; */
-      padding: 200px 0 150px;
+      padding: 120px 0;
       display: flex;
       justify-content: space-between;
+    }
+
+    @media (--desktop-up) {
+      padding: 200px 0 150px;
     }
   }
 

@@ -18,7 +18,7 @@ $archive_link = get_post_type_archive_link($type);
     <div class="breadcrumbs">
       <div class="breadcrumbs__center center center--narrow">
         <div class="breadcrumbs__inner">
-          <a href="<?= get_post_type_archive_link($type) ?>">Blog</a>
+          <a href="<?= get_site_url() ?>/journal">Blog</a>
           <span class="breadcrumbs__divider">/</span>
           <span><?= the_title(); ?></span>
         </div>

@@ -1,19 +1,35 @@
 .wysiwyg-content {
+  h1,
   h2 {
     font: 400 38px/1.1 'Blacker Pro', serif;
     text-transform: uppercase;
-    /*margin-bottom: 21px;*/
 
-    @media (--laptop-up) {
-      /*margin-bottom: 27px;*/
-    }
-
-    &:not(:last-child):not(:first-child) {
-      margin: 35px 0 21px;
+    &:nth-last-child(n+2) {
+      margin-bottom: 21px;
 
       @media (--laptop-up) {
-        margin: 41px 0 27px;
+        margin-bottom: 27px;
       }
+    }
+
+    &:nth-child(n+2) {
+      margin-top: 35px;
+
+      @media (--laptop-up) {
+        margin-top: 41px;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 38px;
+
+    @media (--laptop-up) {
+      font-size: 42px;
+    }
+
+    @media (--desktop-up) {
+      font-size: 52px;
     }
   }
 
@@ -21,7 +37,10 @@
   h4,
   h5 {
     font: 700 18px/1.33 'Spartan', sans-serif;
-    margin-bottom: 23px;
+
+    &:nth-last-child(n+2) {
+      margin-bottom: 23px;
+    }
   }
 
   h4 {
