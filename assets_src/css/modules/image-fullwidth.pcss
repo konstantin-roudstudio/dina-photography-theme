@@ -1,6 +1,4 @@
 .image-fullwidth {
-  /*margin-bottom: 30px;*/
-
   &:last-child {
     margin-bottom: 0 !important;
   }
@@ -12,13 +10,11 @@
   }
 
   @media (--laptop-up) {
-    /*margin: 30px 0 63px;*/
     margin: 30px 0 0;
     max-height: 800px;
   }
 
   @media (min-width: 1920px) {
-    /* max-width: 1760px; */
     margin: 30px auto 63px;
   }
 
@@ -28,5 +24,11 @@
     width: 100%;
     display: block;
     object-fit: cover;
+
+    &.parallax-slow,
+    &.parallax-fast {
+      top: -10vh;
+      bottom: -10vh;
+    }
   }
 }

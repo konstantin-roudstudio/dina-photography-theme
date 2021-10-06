@@ -17,18 +17,18 @@ if ($button) {
 
 <section class="hero-info">
   <?php if ($bg_img): ?>
-    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--desktop'; ?>">
+    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--desktop'; ?> animate-zoom">
       <?= $bg_img ?>
     </div>
   <?php endif; ?>
 
   <?php if ($bg_mob_img): ?>
-    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--mobile'; ?>">
+    <div class="hero-info__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-info__bg--mobile'; ?> animate-zoom">
       <?= $bg_mob_img ?>
     </div>
   <?php endif; ?>
 
-  <div class="center hero-info__center">
+  <div class="center hero-info__center animate-hero-content">
     <?php if ($title) : ?>
       <h1 class="hero-info__title title"><?= $title ?></h1>
     <?php endif; ?>

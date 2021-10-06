@@ -13,14 +13,14 @@ $destinations = get_sub_field('hero_destinations');
         <div class="swiper-wrapper">
           <?php foreach ($slides as $slide) : ?>
             <div class="swiper-slide">
-              <?= wp_get_attachment_image($slide['image'], 'full') ?>
+              <?= wp_get_attachment_image($slide['image'], 'full', false,  array('class' => 'animate-zoom')) ?>
             </div>
           <?php endforeach; ?>
         </div>
       </div>
     <?php endif; ?>
 
-    <div class="hero-slider__content center">
+    <div class="hero-slider__content center animate-hero-content">
       <?php if ($title) : ?>
         <h1 class="hero-slider__title title"><?= nl2br($title) ?></h1>
       <?php endif; ?>

@@ -17,6 +17,12 @@
     right: 0;
     bottom: 0;
 
+    &.parallax-fast,
+    &.parallax-slow {
+      top: -10vh;
+      bottom: -10vh;
+    }
+
     &::after {
       content: '';
       position: absolute;

@@ -21,7 +21,7 @@ if ($button) {
   <div class="about__center center">
     <div class="about__inner">
       <div class="about__images">
-        <div class="about__img about__img--portrait"><?= $img_1 ?></div>
+        <div class="about__img about__img--portrait parallax-fast"><?= $img_1 ?></div>
         <div class="about__img about__img--landscape"><?= $img_2 ?></div>
       </div>
 

@@ -1,5 +1,4 @@
-import 'regenerator-runtime/runtime.js';
-// import animations from './utils/animations';
+import 'regenerator-runtime/runtime';
 import mobMenu from './modules/mob-menu';
 import stickyHeader from './modules/header';
 import portfolioSlider from './modules/portfolio-slider';
@@ -7,12 +6,12 @@ import blogSlider from './modules/blog-slider';
 import heroSlider from './modules/hero-slider';
 import form from './modules/form';
 import feedbackSlider from './modules/feedback-slider';
+import animations from './modules/animations';
+import feedback from './modules/feedback';
 /*import disablePageScroll from './utils/scroll';*/
-
 
 (function ($) {
   const initMethods = [
-    // animations,
     /*disablePageScroll,*/
     feedbackSlider,
     mobMenu,
@@ -20,7 +19,9 @@ import feedbackSlider from './modules/feedback-slider';
     heroSlider,
     portfolioSlider,
     blogSlider,
-    form
+    form,
+    animations,
+    feedback,
   ];
 
   $(() => {

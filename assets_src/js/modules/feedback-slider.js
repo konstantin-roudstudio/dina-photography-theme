@@ -1,8 +1,9 @@
-import Swiper, { Navigation } from 'swiper';
+import Swiper, {Navigation} from 'swiper';
 
 export default function feedbackSlider($) {
-  const $feedback = $('.feedback--slider'); {
-    $feedback.each(function() {
+  const $feedback = $('.feedback--slider');
+  {
+    $feedback.each(function () {
       const container = $(this).find('.swiper-container')[0];
       const $current = $(this).find('.current');
       const $total = $(this).find('.total');
@@ -19,11 +20,11 @@ export default function feedbackSlider($) {
           prevEl: btnPrev,
         },
         on: {
-          init: function(sw) {
+          init: function (sw) {
             $total.text($slides.length);
             $current.text(sw.realIndex + 1)
           },
-          slideChange: function(sw) {
+          slideChange: function (sw) {
             $current.text(sw.realIndex + 1)
           },
         },

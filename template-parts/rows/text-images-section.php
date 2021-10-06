@@ -22,13 +22,6 @@ if ($button) {
   $button_target = $button['target'] ? $button['target'] : '_self';
 }
 
-// $section = get_field('text-images');
-
-// if ($section) {
-//   $classes = $classes . ' text-images--positioning';  
-//   $classes = $classes . ' text-images--positioning-inverted';
-// }
-
 ?>
 
 <section class="text-images<?= $classes ?>">
@@ -77,7 +70,7 @@ if ($button) {
       </div>
       <div class="text-images__wrap">
         <?php if ($image1) : ?>
-          <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--horisontal">
+          <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--horizontal">
             <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img')) ?>
           </div>
         <?php endif; ?>

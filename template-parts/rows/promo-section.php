@@ -18,13 +18,13 @@ if ($button) {
 
 <section class="promo">
   <?php if ($bg_img): ?>
-    <div class="promo__bg<?php if ($bg_img && $bg_mob_img) echo ' promo__bg--desktop'; ?>">
+    <div class="promo__bg<?php if ($bg_img && $bg_mob_img) echo ' promo__bg--desktop'; ?> parallax-slow">
       <?= $bg_img ?>
     </div>
   <?php endif; ?>
 
   <?php if ($bg_mob_img): ?>
-    <div class="promo__bg<?php if ($bg_img && $bg_mob_img) echo ' promo__bg--mobile'; ?>">
+    <div class="promo__bg<?php if ($bg_img && $bg_mob_img) echo ' promo__bg--mobile'; ?> parallax-slow">
       <?= $bg_mob_img ?>
     </div>
   <?php endif; ?>
