@@ -78,8 +78,8 @@ export default function animations() {
       translateY: [
         ['elInY', 'elOutY'],
         {
-          999: [0, 0],
-          1400: ['screenHeight/-10', 0 ],
+          999: [0, 'elCenterY', 0],
+          1400: ['screenHeight/-20', 0, 'screenHeight/20'],
         },
       ],
     },
@@ -90,8 +90,8 @@ export default function animations() {
       translateY: [
         ['elInY', 'elOutY'],
         {
-          999: [0, 0],
-          1400: ['screenHeight/10', 0],
+          999: [0, 'elCenterY', 0],
+          1400: ['screenHeight/20', 0, 'screenHeight/-20'],
         },
       ],
     },
