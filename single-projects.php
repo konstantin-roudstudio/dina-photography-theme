@@ -34,18 +34,18 @@ $bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full') 
       <article class="post">
         <div class="hero-info">
           <?php if ($bg_img): ?>
-            <div class="hero-info__bg<?php if ($bg_img && $bg_img_mobile) echo ' hero-info__bg--desktop'; ?>">
+            <div class="hero-info__bg<?php if ($bg_img && $bg_img_mobile) echo ' hero-info__bg--desktop'; ?> animate-zoom">
               <?= $bg_img ?>
             </div>
           <?php endif; ?>
 
           <?php if ($bg_img_mobile): ?>
-            <div class="hero-info__bg<?php if ($bg_img && $bg_img_mobile) echo ' hero-info__bg--mobile'; ?>">
+            <div class="hero-info__bg<?php if ($bg_img && $bg_img_mobile) echo ' hero-info__bg--mobile'; ?> animate-zoom">
               <?= $bg_img_mobile ?>
             </div>
           <?php endif; ?>
 
-          <div class="center hero-info__center">
+          <div class="center hero-info__center animate-hero-content">
             <h3 class="hero-info__subtitle">
               <?= the_title() ?>
             </h3>

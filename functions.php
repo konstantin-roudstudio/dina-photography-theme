@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '1.3.1' );
+	define( '_S_VERSION', '1.3.2' );
 }
 
 if ( ! function_exists( 'dina-photography_setup' ) ) :
@@ -115,7 +115,6 @@ add_action( 'widgets_init', 'dina_photography_widgets_init' );
 function dina_photography_scripts() {
   wp_enqueue_style( 'dina-photography-google-font', 'https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap', [], null );
   wp_enqueue_style( 'dina-photography-style', get_stylesheet_uri(), [], _S_VERSION );
-
   wp_enqueue_script( 'dina-photography-main-script', get_theme_file_uri( '/js/main.js' ), [ 'jquery' ], _S_VERSION );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

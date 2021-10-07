@@ -1,13 +1,12 @@
 html {
   touch-action: manipulation;
-  /* overflow: hidden; */
   overflow-y: scroll;
 }
 
 body {
   background: #Fff;
   color: #000;
-  font: 500 15px / 1.53 'Spartan', sans-serif;
+  font: 500 14px / 1.6 'Spartan', sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -19,9 +18,8 @@ button {
 
 h1,
 h2,
-h3,
-
-h1 {
+ {
+  font-family: 'Blacker Pro', serif;
   font-size: 20px;
 }
 
@@ -39,7 +37,6 @@ h4 {
 
 a {
   color: inherit;
-  //transition: .2s color ease-in-out;
   text-decoration: none;
 }
 
@@ -60,8 +57,26 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* overflow: hidden; */
   position: relative;
+
+  &::after {
+    background: #000000;
+    content: '';
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility 0s .3s;
+  }
+
+  &.drop-shown {
+    &::after {
+      opacity: .4;
+      visibility: visible;
+      transition: opacity .3s ease, visibility 0s 0s;
+    }
+  }
 }
 
 @media (--mobile) {
