@@ -107,7 +107,7 @@
   }
 
   &__item-title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     line-height: 1.16;
     margin-bottom: 16px;
@@ -141,11 +141,11 @@
 
   &__link {
     width: fit-content;
-    font-weight: 600;
-    font-size: 13px;
+/*     font-weight: 600;
+    font-size: 13px; */
     line-height: 1.23;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
+/*     text-transform: uppercase;
     position: relative;
 
     &::after {
@@ -165,6 +165,26 @@
     &:hover::after {
       opacity: 1;
       transform: scaleX(1);
+    } */
+
+    font-size: 13px;
+    position: relative;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+
+    &::after {
+      background: currentColor;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      transition: transform .2s ease;
+    }
+
+    &:hover::after {
+      transform: translateY(-3px);
     }
   }
 
