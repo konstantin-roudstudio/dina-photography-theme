@@ -1,11 +1,9 @@
 .header {
   transition: color .3s ease;
   position: relative;
-  //transform: translateZ(0);
 
   &__inner {
     background: rgba(255, 255, 255, 0);
-    //transform: translateZ(0);
     transition: transform .3s ease;
     position: fixed;
     left: 0;
@@ -23,6 +21,10 @@
       transition: opacity .3s .2s ease;
       z-index: -1;
       opacity: 0;
+    }
+
+    @media (--laptop-down) {
+      transition: transform .4s ease-out;
     }
 
     @media (--desktop-up) {
@@ -136,11 +138,12 @@
     }
 
     .main-nav__main {
-      transform: translateX(90px);
+      transform: translate(90px, 3px);
     }
 
     .main-nav__secondary {
       align-items: center;
+      transform: translateY(3px);
     }
 
     .header__info {
@@ -150,7 +153,7 @@
 
     .header__btn {
       padding: 11px 0;
-      transform: translateY(24px);
+      transform: translateY(27px);
     }
 
     .logo-small {

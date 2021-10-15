@@ -15,7 +15,7 @@ $review_posts = get_sub_field('review_posts');
           $img = get_post_thumbnail_id($content);
         ?>
           <div class="swiper-slide">
-            <div class="feedback__slide-bg parallax-x-slow"><?= wp_get_attachment_image($img, 'full'); ?></div>
+            <div class="feedback__slide-bg"><?= wp_get_attachment_image($img, 'full', false, array('class' => 'parallax-x-slow')); ?></div>
             <div class="feedback__container">
               <div class="feedback__quotemark">
                 <svg class="feedback__quotemark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 17">
