@@ -17,7 +17,7 @@ if ($link) {
     <div class="info-block__inner">
       <div class="info-block__wrapper">
         <div class="info-block__img-wrapper">
-          <?= wp_get_attachment_image($img, 'full') ?>
+          <?= wp_get_attachment_image($img, 'full', false, array('loading' => 'lazy')) ?>
         </div>
       </div>
       <div class="info-block__content-wrapper">

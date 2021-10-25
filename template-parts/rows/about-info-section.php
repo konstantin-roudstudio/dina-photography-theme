@@ -6,8 +6,8 @@
   $img_2_id = get_sub_field('about_image_2');
   $logos = get_sub_field('about_logos');
 
-$img_1 = $img_1_id ? wp_get_attachment_image($img_1_id, 'full') : null;
-$img_2 = $img_2_id ? wp_get_attachment_image($img_2_id, 'full') : null;
+$img_1 = $img_1_id ? wp_get_attachment_image($img_1_id, 'full', false, array('loading' => 'lazy')) : null;
+$img_2 = $img_2_id ? wp_get_attachment_image($img_2_id, 'full', false, array('loading' => 'lazy')) : null;
 
 if ($button) {
   $button_url = $button['url'];
@@ -48,7 +48,7 @@ if ($button) {
       <div class="about__bottom-items">
         <?php foreach ($logos as $logo) : ?>
           <div class="about__bottom-item">
-            <?= wp_get_attachment_image($logo['image'], 'full') ?>
+            <?= wp_get_attachment_image($logo['image'], 'full', false, array('loading' => 'lazy')) ?>
           </div>
         <?php endforeach; ?>
       </div>

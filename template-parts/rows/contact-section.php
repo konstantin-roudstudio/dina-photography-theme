@@ -8,7 +8,7 @@ $email = get_field('contact_email', 'option');
 ?>
 
 <section class="contact">
-  <div class="contact__bg"><?= wp_get_attachment_image($image, 'full'); ?></div>
+  <div class="contact__bg"><?= wp_get_attachment_image($image, 'full', false, array('loading' => 'lazy')); ?></div>
   <div class="contact__content animate-hero-about-content">
     <h1 class="title contact__title"><?= $title ?></h1>
     <div class="contact__text"><?= $text ?></div>

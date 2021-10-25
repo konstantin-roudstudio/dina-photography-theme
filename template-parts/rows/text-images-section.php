@@ -37,7 +37,7 @@ if ($button) {
         <?php endif; ?>
 
         <div class="text-images__img-wrapper text-images__img-wrapper--mob">
-          <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img')) ?>
+          <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img', 'loading' => 'lazy')) ?>
         </div>
 
         <?php if ($text) : ?>
@@ -71,13 +71,13 @@ if ($button) {
       <div class="text-images__wrap">
         <?php if ($image1) : ?>
           <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--horizontal">
-            <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img')) ?>
+            <?= wp_get_attachment_image($image1, 'full', null, array('class' => 'text-images__img', 'loading' => 'lazy')) ?>
           </div>
         <?php endif; ?>
 
         <?php if ($image2) : ?>
           <div class="text-images__img-wrapper text-images__img-wrapper--desktop text-images__img-wrapper--vertical">
-            <?= wp_get_attachment_image($image2, 'full', null, array('class' => 'text-images__img')) ?>
+            <?= wp_get_attachment_image($image2, 'full', null, array('class' => 'text-images__img', 'loading' => 'lazy')) ?>
           </div>
         <?php endif; ?>
       </div>

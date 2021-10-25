@@ -5,8 +5,8 @@ $bg_id = get_sub_field('image');
 $bg_mob_id = get_sub_field('image_mobile');
 $button = get_sub_field('button');
 
-$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
-$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full', false, array('loading' => 'lazy')) : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full', false, array('loading' => 'lazy')) : null;
 
 if ($button) {
   $button_url = $button['url'];

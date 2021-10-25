@@ -36,8 +36,8 @@ if ($btn) {
   $btn_target = $btn['target'] ? $btn['target'] : '_self';
 }
 
-$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
-$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full', false, array('loading' => 'lazy')) : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full', false, array('loading' => 'lazy')) : null;
 
 ?>
 

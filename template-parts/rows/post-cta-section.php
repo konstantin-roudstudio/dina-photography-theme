@@ -19,7 +19,7 @@ if ($explore_link) {
 ?>
 
 <section class="post-cta">
-  <div class="post-cta__bg parallax-slow"><?= wp_get_attachment_image($image, 'full') ?></div>
+  <div class="post-cta__bg parallax-slow"><?= wp_get_attachment_image($image, 'full', false, array('loading' => 'lazy')) ?></div>
   <div class="center center--narrow">
     <div class="post-cta__content">
       <?php if ($title) : ?>

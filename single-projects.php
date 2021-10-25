@@ -21,8 +21,8 @@ $description = get_field('project_description');
 $bg_id = get_field('project_cover');
 $bg_id_mobile = get_field('project_cover_mobile');
 
-$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full') : null;
-$bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full') : null;
+$bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full', false, array('loading' => 'lazy')) : null;
+$bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full', false, array('loading' => 'lazy')) : null;
 ?>
   <main id="primary" class="main project">
 
@@ -119,7 +119,7 @@ $bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full') 
                           ?>
                           <div class="swiper-slide portfolio-slider__item">
                             <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__img-wrapper">
-                              <?= wp_get_attachment_image($thumb_id, 'full') ?>
+                              <?= wp_get_attachment_image($thumb_id, 'full', false, array('loading' => 'lazy')) ?>
                             </a>
                             <a href="<?= get_post_permalink($item); ?>" class="portfolio-slider__item-text"><?= get_the_title( $item ); ?></a>
                           </div>

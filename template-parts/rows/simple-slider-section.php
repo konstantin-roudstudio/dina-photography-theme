@@ -10,7 +10,7 @@
           <div class="swiper-wrapper">
             <?php foreach ($slides as $slide) : ?>
               <div class="swiper-slide">
-                <?= wp_get_attachment_image($slide['image'], 'full') ?>
+                <?= wp_get_attachment_image($slide['image'], 'full', false, array('loading' => 'lazy')) ?>
               </div>
             <?php endforeach; ?>
           </div>

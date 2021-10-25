@@ -10,12 +10,12 @@ $date = get_field('cta_date_link', 'option');
 	<div class="center">
 		<div class="cta__inner">
 			<div class="cta__img-wrapper desktop">
-        <?= wp_get_attachment_image($image, 'large', false, array('class' => 'cta__img')); ?>
+        <?= wp_get_attachment_image($image, 'large', false, array('class' => 'cta__img', 'loading' => 'lazy')); ?>
 			</div>
 			<div class="cta__content">
 				<h2 class="cta__title"><?= $title ?></h2>
 				<div class="cta__img-wrapper mob">
-          <?= wp_get_attachment_image($image, 'large', false, array('class' => 'cta__img')); ?>
+          <?= wp_get_attachment_image($image, 'large', false, array('class' => 'cta__img', 'loading' => 'lazy')); ?>
 				</div>
 				<div class="cta__text"><?= $text ?></div>
 				<div class="cta__link-wrapper">

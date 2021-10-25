@@ -7,7 +7,7 @@ $img = get_post_thumbnail_id($review_post);
 <section class="feedback" data-sal>
   <div class="feedback__wrapper">
     <?php if ($img) : ?>
-      <div class="feedback__bg"><?= wp_get_attachment_image($img, 'full') ?></div>
+      <div class="feedback__bg"><?= wp_get_attachment_image($img, 'full', false, array('loading' => 'lazy')) ?></div>
     <?php endif; ?>
 
     <div class="feedback__center center">

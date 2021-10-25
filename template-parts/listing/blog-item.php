@@ -7,7 +7,7 @@ $url = esc_url(get_permalink());
   <a href="<?= $url ?>" class="blog-listing__item-title"><?= get_the_title() ?></a>
   <div class="blog-listing__content-wrapper">
     <a href="<?= $url ?>" class="blog-listing__img-wrapper">
-      <?= get_the_post_thumbnail(null, 'large', ['alt' => get_the_title(), 'sizes' => '350px']) ?>
+      <?= get_the_post_thumbnail(null, 'large', ['alt' => get_the_title(), 'sizes' => '350px', 'loading' => 'lazy']) ?>
     </a>
     <a href="<?= $url ?>" class="blog-listing__link">read more</a>
   </div>

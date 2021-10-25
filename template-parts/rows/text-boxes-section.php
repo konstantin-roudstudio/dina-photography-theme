@@ -46,7 +46,7 @@ $items = get_sub_field('items');
 
               <?php if ($item['img']) : ?>
                 <div class="text-boxes__img-wrapper">
-                  <?= wp_get_attachment_image($item['img'], 'full', null, array('class' => 'text-boxes__img')) ?>
+                  <?= wp_get_attachment_image($item['img'], 'full', null, array('class' => 'text-boxes__img', 'loading' => 'lazy')) ?>
                 </div>
               <?php endif; ?>
 

@@ -24,7 +24,7 @@ $gallery = get_sub_field('gallery');
           ?>
           <div class="gallery__item"  <?php if ($width) echo 'style="'.$width.'"' ?>>
             <div class="gallery__item-wrapper" <?php if ($ratio) echo 'style="'.$ratio.'"' ?>>
-              <?= wp_get_attachment_image($item['image'], 'full') ?>
+              <?= wp_get_attachment_image($item['image'], 'full', false, array('loading' => 'lazy')) ?>
             </div>
           </div>
         <?php endforeach; ?>

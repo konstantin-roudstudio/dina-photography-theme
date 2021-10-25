@@ -46,7 +46,7 @@ if ($button) {
                   ?>
                   <div class="swiper-slide portfolio-slider__item">
                     <a href="<?= get_post_permalink($project); ?>" class="portfolio-slider__img-wrapper">
-                      <?= wp_get_attachment_image($thumb_id, 'full') ?>
+                      <?= wp_get_attachment_image($thumb_id, 'full', false, array('loading' => 'lazy')) ?>
                     </a>
                     <a href="<?= get_post_permalink($project); ?>" class="portfolio-slider__item-text"><?= get_the_title( $project ); ?></a>
                   </div>
