@@ -2,12 +2,17 @@
 $review_post = get_sub_field('review_post');
 $text = $review_post->post_content;
 $img = get_post_thumbnail_id($review_post);
+$img_mob = get_field('image_mobile', $review_post->ID);
 ?>
 
 <section class="feedback" data-sal>
   <div class="feedback__wrapper">
     <?php if ($img) : ?>
-      <div class="feedback__bg"><?= wp_get_attachment_image($img, 'full', false, array('loading' => 'lazy')) ?></div>
+      <div class="feedback__bg<?php if ($img_mob) echo ' feedback__bg--desktop' ?>"><?= wp_get_attachment_image($img, 'full', false, array('loading' => 'lazy')) ?></div>
+    <?php endif; ?>
+
+    <?php if ($img_mob) : ?>
+      <div class="feedback__bg<?php if ($img) echo ' feedback__bg--mobile' ?>"><?= wp_get_attachment_image($img_mob, 'full', false, array('loading' => 'lazy')) ?></div>
     <?php endif; ?>
 
     <div class="feedback__center center">

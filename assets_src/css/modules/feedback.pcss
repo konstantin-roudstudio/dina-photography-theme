@@ -21,6 +21,18 @@
     right: 0;
     bottom: 0;
 
+    &--mobile {
+      @media (--laptop-up) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      @media (--tablet-down) {
+        display: none;
+      }
+    }
+
     &.parallax-slow,
     &.parallax-fast {
       top: -10vh;
@@ -124,6 +136,18 @@
       &.parallax-x-fast {
         top: -10vh;
         height: calc(100% + 20vh)
+      }
+    }
+
+    &--mobile {
+      @media(--laptop-up) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      @media(--tablet-down) {
+        display: none;
       }
     }
   }
@@ -236,7 +260,7 @@
     }
   }
 
-  .swiper-container {
+  .swiper {
     height: 100%;
 
     @media (--laptop-up) {

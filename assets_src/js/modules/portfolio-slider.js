@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, {Navigation, Pagination} from 'swiper';
 
 export default function portfolioSlider($) {
   const $portSlider = $('.portfolio-slider');
@@ -27,7 +27,7 @@ export default function portfolioSlider($) {
         1200: {
           slidesPerView: 2,
           spaceBetween: 98,
-        }
+        },
       },
       navigation: {
         nextEl: btnNext,
@@ -39,14 +39,5 @@ export default function portfolioSlider($) {
         clickable: true,
       },
     });
-
-    // $(container)
-    //     .on('click', '.swiper-button-prev', function() {
-    //       swiper.slidePrev();
-    //     })
-    //     .on('click', '.swiper-button-next', function() {
-    //       swiper.slideNext();
-    //     });
-
   });
 }

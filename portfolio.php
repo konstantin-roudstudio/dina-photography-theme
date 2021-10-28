@@ -32,7 +32,7 @@ get_header();
       <div class="portfolio__center center">
         <div class="portfolio__head">
           <div class="portfolio__item-subtitle"><?= get_cat_name($category_id) ?></div>
-          <div class="portfolio__item-title title"><?= $title ?></div>
+          <h1 class="portfolio__item-title title"><?= $title ?></h1>
           <?php if ($description) : ?>
             <div class="portfolio__item-text wysiwyg-content"><?= $description ?></div>
           <?php endif; ?>
@@ -45,9 +45,9 @@ get_header();
             <div class="portfolio__item<?php if (!$landscape) echo ' portfolio__item--portrait'; else echo ' portfolio__item--landscape'; ?>">
               <a href="<?= get_permalink( $item ); ?>" class="portfolio__img-wrapper">
                 <?php if (!$landscape) :
-                  echo wp_get_attachment_image(get_field('thumbnail_portrait', $item), 'large');
+                  echo wp_get_attachment_image(get_field('thumbnail_portrait', $item), 'large', false, array('loading' => 'lazy'));
                 else :
-                  echo wp_get_attachment_image(get_field('thumbnail_landscape', $item), 'large');
+                  echo wp_get_attachment_image(get_field('thumbnail_landscape', $item), 'large', false, array('loading' => 'lazy'));
                 endif; ?>
               </a>
               <a href="<?= get_permalink( $item ); ?>" class="portfolio__text"><?= get_the_title($item); ?></a>
@@ -55,7 +55,7 @@ get_header();
             <?php if ($index === 0) : ?>
             <div class="portfolio__item portfolio__item--text portfolio__item--desktop">
               <div class="portfolio__item-subtitle"><?= get_cat_name($category_id) ?></div>
-              <div class="portfolio__item-title title"><?= $title ?></div>
+              <h1 class="portfolio__item-title title"><?= $title ?></h1>
               <?php if ($description) : ?>
                 <div class="portfolio__item-text wysiwyg-content"><?= $description ?></div>
               <?php endif; ?>

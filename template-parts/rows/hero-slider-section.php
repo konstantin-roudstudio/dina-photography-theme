@@ -13,7 +13,17 @@ $destinations = get_sub_field('hero_destinations');
         <div class="swiper-wrapper">
           <?php foreach ($slides as $slide) : ?>
             <div class="swiper-slide">
-              <?= wp_get_attachment_image($slide['image'], 'full', false,  array('class' => 'animate-zoom')) ?>
+              <?php if ($slide['image']) : ?>
+                <div class="swiper-slide__inner<?php if ($slide['image_mobile']) echo ' swiper-slide__inner--desktop' ?>">
+                  <?= wp_get_attachment_image($slide['image'], 'full', false,  array('class' => 'animate-zoom')) ?>
+                </div>
+              <?php endif; ?>
+
+              <?php if ($slide['image_mobile']) : ?>
+                <div class="swiper-slide__inner<?php if ($slide['image']) echo ' swiper-slide__inner--mobile' ?>">
+                  <?= wp_get_attachment_image($slide['image_mobile'], 'full', false,  array('class' => 'animate-zoom')) ?>
+                </div>
+              <?php endif; ?>
             </div>
           <?php endforeach; ?>
         </div>

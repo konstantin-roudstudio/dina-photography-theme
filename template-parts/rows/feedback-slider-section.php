@@ -6,16 +6,30 @@ $review_posts = get_sub_field('review_posts');
 
 <section class="feedback feedback--slider">
   <div class="feedback__content">
-    <div class="swiper-container ">
+    <div class="swiper">
       <div class="swiper-wrapper">
 
         <?php foreach ($review_posts as $review) :
           $content = $review['post'];
           $text = apply_filters('the_content', get_post_field('post_content', $content));
           $img = get_post_thumbnail_id($content);
+          $img_mob = get_field('image_mobile', $content->ID);
+//          var_dump($img_mob);
         ?>
           <div class="swiper-slide">
-            <div class="feedback__slide-bg"><?= wp_get_attachment_image($img, 'full', false, array('class' => 'parallax-x-slow', 'loading' => 'lazy')); ?></div>
+
+            <?php if($img) : ?>
+              <div class="feedback__slide-bg<?php if($img_mob) echo ' feedback__slide-bg--desktop' ?>">
+                <?= wp_get_attachment_image($img, 'full', false, array('class' => 'parallax-x-slow')); ?>
+              </div>
+            <?php endif; ?>
+
+            <?php if($img_mob) : ?>
+              <div class="feedback__slide-bg<?php if($img) echo ' feedback__slide-bg--mobile' ?>">
+                <?= wp_get_attachment_image($img_mob, 'full', false, array('class' => 'parallax-x-slow')); ?>
+              </div>
+            <?php endif; ?>
+
             <div class="feedback__container">
               <div class="feedback__quotemark">
                 <svg class="feedback__quotemark-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 17">
