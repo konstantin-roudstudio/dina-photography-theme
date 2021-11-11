@@ -19,6 +19,10 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      .hero-about__title {
+        display: none;
+      }
     }
 
     @media (--laptop-up) {
@@ -60,6 +64,7 @@
 
     @media (--tablet-down) {
       margin: 0 20px;
+      padding: 40px 0 30px;
     }
 
     @media (--laptop-up) {
@@ -86,7 +91,10 @@
     }
 
     .hero-about__title {
-      @media (--tablet-down) {
+      color: inherit;
+      padding-bottom: 0;
+
+      @media (--laptop-up) {
         display: none;
       }
     }

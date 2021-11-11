@@ -7,7 +7,7 @@ $facts = get_sub_field('facts');
 $logos = get_sub_field('logos');
 
 $bg_img = $bg_id ? wp_get_attachment_image($bg_id, 'full', false, array('class' => 'animate-zoom')) : null;
-$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
+$bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full', false, array('class' => 'animate-zoom')) : null;
 
 ?>
 
@@ -22,7 +22,7 @@ $bg_mob_img = $bg_mob_id ? wp_get_attachment_image($bg_mob_id, 'full') : null;
   <?php endif; ?>
 
   <?php if ($bg_mob_img): ?>
-    <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--mobile'; ?> animate-zoom">
+    <div class="hero-about__bg<?php if ($bg_img && $bg_mob_img) echo ' hero-about__bg--mobile'; ?>">
       <?= $bg_mob_img ?>
       <?php if ($title) : ?>
         <h1 class="hero-about__title title"><?= nl2br($title) ?></h1>

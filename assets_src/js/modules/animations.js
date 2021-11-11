@@ -16,11 +16,17 @@ export default function animations() {
     scrollY: {
       translateY: [
         ['elCenterY', 'elOutY'],
-        [0, 'screenHeight/5'],
+        {
+          767: [0, 0],
+          1920: [0, 'screenHeight/5'],
+        },
       ],
       opacity: [
         ['elCenterY', 'elOutY'],
-        [1, 0],
+        {
+          767: [1, 0.8],
+          1920: [1, 0],
+        },
       ],
     },
   });
