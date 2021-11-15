@@ -48,7 +48,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu
 
       if ($image) {
         $thumb = $image['sizes']['large'];
-        $item_output .= '<img src="' . esc_url($thumb) . '" alt="' . esc_attr($image['alt']) . '" />';
+        $item_output .= '<img src="' . esc_url($thumb) . '" alt="' . esc_attr($image['alt']) . '" loading="lazy" />';
       }
 
       $item_output .= '</div>';

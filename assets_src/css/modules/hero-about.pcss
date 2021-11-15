@@ -19,10 +19,6 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-
-      .hero-about__title {
-        display: none;
-      }
     }
 
     @media (--laptop-up) {
@@ -31,6 +27,10 @@
       left: 0;
       top: 0;
       right: 0;
+
+      .hero-about__title {
+        display: none;
+      }
     }
 
     @media (--mobile) {
@@ -50,12 +50,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .hero-about__title {
-      @media (--laptop-up) {
-        display: none;
-      }
     }
   }
 
@@ -94,7 +88,7 @@
       color: inherit;
       padding-bottom: 0;
 
-      @media (--laptop-up) {
+      @media (--tablet-down) {
         display: none;
       }
     }

@@ -7,7 +7,10 @@ export default function animations() {
     scrollY: {
       scale: [
         ['elInY', 'elCenterY', 'elOutY'],
-        [1, 1.1, 1.2],
+        {
+          768: [1, 1, 1],
+          1920: [1, 1.1, 1.2],
+        }
       ],
     },
   });
