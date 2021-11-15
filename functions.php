@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '1.3.5' );
+	define( '_S_VERSION', '1.3.6' );
 }
 
 if ( ! function_exists( 'dina-photography_setup' ) ) :
