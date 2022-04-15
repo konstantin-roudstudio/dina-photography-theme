@@ -1,12 +1,14 @@
 .post-cta {
   position: relative;
   color: #fff;
+  overflow: hidden;
 
   @media (--hd) {
     height: 700px;
 
     .center {
       height: 100%;
+      transform: translate3d(0, 0, 1px);
     }
   }
 
@@ -23,6 +25,23 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: #000000;
+      opacity: .5;
+    }
+
+    &.parallax-fast,
+    &.parallax-slow {
+      top: -10vh;
+      bottom: -10vh;
     }
   }
 
@@ -68,13 +87,13 @@
     @media (min-width: 700px) {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      max-width: 410px;
-      margin: auto;
+      justify-content: center;
+      //max-width: 410px;
+      //margin: auto;
     }
 
     @media (--laptop-up) {
-      margin: 0 0 0 91px;
+      //margin: 0 0 0 91px;
     }
   }
 
@@ -89,6 +108,10 @@
 
     @media (min-width: 700px) {
       margin: 0;
+
+      &:nth-child(2) {
+        margin-left: 20px;
+      }
     }
 
     &::after {
@@ -116,6 +139,10 @@
 
     @media (min-width: 700px) {
       margin-bottom: 0;
+
+      &:nth-last-child(2) {
+        margin-right: 20px;
+      }
     }
   }
 }
