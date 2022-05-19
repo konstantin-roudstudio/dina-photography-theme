@@ -20,13 +20,25 @@ $review_posts = get_sub_field('review_posts');
 
             <?php if($img) : ?>
               <div class="feedback__slide-bg<?php if($img_mob) echo ' feedback__slide-bg--desktop' ?>">
-                <?= wp_get_attachment_image($img, 'full', false, array('class' => 'parallax-x-slow')); ?>
+                <img
+                    data-src="<?= wp_get_attachment_image_url($img) ?>"
+                    data-srcset="<?= wp_get_attachment_image_srcset($img) ?>"
+                    alt=""
+                    class="swiper-lazy parallax-x-slow"
+                    loading="lazy"
+                >
               </div>
             <?php endif; ?>
 
             <?php if($img_mob) : ?>
               <div class="feedback__slide-bg<?php if($img) echo ' feedback__slide-bg--mobile' ?>">
-                <?= wp_get_attachment_image($img_mob, 'full', false, array('class' => 'parallax-x-slow')); ?>
+                <img
+                    data-src="<?= wp_get_attachment_image_url($img_mob) ?>"
+                    data-srcset="<?= wp_get_attachment_image_srcset($img_mob) ?>"
+                    alt=""
+                    class="swiper-lazy parallax-x-slow"
+                    loading="lazy"
+                >
               </div>
             <?php endif; ?>
 

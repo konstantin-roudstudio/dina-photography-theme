@@ -14,6 +14,7 @@ get_header();
         elseif (get_row_layout() == 'contact_section'): get_template_part('template-parts/rows/contact-section', 'section');
         elseif (get_row_layout() == 'cta_form_section'): get_template_part('template-parts/rows/cta-form-section', 'section');
         elseif (get_row_layout() == 'cta_section'): get_template_part('template-parts/global-rows/cta-section', 'section');
+        elseif (get_row_layout() == 'featured_posts_section'): get_template_part('template-parts/rows/featured-posts-section', 'section');
         elseif (get_row_layout() == 'feedback_section'): get_template_part('template-parts/rows/feedback-section', 'section');
         elseif (get_row_layout() == 'feedback_slider_section'): get_template_part('template-parts/rows/feedback-slider-section', 'section');
         elseif (get_row_layout() == 'gallery_section'): get_template_part('template-parts/rows/gallery-section', 'section');

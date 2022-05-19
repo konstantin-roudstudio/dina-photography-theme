@@ -15,13 +15,24 @@ $destinations = get_sub_field('hero_destinations');
             <div class="swiper-slide">
               <?php if ($slide['image']) : ?>
                 <div class="swiper-slide__inner<?php if ($slide['image_mobile']) echo ' swiper-slide__inner--desktop' ?>">
-                  <?= wp_get_attachment_image($slide['image'], 'full', false,  array('class' => 'animate-zoom')) ?>
+                  <img
+                      data-src="<?= wp_get_attachment_image_url($slide['image']) ?>"
+                      data-srcset="<?= wp_get_attachment_image_srcset($slide['image']) ?>"
+                      alt=""
+                      class="swiper-lazy animate-zoom"
+                      loading="lazy"
+                  >
                 </div>
               <?php endif; ?>
 
               <?php if ($slide['image_mobile']) : ?>
                 <div class="swiper-slide__inner<?php if ($slide['image']) echo ' swiper-slide__inner--mobile' ?>">
-                  <?= wp_get_attachment_image($slide['image_mobile'], 'full', false,  array('class' => 'animate-zoom')) ?>
+                  <img
+                      data-src="<?= wp_get_attachment_image_url($slide['image_mobile']) ?>"
+                      data-srcset="<?= wp_get_attachment_image_srcset($slide['image_mobile']) ?>"
+                      alt=""
+                      class="swiper-lazy"
+                      loading="lazy">
                 </div>
               <?php endif; ?>
             </div>

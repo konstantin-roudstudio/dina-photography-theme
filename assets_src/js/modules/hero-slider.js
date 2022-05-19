@@ -1,4 +1,4 @@
-import Swiper, {Navigation} from 'swiper';
+import Swiper, {Navigation, Lazy} from 'swiper';
 
 export default function heroSlider($) {
   const $hero = $('.hero-slider');
@@ -10,9 +10,13 @@ export default function heroSlider($) {
     const btnNext = $(this).find('.swiper-button-next')[0];
     const btnPrev = $(this).find('.swiper-button-prev')[0];
 
-    Swiper.use([Navigation]);
+    Swiper.use([Navigation, Lazy]);
     const swiper = new Swiper(container, {
       slidesPerView: 1,
+      preloadImages: false,
+      lazy: {
+        loadPrevNext: true,
+      },
       navigation: {
         nextEl: btnNext,
         prevEl: btnPrev,

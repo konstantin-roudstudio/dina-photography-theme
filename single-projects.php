@@ -18,6 +18,8 @@ $title = get_field('page_title');
 $gallery = get_field('gallery');
 $description = get_field('project_description');
 
+$bottom_text = get_field('project_bottom_text');
+
 $bg_id = get_field('project_cover');
 $bg_id_mobile = get_field('project_cover_mobile');
 
@@ -149,6 +151,16 @@ $bg_img_mobile = $bg_id_mobile ? wp_get_attachment_image($bg_id_mobile, 'full', 
           </div>
         </section>
 
+        <?php endif; ?>
+
+        <?php if ($bottom_text) : ?>
+          <section class="project-wysiwig">
+            <div class="project-wysiwig__center center">
+              <div class="wysiwyg-content">
+                <?= $bottom_text ?>
+              </div>
+            </div>
+          </section>
         <?php endif; ?>
       </article>
     <?php
