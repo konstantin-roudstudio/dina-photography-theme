@@ -9,6 +9,7 @@ if ($link) {
   $link_url = $link['url'];
   $link_title = $link['title'];
   $link_target = $link['target'] ? $link['target'] : '_self';
+  $lnk_rel = $link_target === '_blank' ? 'nofollow' : '';
 }
 ?>
 
@@ -31,7 +32,7 @@ if ($link) {
           <?php endif; ?>
 
           <?php if ($link) : ?>
-            <a href="<?= $link_url ?>" target="<?= $link_target ?>" class="info-block__link"><?= $link_title ?></a>
+            <a href="<?= $link_url ?>" target="<?= $link_target ?>" class="info-block__link" rel="<?= $lnk_rel ?>"><?= $link_title ?></a>
           <?php endif; ?>
       </div>
       </div>
