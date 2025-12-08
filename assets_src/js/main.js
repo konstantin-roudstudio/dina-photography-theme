@@ -8,6 +8,7 @@ import form from './modules/form';
 import feedbackSlider from './modules/feedback-slider';
 import animations from './modules/animations';
 import feedback from './modules/feedback';
+import faq from './modules/faq';
 /*import disablePageScroll from './utils/scroll';*/
 
 (function ($) {
@@ -22,6 +23,7 @@ import feedback from './modules/feedback';
     form,
     animations,
     feedback,
+    faq
   ];
 
   $(() => {
